@@ -5,7 +5,6 @@
 ## Introduction
 
 * [Design principles](introduction/design-principles.md)
-* [Interoperability](introduction/interoperability.md)
 
 ## Product Specifications
 
@@ -13,7 +12,8 @@
 
 ## Technology
 
-* [Speed up with quick find](technology/speed-up-with-quick-find.md)
+* [Development standards](technology/development-standards.md)
+* [Interoperability](technology/interoperability.md)
 
 ## Setup
 

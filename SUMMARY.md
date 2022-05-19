@@ -17,6 +17,7 @@
 
 ## Setup
 
+* [0. Before you start](setup/0.-before-you-start.md)
 * [1. Establish team](setup/1.-establish-team.md)
 * [2. Gather requirements](setup/2.-gather-requirements.md)
 * [3. Installation](setup/3.-installation/README.md)

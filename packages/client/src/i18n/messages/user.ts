@@ -26,6 +26,10 @@ interface IUserMessages
   accountTitle: MessageDescriptor
   BIRTH_TOWN: MessageDescriptor
   CHA: MessageDescriptor
+  HEALTHCARE_WORKER: MessageDescriptor
+  POLICE_OFFICER: MessageDescriptor
+  SOCIAL_WORKER: MessageDescriptor
+  LOCAL_LEADER: MessageDescriptor
   CHAIRMAN: MessageDescriptor
   changeLanguageMessege: MessageDescriptor
   changeLanguageSuccessMessage: MessageDescriptor
@@ -114,6 +118,26 @@ const messagesToDefine: IUserMessages = {
     defaultMessage: 'CHA',
     description: 'The description for CHA type',
     id: 'constants.cha'
+  },
+  HEALTHCARE_WORKER: {
+    defaultMessage: 'Healthcare Worker',
+    description: 'The description for HEALTHCARE_WORKER type',
+    id: 'constants.healthcareWorker'
+  },
+  POLICE_OFFICER: {
+    defaultMessage: 'Police Officer',
+    description: 'The description for POLICE_OFFICER type',
+    id: 'constants.policeOfficer'
+  },
+  LOCAL_LEADER: {
+    defaultMessage: 'Local Leader',
+    description: 'The description for LOCAL_LEADER type',
+    id: 'constants.localLeader'
+  },
+  SOCIAL_WORKER: {
+    defaultMessage: 'Social Worker',
+    description: 'The description for SOCIAL_WORKER type',
+    id: 'constants.socialWorker'
   },
   CHAIRMAN: {
     defaultMessage: 'Chairman',
@@ -211,9 +235,9 @@ const messagesToDefine: IUserMessages = {
     id: 'constants.localRegistrar'
   },
   LOCAL_SYSTEM_ADMIN: {
-    defaultMessage: 'Sysadmin',
-    description: 'The description for Sysadmin role',
-    id: 'home.header.localSystemAdmin'
+    defaultMessage: 'Local System Admin',
+    description: 'The description for Local System Admin role',
+    id: 'constants.localSystemAdmin'
   },
   MAYOR: {
     defaultMessage: 'Mayor',
@@ -231,8 +255,8 @@ const messagesToDefine: IUserMessages = {
     id: 'constants.nationalRegistrar'
   },
   NATIONAL_SYSTEM_ADMIN: {
-    defaultMessage: 'System admin (national)',
-    description: 'The description for System admin (national)',
+    defaultMessage: 'National System Admin',
+    description: 'The description for National System Admin',
     id: 'constants.nationalSystemAdmin'
   },
   ORG_DIVISION: {
@@ -241,8 +265,8 @@ const messagesToDefine: IUserMessages = {
     id: 'constants.orgDivision'
   },
   PERFORMANCE_MANAGEMENT: {
-    defaultMessage: 'Performance Management',
-    description: 'The description for Performance Management role',
+    defaultMessage: 'Performance Manager',
+    description: 'The description for Performance Manager role',
     id: 'constants.performanceManagement'
   },
   profileTitle: {

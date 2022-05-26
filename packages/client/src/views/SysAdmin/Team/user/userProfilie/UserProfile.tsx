@@ -10,6 +10,7 @@
  * graphic logo are (registered/a) trademark(s) of Plan International.
  */
 import { messages } from '@client/i18n/messages/views/userSetup'
+import { messages as userFormMessages } from '@client/i18n/messages/views/userForm'
 import { withTheme } from '@client/styledComponents'
 import { goToTeamUserList, goToReviewUserDetails } from '@client/navigation'
 import * as React from 'react'
@@ -386,12 +387,17 @@ class UserProfileComponent extends React.Component<Props, State> {
                     </InformationHolder>
                     <InformationHolder>
                       <InformationTitle paddingRight={208}>
-                        {intl.formatMessage(messages.roleType)}
+                        {(user.type && intl.formatMessage(messages.roleType)) ||
+                          intl.formatMessage(userFormMessages.labelRole)}
                       </InformationTitle>
                       <InformationValue>
-                        {intl.formatMessage(userMessages[user.role as string])}{' '}
-                        /{' '}
-                        {intl.formatMessage(userMessages[user.type as string])}
+                        {(user.type &&
+                          `${intl.formatMessage(
+                            userMessages[user.role as string]
+                          )} / ${intl.formatMessage(
+                            userMessages[user.type as string]
+                          )}`) ||
+                          intl.formatMessage(userMessages[user.role as string])}
                       </InformationValue>
                     </InformationHolder>
                     <InformationHolder>

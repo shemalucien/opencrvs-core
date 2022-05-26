@@ -456,32 +456,32 @@ export const mockFetchRoleGraphqlOperation = {
         {
           title: 'Field Agent',
           value: 'FIELD_AGENT',
-          types: ['HOSPITAL', 'CHA']
+          types: [
+            'HEALTHCARE_WORKER',
+            'POLICE_OFFICER',
+            'LOCAL_LEADER',
+            'SOCIAL_WORKER'
+          ]
         },
         {
           title: 'Registration Agent',
-          value: 'REGISTRATION_AGENT',
-          types: ['ENTREPENEUR', 'DATA_ENTRY_CLERK']
+          value: 'REGISTRATION_AGENT'
         },
         {
           title: 'Registrar',
-          value: 'LOCAL_REGISTRAR',
-          types: ['SECRETARY', 'CHAIRMAN', 'MAYOR']
+          value: 'LOCAL_REGISTRAR'
         },
         {
-          title: 'System admin (local)',
-          value: 'LOCAL_SYSTEM_ADMIN',
-          types: ['LOCAL_SYSTEM_ADMIN']
+          title: 'Local System Admin',
+          value: 'LOCAL_SYSTEM_ADMIN'
         },
         {
-          title: 'System admin (national)',
-          value: 'NATIONAL_SYSTEM_ADMIN',
-          types: ['NATIONAL_SYSTEM_ADMIN']
+          title: 'National System Admin',
+          value: 'NATIONAL_SYSTEM_ADMIN'
         },
         {
           title: 'Performance Management',
-          value: 'PERFORMANCE_MANAGEMENT',
-          types: ['HEALTH_DIVISION', 'ORG_DIVISION']
+          value: 'PERFORMANCE_MANAGEMENT'
         }
       ]
     }

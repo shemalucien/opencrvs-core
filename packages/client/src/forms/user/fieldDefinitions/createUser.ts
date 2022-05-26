@@ -187,6 +187,12 @@ export const userSectionFormType: ISerializedFormSection = {
           required: true,
           initialValue: '',
           validate: [],
+          conditionals: [
+            {
+              action: 'hide',
+              expression: 'values.role!=="FIELD_AGENT"'
+            }
+          ],
           dynamicOptions: {
             dependency: 'role',
             options: {}

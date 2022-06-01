@@ -12,8 +12,8 @@
   * [Support functions](product-specifications/functional-architecture/support-functions.md)
   * [Admin functions](product-specifications/functional-architecture/admin-functions.md)
 * [Farajaland](product-specifications/farajaland.md)
-* [User roles](product-specifications/user-roles/README.md)
-  * [Tasks and permissions](product-specifications/user-roles/tasks-and-permissions.md)
+* [User roles](tasks-and-permissions.md)
+  * [Tasks and permissions](product-specifications/user-types.md)
   * [Examples](product-specifications/user-roles/examples.md)
 * [Status flow](product-specifications/status-flow.md)
 

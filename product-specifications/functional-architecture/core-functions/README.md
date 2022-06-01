@@ -4,8 +4,8 @@
 [notify.md](notify.md)
 {% endcontent-ref %}
 
-{% content-ref url="declaration.md" %}
-[declaration.md](declaration.md)
+{% content-ref url="declare-an-event.md" %}
+[declare-an-event.md](declare-an-event.md)
 {% endcontent-ref %}
 
 {% content-ref url="function-3.md" %}

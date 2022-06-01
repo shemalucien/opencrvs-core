@@ -7,7 +7,7 @@
 * [Functional architecture](product-specifications/functional-architecture.md)
   * [Core functions](product-specifications/functional-architecture/core-functions/README.md)
     * [Notify](product-specifications/functional-architecture/core-functions/notify.md)
-    * [Declaration](product-specifications/functional-architecture/core-functions/declaration.md)
+    * [Declare an event](product-specifications/functional-architecture/core-functions/declare-an-event.md)
     * [Function 3](product-specifications/functional-architecture/core-functions/function-3.md)
   * [Support functions](product-specifications/functional-architecture/support-functions.md)
   * [Admin functions](product-specifications/functional-architecture/admin-functions.md)

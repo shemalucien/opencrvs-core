@@ -1,3 +1,7 @@
+---
+layout: landing
+---
+
 # Tasks and permissions
 
 adada

@@ -4,13 +4,14 @@
 
 ## Product Specifications
 
-* [Functional architecture](product-specifications/functional-architecture.md)
-  * [Core functions](product-specifications/functional-architecture/core-functions/README.md)
-    * [Notify](product-specifications/functional-architecture/core-functions/notify.md)
-    * [Declare an event](product-specifications/functional-architecture/core-functions/declare-an-event.md)
-    * [Function 3](product-specifications/functional-architecture/core-functions/function-3.md)
-  * [Support functions](product-specifications/functional-architecture/support-functions.md)
-  * [Admin functions](product-specifications/functional-architecture/admin-functions.md)
+* [Function Architecture](product-specifications/function-architecture/README.md)
+  * [Core functions](product-specifications/function-architecture/core-functions/README.md)
+    * [Notify an event](product-specifications/function-architecture/core-functions/notify-an-event.md)
+    * [Declare an event](product-specifications/function-architecture/core-functions/declare-an-event.md)
+    * [Issue a certificate](product-specifications/function-architecture/core-functions/issue-a-certificate.md)
+  * [Function 3](product-specifications/function-architecture/function-3.md)
+  * [Support functions](product-specifications/function-architecture/support-functions.md)
+  * [Admin functions](product-specifications/function-architecture/admin-functions.md)
 * [Farajaland](product-specifications/farajaland.md)
 * [User roles](tasks-and-permissions.md)
   * [Tasks and permissions](product-specifications/user-types.md)
@@ -19,7 +20,9 @@
 
 ## Technology
 
-* [Stack & standards](technology/development-standards.md)
+* [Architecture](technology/architecture.md)
+* [Standards](technology/standards.md)
+* [APIS](technology/apis.md)
 * [Interoperability](technology/interoperability.md)
 
 ## Setup
@@ -50,7 +53,8 @@
     * [3.3.4 Set up an SMTP server for OpenCRVS monitoring alerts](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.4-set-up-an-smtp-server-for-opencrvs-monitoring-alerts.md)
     * [3.3.5 Setup DNS A records](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.5-setup-dns-a-records.md)
     * [3.3.6 Deploy](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy.md)
-* [4. Configuration](setup/4.-configuration.md)
+* [4. Configuration](setup/4.-configuration/README.md)
+  * [4.# Configure a certificate template](setup/4.-configuration/4.-configure-a-certificate-template.md)
 * [5. Testing](setup/5.-testing.md)
 * [6. Go live](setup/6.-go-live.md)
 

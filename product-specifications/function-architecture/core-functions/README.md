@@ -1,0 +1,12 @@
+# Core functions
+
+| Function            | Description                                                                                                                                                                                                            |   |   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - | - |
+| Notify an event     | Field agents can create and send notifications to their assigned office. Incomplete notifications appear in a Registration Agent and Registrar 'In Progress' workqueue and complete notification in Ready for review.  |   |   |
+| Declare an event    | ...                                                                                                                                                                                                                    |   |   |
+| Issue a certificate |                                                                                                                                                                                                                        |   |   |
+| ..                  |                                                                                                                                                                                                                        |   |   |
+| ..                  |                                                                                                                                                                                                                        |   |   |
+|                     |                                                                                                                                                                                                                        |   |   |
+|                     |                                                                                                                                                                                                                        |   |   |
+|                     |                                                                                                                                                                                                                        |   |   |

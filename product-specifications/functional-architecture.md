@@ -1,3 +1,2 @@
 # Functional architecture
 
-...

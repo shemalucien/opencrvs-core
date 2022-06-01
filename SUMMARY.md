@@ -11,13 +11,15 @@
     * [Function 3](product-specifications/functional-architecture/core-functions/function-3.md)
   * [Support functions](product-specifications/functional-architecture/support-functions.md)
   * [Admin functions](product-specifications/functional-architecture/admin-functions.md)
-* [User types](tasks-and-permissions.md)
-  * [Page 1](product-specifications/user-types/page-1.md)
-  * [Tasks and permissions](product-specifications/user-types.md)
+* [Farajaland](product-specifications/farajaland.md)
+* [Users](product-specifications/users/README.md)
+  * [Tasks and permissions](product-specifications/users/tasks-and-permissions.md)
+  * [Examples](product-specifications/users/examples.md)
+* [Statuses](product-specifications/statuses.md)
 
 ## Technology
 
-* [Development standards](technology/development-standards.md)
+* [Stack & standards](technology/stack-and-standards.md)
 * [Interoperability](technology/interoperability.md)
 
 ## Setup
@@ -57,3 +59,4 @@
 * [Resources](general/resources.md)
 * [Contributing](general/contributing.md)
 * [Change log](general/change-log.md)
+* [Roadmap](general/roadmap.md)

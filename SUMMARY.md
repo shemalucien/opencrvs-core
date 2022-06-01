@@ -12,14 +12,14 @@
   * [Support functions](product-specifications/functional-architecture/support-functions.md)
   * [Admin functions](product-specifications/functional-architecture/admin-functions.md)
 * [Farajaland](product-specifications/farajaland.md)
-* [Users](product-specifications/users/README.md)
-  * [Tasks and permissions](product-specifications/users/tasks-and-permissions.md)
-  * [Examples](product-specifications/users/examples.md)
-* [Statuses](product-specifications/statuses.md)
+* [User roles](product-specifications/user-roles/README.md)
+  * [Tasks and permissions](product-specifications/user-roles/tasks-and-permissions.md)
+  * [Examples](product-specifications/user-roles/examples.md)
+* [Status flow](product-specifications/status-flow.md)
 
 ## Technology
 
-* [Stack & standards](technology/stack-and-standards.md)
+* [Stack & standards](technology/development-standards.md)
 * [Interoperability](technology/interoperability.md)
 
 ## Setup

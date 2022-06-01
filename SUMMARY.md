@@ -5,7 +5,7 @@
 ## Product Specifications
 
 * [Functional architecture](product-specifications/functional-architecture.md)
-* [User types](product-specifications/user-types.md)
+* [Tasks and permissions](product-specifications/tasks-and-permissions.md)
 
 ## Technology
 
@@ -46,4 +46,4 @@
 
 ***
 
-* [Tasks and permissions](tasks-and-permissions.md)
+* [User types](user-types.md)

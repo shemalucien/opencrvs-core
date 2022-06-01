@@ -4,16 +4,16 @@
 
 ## Product Specifications
 
-* [Functional architecture](product-specifications/functional-architecture/README.md)
+* [Functional architecture](product-specifications/functional-architecture.md)
   * [Core functions](product-specifications/functional-architecture/core-functions/README.md)
     * [Notify](product-specifications/functional-architecture/core-functions/notify.md)
     * [Declaration](product-specifications/functional-architecture/core-functions/declaration.md)
     * [Function 3](product-specifications/functional-architecture/core-functions/function-3.md)
   * [Support functions](product-specifications/functional-architecture/support-functions.md)
   * [Admin functions](product-specifications/functional-architecture/admin-functions.md)
-* [User types](product-specifications/user-types/README.md)
+* [User types](tasks-and-permissions.md)
   * [Page 1](product-specifications/user-types/page-1.md)
-  * [Tasks and permissions](product-specifications/user-types/tasks-and-permissions.md)
+  * [Tasks and permissions](product-specifications/user-types.md)
 
 ## Technology
 

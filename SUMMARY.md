@@ -1,10 +1,10 @@
 # Table of contents
 
-* [Get Started](README.md)
+* [Introduction](README.md)
 
 ## Introduction
 
-* [Design principles](introduction/design-principles.md)
+* [Design principles](introduction-1/design-principles.md)
 
 ## Product Specifications
 

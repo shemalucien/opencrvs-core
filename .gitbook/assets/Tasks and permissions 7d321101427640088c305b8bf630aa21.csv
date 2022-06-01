@@ -1,0 +1,94 @@
+﻿#,Epic,Tasks,User Story,Version,Offline/Online,Field Agent,Registration Agent,Registrar,National Registrar,Performance Manager,Local System Admin,National System Admin,Developer
+1.1,Declare an Event,Create a new application,I want to start a new application so that a new event can be registered,v1,Offline,Yes,Yes,Yes,Yes,No,No,No,No
+1.2,Declare an Event,Add supporting documents,I want to upload supporting document so that the application can be verified,v1,Offline,Yes,Yes,Yes,No,No,No,No,No
+1.4,Declare an Event,Update an in-progress application,I want to continue an in-progress application so that it is ready to be reviewed,v1,Offline,Yes,Yes,Yes,No,No,No,No,No
+1.5,Declare an Event,Update an in-progress application (from Field Agent),I want to continue an in-progress started by a field agent so that it is ready to be reviewed,v1,Offline,No,Yes,Yes,No,No,No,No,No
+1.6,Declare an Event,Update an in-progress application (from Hospital),I want to continue an in-progress started in a hospital so that it is ready to be reviewed,v1,Offline,No,Yes,Yes,No,No,No,No,No
+1.7,Review and Register,Review an application,I want to review an application against a supporting document so that I'm confident it is ready to be registered,v1,Offline,No,Yes,Yes,No,No,No,No,No
+1.8,Review and Register,Send application for updates,I want to send an application for updates so that missing data can be added,v1,Online,No,Yes,Yes,No,No,No,No,No
+1.9,Review and Register,Update application that 'requires updates',I want to make updates to an application that was previously reviewed and deemed to require updates so that I can make the necessary changes,v1,Offline if data is already download,No,No,No,No,No,No,No,No
+1.10,Review and Register,Register an application,I want to register an application so that a unique registration number can be assigned and a certificate can be printed,v1,Online,No,No,Yes,No,No,No,No,No
+1.11,Review and Register,Reject an application,I want to reject an application and remove it from all workqueues (archive),GAP,Online,No,No,Yes,No,No,No,No,No
+1.11,Deduplication,Review duplicate applications,,v1,Offline,No,No,Yes,No,No,No,No,No
+1.12,Deduplication,Reject duplication application,,v1,Online,No,No,Yes,No,No,No,No,No
+2.1,Certification,Download record to print,,v1,Online,No,Yes,Yes,No,No,No,No,No
+2.2,Certification,Print fee receipt,,v1,Offline,No,Yes,Yes,No,No,No,No,No
+2.3,Certification,Print a certificate on collection,,v1,Online,No,Yes,Yes,No,No,No,No,No
+2.4,Certification,Print a certificate in advance,,v1,Offline,No,Yes,Yes,No,No,No,No,No
+2.5,Certification,Print with/without digital signatures,,v1,Offline,No,Yes,Yes,No,No,No,No,No
+3.1,Search,Search for a record by tracking no.,,v1,Offline if data is already download,No,Yes,Yes,Yes,No,No,No,No
+3.2,Search,Search for a record by name,,v1,Offline if data is already download,No,Yes,Yes,Yes,No,No,No,No
+3.3,Search,Search for a record by contact no.,,v1,Offline if data is already download,No,Yes,Yes,Yes,No,No,No,No
+3.4,Search,Search for a user,,v1,Offline if data is already download,No,Yes,Yes,Yes,No,Yes,Yes,No
+3.5,Search,Search for an office,,v1,Offline if data is already download,No,Yes,Yes,Yes,Yes,Yes,Yes,No
+4.1,Audit,View record history,,v1,Offline,No,Yes,Yes,Yes,No,Yes,Yes,No
+4.2,Audit,View user action history,,v1,Offline,No,No,Yes,Yes,No,Yes,Yes,No
+5.1,Correct Record,Request a correction,,v1,Online,No,Yes,No,No,No,No,No,No
+5.2,Correct Record,Correct a record (before first issuance of a certificate),,v1,Online,No,No,Yes,No,No,No,No,No
+5.3,Correct Record,Correct a record,allow a national registrar to correct any old record??? or only requests made by a local registrar,v1,Online,No,No,No,No,No,No,No,No
+5.4,Correct Record,Review a correction request,,v1,Online,No,No,No,No,No,No,No,No
+5.5,Correct Record,Approve a correction request,,v1,Online,No,No,No,No,No,No,No,No
+5.6,Correct Record,Reject a correction request,,,Online,No,No,No,No,No,No,No,No
+6.1,Team Management,View office team,I want to be able to be able to view all users in my office so that only active users have access to the application,v1,Online,Yes,Yes,Yes,No,No,No,No,No
+,Team Management,Create user (within jurisdiction),,v1,Online,No,No,No,No,No,Yes,Yes,No
+,Team Management,Create user (anywhere),,,,No,No,No,No,No,No,Yes,No
+,Team Management,Edit user,,v1,Online,No,No,No,No,No,Yes,Yes,No
+,Team Management,Audit user,,v1,Online,No,No,No,No,No,Yes,Yes,No
+,Team Management,Delegate authority,,,Online,No,No,Yes,Yes,No,No,No,No
+,Team Management,Deactivate user,I want to be able to request to deactivate users who no longer work on civil registration so that they can't conduct activities when they don't have an official role,v1,Online,No,No,No,No,No,Yes,Yes,No
+,Team Management,Reactivate user,"I want to be able to request to reactivate a users who has rejoined so that they can continue to conduct civil registration activities ",v1,Online,No,No,No,No,No,Yes,Yes,No
+,Team Management,Request new user,I want to be able to request the creation of a new user so that they can quickly get to work ,v2,Online,No,Yes,Yes,Yes,No,No,No,No
+,Team Management,Approve new user,,v2,Online,No,No,No,No,No,Yes,Yes,No
+,Performance Management,"Monitor personal achievements ",,v2,Online,Yes,Yes,Yes,Yes,Yes,No,No,No
+,Performance Management,Monitor registration rates,,v1,Online,No,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Performance Management,"Monitor operational data ",,v1,Online,No,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Performance Management,View reports,,v1,Online,No,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Performance Management,Export reports,,v1,Online,No,No,Yes,Yes,Yes,Yes,Yes,No
+,Account Settings,Update name,,v1,Online,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Account Settings,Update phone number,,v1,Online,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Account Settings,Change password,,v1,Online,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Account Settings,Change pin,,v1,Online,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Account Settings,Change profile image,,v1,Online,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Account Settings,Select system language,,v1,Offline,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Account Settings,Send username reminder,,v1,Online,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Account Settings,Reset password,,v1,Online,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No
+,Jurisdiction Config,Add a jurisdiction,,v2,Online,No,No,No,No,No,No,Yes,Yes
+,Jurisdiction Config,Re-assign an office to a different jurisdiction,,v2,Online,No,No,No,No,No,No,Yes,Yes
+,Jurisdiction Config,Deactivate a jurisdiction,,v2,Online,No,No,No,No,No,No,Yes,Yes
+,Jurisdiction Config,Rename a jurisdiction,,v2,Online,No,No,No,No,No,No,Yes,Yes
+,Jurisdiction Config,Add an office,,v2,Online,No,No,No,No,No,No,Yes,Yes
+,Jurisdiction Config,Deactivate an office,,v2,Online,No,No,No,No,No,No,Yes,Yes
+,Jurisdiction Config,Rename an office,,v2,Online,No,No,No,No,No,No,Yes,Yes
+,Registration Config,Set upfront tip/reminder text,,,,No,No,No,No,No,No,No,No
+,Registration Config,Configure form fields,"Edit form fields and copy (add, remove)",v1,Online,No,No,No,No,No,No,Yes,Yes
+,Registration Config,Configure form flow,conditional fields,,,No,No,No,No,No,No,No,No
+,Registration Config,Set registration period/s (eg. within 45 days),"Durations of on-time, late, delayed registration",v1,Online,No,No,No,No,No,No,Yes,Yes
+,Registration Config,"Set required supporting document ",,,,No,No,No,No,No,No,No,No
+,Registration Config,Set certificate fee amount,,v1,Online,No,No,No,No,No,No,Yes,Yes
+,Registration Config,Set late registration fees amount,,v1,Online,No,No,No,No,No,No,Yes,Yes
+,Registration Config,Upload review/certificate logo,,,,No,No,No,No,No,No,No,No
+,Registration Config,Upload certificate design,,,,No,No,No,No,No,No,No,No
+,Performance Config,CBR/CDR for National and sub-National levels,,,Online,No,No,No,No,No,No,Yes,Yes
+,Performance Config,Population data (National and sub-National),,,Online,No,No,No,No,No,No,Yes,Yes
+,Performance Config,Male/Female ratios (National and sub-National),,,Online,No,No,No,No,No,No,Yes,Yes
+,Comms Config,Create new communication (SMS),,,Online,No,No,No,No,No,No,Yes,Yes
+,Comms Config,Edit communications content (SMS),,,Online,No,No,No,No,No,No,Yes,Yes
+,Comms Config,Schedule communications (SMS),,,Online,No,No,No,No,No,No,Yes,Yes
+,Comms Config,Reschedule communications (SMS),,,Online,No,No,No,No,No,No,Yes,Yes
+,Comms Config,Create new push notification,,,Online,No,No,No,No,No,No,Yes,Yes
+,Comms Config,Edit push notification content,,,Online,No,No,No,No,No,No,Yes,Yes
+,Comms Config,Schedule push notification content,,,Online,No,No,No,No,No,No,Yes,Yes
+,Comms Config,Reschedule push notification content,,,Online,No,No,No,No,No,No,Yes,Yes
+,Comms Config,Send mass push notification (national and sub-national),,,Online,No,No,No,No,No,No,Yes,Yes
+,Personalisation,"Add new system language ",,v1,Online,No,No,No,No,No,No,Yes,Yes
+,Personalisation,Change logo,,,Online,No,No,No,No,No,No,Yes,Yes
+,Personalisation,Change primary colour,,,Online,No,No,No,No,No,No,Yes,Yes
+,Personalisation,Change login background,,,Online,No,No,No,No,No,No,Yes,Yes
+,Personalisation,Change theme,,,Online,No,No,No,No,No,No,Yes,Yes
+,Personalisation,Select dark mode/light mode,,,Offline,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+,Learning,Onboarding new user,,v1,Online,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+,,,,,,No,No,No,No,No,No,No,No
+,Payments,,,,,No,No,No,No,No,No,No,No
+,,,,,,No,No,No,No,No,No,No,No
+,,,,,,No,No,No,No,No,No,No,No
+,,,,,,No,No,No,No,No,No,No,No

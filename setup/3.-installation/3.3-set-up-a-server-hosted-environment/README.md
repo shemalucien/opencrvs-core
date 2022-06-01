@@ -1,12 +1,7 @@
----
-description: >-
-  This section outlines the process to setup and deploy OpenCRVS on a remote
-  server environment for Staging (developer testing), Quality Assurance or live
-  Production use.
----
+# 3.3 Set-up a server-hosted environment
 
-# 3.7 Set-up a server-hosted environment
-
+This section outlines the process to setup and deploy OpenCRVS on a remote server environment for Staging (developer testing), Quality Assurance or live Production use.\
+\
 First you need to provision 1, 3 or 5 Ubuntu servers, with an additional, optional backup server that have internet connectivity, in a secure location with cooling and uninterrupted power supply.  We recommend a minimum of a [Tier 2](https://en.wikipedia.org/wiki/Data\_center#Data\_center\_levels\_and\_tiers) data centre.
 
 #### Decide on the size of your deployment

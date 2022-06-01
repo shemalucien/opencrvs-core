@@ -2,11 +2,7 @@
 
 adada
 
-| #   | Task | Function |
-| --- | ---- | -------- |
-| 1   |      |          |
-| 1.1 |      |          |
-| 1.1 |      |          |
+<table><thead><tr><th>#</th><th>Function</th><th>Task</th><th data-type="checkbox">Field Agent</th><th data-type="checkbox">Registration Agent</th><th>Regsitrar</th><th></th></tr></thead><tbody><tr><td>1</td><td>Notify event</td><td>Create a new notification</td><td>true</td><td>true</td><td></td><td></td></tr><tr><td>1.1</td><td>Declare event</td><td>Create a new declaration</td><td>false</td><td>true</td><td></td><td></td></tr><tr><td>1.1</td><td></td><td></td><td>false</td><td>true</td><td></td><td></td></tr></tbody></table>
 
 
 

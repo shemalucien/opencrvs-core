@@ -5,6 +5,7 @@
 ## Product Specifications
 
 * [Functional architecture](product-specifications/functional-architecture.md)
+* [User types](product-specifications/user-types.md)
 
 ## Technology
 
@@ -42,3 +43,7 @@
 * [4. Configuration](setup/4.-configuration.md)
 * [5. Testing](setup/5.-testing.md)
 * [6. Go live](setup/6.-go-live.md)
+
+***
+
+* [Tasks and permissions](tasks-and-permissions.md)

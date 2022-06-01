@@ -13,6 +13,8 @@ OpenCRVS is…
 * ..
 * ..
 
+
+
 ### Principles
 
 OpenCRVS tries to solve the question of "Why?” with a few principles:
@@ -57,7 +59,9 @@ Use data generated from the system to inform design improvements.
 
 OpenCRVS is a global product. Consider the variability of what you are designing - will it work in other countries and contexts, and how will it be easily configured?
 
-***
+
+
+
 
 ### Demo
 

@@ -2,10 +2,6 @@
 
 * [Introduction](README.md)
 
-## Introduction
-
-* [Design principles](introduction-1/design-principles.md)
-
 ## Product Specifications
 
 * [Functional architecture](product-specifications/functional-architecture.md)

@@ -1,15 +1,15 @@
 # Function Architecture
 
-{% content-ref url="../../function-architecture/core-functions/notify-event.md" %}
-[notify-event.md](../../function-architecture/core-functions/notify-event.md)
+{% content-ref url="notify.md" %}
+[notify.md](notify.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../function-architecture/core-functions/declare-event.md" %}
-[declare-event.md](../../function-architecture/core-functions/declare-event.md)
+{% content-ref url="declare-an-event.md" %}
+[declare-an-event.md](declare-an-event.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../function-architecture/core-functions/correct-record.md" %}
-[correct-record.md](../../function-architecture/core-functions/correct-record.md)
+{% content-ref url="function-3.md" %}
+[function-3.md](function-3.md)
 {% endcontent-ref %}
 
 

@@ -1,3 +1,3 @@
-# Notify an event
+# Notify event
 
 Video of the flow?

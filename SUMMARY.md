@@ -33,7 +33,10 @@
   * [Data functions](product-specifications/functional-architecture/data-functions/README.md)
     * [Legacy data import](product-specifications/functional-architecture/data-functions/legacy-data-import.md)
     * [Legacy paper import](product-specifications/functional-architecture/data-functions/legacy-paper-import.md)
-* [Farajaland](product-specifications/farajaland.md)
+* [Farajaland](product-specifications/farajaland/README.md)
+  * [Configuration](product-specifications/farajaland/configuration.md)
+  * [Birth declaration form](product-specifications/farajaland/birth-declaration-form.md)
+  * [Certificate](product-specifications/farajaland/certificate.md)
 * [Status flow](product-specifications/status-flow.md)
 
 ## Technology

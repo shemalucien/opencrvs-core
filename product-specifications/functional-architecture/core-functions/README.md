@@ -1,22 +1,12 @@
-# Function Architecture
+# Core functions
 
-![](../../../.gitbook/assets/functional-architecture-v1.png)
-
-{% content-ref url="notify.md" %}
-[notify.md](notify.md)
-{% endcontent-ref %}
-
-{% content-ref url="declare-an-event.md" %}
-[declare-an-event.md](declare-an-event.md)
-{% endcontent-ref %}
-
-{% content-ref url="function-3.md" %}
-[function-3.md](function-3.md)
-{% endcontent-ref %}
-
-
-
-
-
-
-
+| Function            | Description                                                                                                                                                                                                            |   |   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - | - |
+| Notify an event     | Field agents can create and send notifications to their assigned office. Incomplete notifications appear in a Registration Agent and Registrar 'In Progress' workqueue and complete notification in Ready for review.  |   |   |
+| Declare an event    | ...                                                                                                                                                                                                                    |   |   |
+| Issue a certificate |                                                                                                                                                                                                                        |   |   |
+| ..                  |                                                                                                                                                                                                                        |   |   |
+| ..                  |                                                                                                                                                                                                                        |   |   |
+|                     |                                                                                                                                                                                                                        |   |   |
+|                     |                                                                                                                                                                                                                        |   |   |
+|                     |                                                                                                                                                                                                                        |   |   |

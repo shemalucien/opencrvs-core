@@ -5,9 +5,9 @@
 ## Product Specifications
 
 * [Function Architecture](product-specifications/functional-architecture/core-functions/README.md)
-  * [User roles](tasks-and-permissions.md)
-    * [Tasks and permissions](product-specifications/user-types.md)
-    * [Examples](product-specifications/user-roles/examples.md)
+  * [Users](product-specifications/function-architecture/users/README.md)
+    * [Tasks and permissions](product-specifications/function-architecture/users/tasks-and-permissions.md)
+    * [Examples](product-specifications/function-architecture/users/examples.md)
   * [Core functions](product-specifications/functional-architecture.md)
     * [Notify event](product-specifications/functional-architecture/core-functions/notify.md)
     * [Declare event](product-specifications/functional-architecture/core-functions/declare-an-event.md)

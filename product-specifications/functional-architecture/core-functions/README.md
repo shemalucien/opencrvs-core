@@ -1,4 +1,4 @@
-# Functional Architecture
+# Function Architecture
 
 ![](../../../.gitbook/assets/functional-architecture-v1.png)
 

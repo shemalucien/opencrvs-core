@@ -6,8 +6,8 @@
 [notify.md](notify.md)
 {% endcontent-ref %}
 
-{% content-ref url="declare-an-event.md" %}
-[declare-an-event.md](declare-an-event.md)
+{% content-ref url="2.-declare-event.md" %}
+[2.-declare-event.md](2.-declare-event.md)
 {% endcontent-ref %}
 
 {% content-ref url="function-3.md" %}

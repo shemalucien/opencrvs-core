@@ -81,6 +81,7 @@
 * [7. Monitoring](setup/7.-monitoring/README.md)
   * [7.# Application logs](setup/7.-monitoring/7.-application-logs.md)
   * [7.# Application Performance Monitoring (APM)](setup/7.-monitoring/7.-application-performance-monitoring-apm.md)
+  * [7.# Setting up alerts](setup/7.-monitoring/7.-setting-up-alerts.md)
 
 ## General
 

@@ -79,9 +79,9 @@
 * [5. Testing](setup/5.-testing.md)
 * [6. Go live](setup/6.-go-live.md)
 * [7. Monitoring](setup/7.-monitoring/README.md)
-  * [7.# Application logs](setup/7.-monitoring/7.-application-logs.md)
-  * [7.# Application Performance Monitoring (APM)](setup/7.-monitoring/7.-application-performance-monitoring-apm.md)
-  * [7.# Setting up alerts](setup/7.-monitoring/7.-setting-up-alerts.md)
+  * [7.1 Application logs](setup/7.-monitoring/7.1-application-logs.md)
+  * [7.2 Application Performance Monitoring (APM)](setup/7.-monitoring/7.2-application-performance-monitoring-apm.md)
+  * [7.3 Setting up alerts](setup/7.-monitoring/7.3-setting-up-alerts.md)
 
 ## General
 

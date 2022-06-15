@@ -22,7 +22,7 @@ These tools are only available for server-hosted environments and are not part o
 
 ### Application Performance Monitoring (APM)
 
-The OpenCRVS monitoring stack comes with a pre-installed Application Performance Monitoring tool (APM). You can find this tool in Kibana by navigating to **Observability -> APM -> Services**. This tool gives you a good view of the health of each individual service and helps you discover bottlenecks in the environment.
+The OpenCRVS monitoring stack comes with a pre-installed Application Performance Monitoring tool (APM). This tool collects performance metrics, errors and HTTP request information from each of the services in the OpenCRVS stack. You can find this tool in Kibana by navigating to **Observability -> APM -> Services**. This tool can be used to catch anomalies such as errors happening inside the services. It can also be used to detect bottlenecks and to know which services should be scaled up.
 
 ![](<../../.gitbook/assets/image (3) (1).png>)
 

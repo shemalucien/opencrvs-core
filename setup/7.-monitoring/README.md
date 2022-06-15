@@ -18,6 +18,15 @@ The login credentials are the ones you used as `KIBANA_USERNAME`  and `KIBANA_PA
 These tools are only available for server-hosted environments and are not part of the development environment.
 {% endhint %}
 
+### Application Performance Monitoring (APM)
+
+The OpenCRVS monitoring stack comes with a pre-installed Application Performance Monitoring tool (APM). You can find this tool in Kibana by navigating to **Observability -> APM -> Services**. This tool gives you a good view of the health of each individual service and helps you discover bottlenecks in the environment.
+
+![](<../../.gitbook/assets/image (3) (1).png>)
+
+
+
 #### Read more
 
 * [Kibana—your window into Elastic](https://www.elastic.co/guide/en/kibana/current/introduction.html#introduction)
+* [Application Performance Monitoring (APM)](https://www.elastic.co/observability/application-performance-monitoring)

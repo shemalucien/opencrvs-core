@@ -20,11 +20,21 @@ The login credentials are the ones you used as `KIBANA_USERNAME`  and `KIBANA_PA
 These tools are only available for server-hosted environments and are not part of the development environment.
 {% endhint %}
 
+## What's included?
+
+### Metricbeat
+
+Metricbeat gets installed on all host machines in your infrastructure. Its sole purpose is to collect data about the network, the host machines and the Docker environment. The data is stored in the OpenCRVS Elasticsearch database. This data can be viewed by navigating to **Observability -> Metrics** and selecting either **Inventory** or **Metrics Explorer.** The data can be visualised, grouped and filtered in these views.
+
 ### Application Performance Monitoring (APM)
 
 The OpenCRVS monitoring stack comes with a pre-installed Application Performance Monitoring tool (APM). This tool collects performance metrics, errors and HTTP request information from each of the services in the OpenCRVS stack. You can find this tool in Kibana by navigating to **Observability -> APM -> Services**. This tool can be used to catch anomalies such as errors happening inside the services. It can also be used to detect bottlenecks and to know which services should be scaled up.
 
 ![](<../../.gitbook/assets/image (3) (1).png>)
+
+### Logstash
+
+Logstash receives log entries in [GELF format](https://docs.graylog.org/docs/gelf) from all OpenCRVS services and writes them into the Elasticsearch database. These logs can be viewed in real-time from **Observability -> Logs -> Stream** or through APM. By default, OpenCRVS stores all logs for three days before they are removed. Read more about logging in [7.1 Application logs](7.1-application-logs.md).
 
 
 

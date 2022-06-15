@@ -5,10 +5,12 @@ OpenCRVS comes with a pre-installed suite of tools for monitoring and debugging 
 #### The monitoring setup of OpenCRVS features:
 
 * Reading & searching for application logs
-* Measuring infrastructure load to know when to scale up
-* Setting up alerts for application errors and infrastructure health issues
+* Insights on infrastructure performance & usage to know when to scale up
+* Setting up alerts for application errors and for infrastructure health issues
 
-Once the environment is installed, the monitoring suite can be accessed using the _kibana.\<your\_domain>_ URL.&#x20;
+### Getting started
+
+Once the environment is installed, the monitoring suite can be accessed using the `kibana.<your_domain>` __ URL.&#x20;
 
 ![](<../../.gitbook/assets/image (7) (1).png>)
 

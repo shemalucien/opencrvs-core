@@ -81,8 +81,9 @@
 * [7. Monitoring](setup/7.-monitoring/README.md)
   * [7.1 Application logs](setup/7.-monitoring/7.1-application-logs.md)
   * [7.2 Application Performance Monitoring (APM)](setup/7.-monitoring/7.2-application-performance-monitoring-apm.md)
-  * [7.3 Setting up alerts](setup/7.-monitoring/7.3-setting-up-alerts.md)
-  * [7.4 Server health](setup/7.-monitoring/7.4-server-health.md)
+  * [7.3 Server health](setup/7.-monitoring/7.3-server-health.md)
+  * [7.4 Routine monitoring checklist](setup/7.-monitoring/7.4-routine-monitoring-checklist.md)
+  * [7.5 Setting up alerts](setup/7.-monitoring/7.5-setting-up-alerts.md)
 
 ## General
 

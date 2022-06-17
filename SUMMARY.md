@@ -82,7 +82,7 @@
   * [7.1 Application logs](setup/7.-monitoring/7.1-application-logs.md)
   * [7.2 Infrastructure health](setup/7.-monitoring/7.3-server-health.md)
   * [7.3 Routine monitoring checklist](setup/7.-monitoring/7.4-routine-monitoring-checklist.md)
-  * [7.4 Setting up alerts](setup/7.-monitoring/7.4-setting-up-alerts.md)
+  * [7.4 Setting up alerts](setup/7.-monitoring/7.5-setting-up-alerts.md)
 
 ## General
 

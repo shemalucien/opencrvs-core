@@ -1,20 +1,6 @@
-# Function Architecture
+# Functional Architecture
 
-![](../../../.gitbook/assets/functional-architecture-v1.png)
-
-{% content-ref url="notify.md" %}
-[notify.md](notify.md)
-{% endcontent-ref %}
-
-{% content-ref url="declare-an-event.md" %}
-[declare-an-event.md](declare-an-event.md)
-{% endcontent-ref %}
-
-{% content-ref url="function-3.md" %}
-[function-3.md](function-3.md)
-{% endcontent-ref %}
-
-
+{% embed url="https://www.figma.com/file/aF3iB0u9yIxTHB9uOFII3G/Functional-Architecture?node-id=0:1" %}
 
 
 

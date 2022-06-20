@@ -75,6 +75,8 @@
     * [3.3.5 Setup DNS A records](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.5-setup-dns-a-records.md)
     * [3.3.6 Deploy](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy.md)
 * [4. Configuration](setup/4.-configuration.md)
+  * [4.# Configure declaration forms](setup/4.-configuration/4.-configure-declaration-forms.md)
+  * [4.# Configure application settings](setup/4.-configuration/4.-configure-application-settings.md)
   * [4.# Configure a certificate template](setup/4.-configuration/4.-configure-a-certificate-template.md)
 * [5. Testing](setup/5.-testing.md)
 * [6. Go live](setup/6.-go-live.md)

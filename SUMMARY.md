@@ -79,7 +79,7 @@
 * [4. Configuration](setup/4.-configuration.md)
   * [4.1 Configure application settings](setup/4.-configuration/4.1-configure-application-settings.md)
   * [4.2 Configure registration periods and fees](setup/4.-configuration/4.2-configure-registration-periods-and-fees.md)
-  * [4.3 Configure declaration forms](setup/4.-configuration/4.3-configure-declaration-forms.md)
+  * [4.3 Configure declaration forms](setup/4.-configuration/4.-configure-declaration-forms.md)
   * [4.# Configure a certificate template](setup/4.-configuration/4.-configure-a-certificate-template.md)
 * [5. Testing](setup/5.-testing.md)
 * [6. Go live](setup/6.-go-live.md)

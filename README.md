@@ -9,7 +9,7 @@ OpenCRVS is an open-source digital solution for civil registration designed for 
 * Civil registration is the foundation of legal identity and rights-based service delivery. A Civil Registration and Vital Statistics (CRVS) system records the details of all major life events, such as births and deaths.&#x20;
 * It is an essential component of the "leave no one behind" agenda and without it working effectively, it is virtually impossible to ensure inclusive growth.&#x20;
 * Unfortunately in many countries CRVS systems are broken. 1 in 4 children under the age of 5 are not registered at birth and hence do not officially exist (UNICEF). As a result, they struggle to access basic rights like education, healthcare and social protection.
-* We have conducted technical analysis of CRVS systems in Pakistan, Bangladesh, Indonesia, Malawi, Uganda and understand the challenges experienced by parents when trying to register their children:
+* We have conducted technical analysis of CRVS systems in Pakistan, Bangladesh, Indonesia, Malawi, Uganda and understand the challenges experienced by parents when trying to register their children
 * They need to travel long distances to register and often need to make several trips before receiving the birth certificate
 * They are faced with bureaucratic civil registration process with long delays, requests for unofficial payments and are not kept informed about the status of their application
 * Systems are not integrated so birth registration does not lead to automatic access to other rights e.g. vaccination programmes, enrolment in social protection schemes etc.

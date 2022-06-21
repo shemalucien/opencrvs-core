@@ -1,13 +1,2 @@
 # Roadmap
 
-### Upcoming features:
-
-\-
-
-\-
-
-\-
-
-\-
-
-\-

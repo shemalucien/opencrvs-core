@@ -30,7 +30,7 @@ Metricbeat gets installed on all host machines in your infrastructure. Its sole 
 
 The OpenCRVS monitoring stack comes with a pre-installed Application Performance Monitoring tool (APM). This tool collects performance metrics, errors and HTTP request information from each of the services in the OpenCRVS stack. You can find this tool in Kibana by navigating to **Observability -> APM -> Services**. This tool can be used to catch anomalies such as errors happening inside the services. It can also be used to detect bottlenecks and to know which services should be scaled up.
 
-![](<../../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 #### Logstash
 

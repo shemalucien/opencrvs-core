@@ -1,4 +1,4 @@
-# 3.2.3 Configure CR offices and Health facilities
+# 3.2.3 Set up CR offices and Health facilities
 
 The next step is to prepare csv files to import into OpenCRVS all of the offices where civil registration staff work and all of the health facilities where births and deaths can occur in a medical setting.
 

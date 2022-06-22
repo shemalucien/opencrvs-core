@@ -14,6 +14,7 @@
     * [Validate event](product-specifications/function-architecture/core-functions/validate-event.md)
     * [Register event](product-specifications/function-architecture/core-functions/register-event.md)
     * [Issue certificate](product-specifications/function-architecture/core-functions/issue-a-certificate.md)
+    * [Search for a record](product-specifications/functional-architecture/core-functions/search-for-a-record.md)
     * [Correct record](product-specifications/functional-architecture/core-functions/function-3.md)
     * [Verify record](product-specifications/function-architecture/core-functions/verify-record.md)
     * [Vital statistics export](product-specifications/function-architecture/core-functions/vital-statistics-export.md)

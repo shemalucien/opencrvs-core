@@ -73,7 +73,7 @@
       * [3.2.3.1 Prepare source file for test employees](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.4-set-up-employees-for-testing-or-production/3.2.3.1-prepare-source-file-for-test-employees.md)
       * [3.2.3.2 Prepare source file for production employees](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.4-set-up-employees-for-testing-or-production/3.2.3.2-prepare-source-file-for-production-employees.md)
     * [3.2.5 Import set up files](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.5-generate-factory-reset-reference-data-backups.md)
-    * [3.2.6 Create factory reset backups for development](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.6-create-factory-reset-backups-for-development.md)
+    * [3.2.6 Create factory reset reference data backups](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.6-create-factory-reset-reference-data-backups.md)
     * [3.2.7 Set-up multi language content](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.6-set-up-multi-language-content.md)
     * [3.2.8 Set up BRN/DRN registration and interoperability](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.7-set-up-brn-drn-registration-and-interoperability.md)
     * [3.2.9 Set up required settings](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.9-set-up-required-settings.md)

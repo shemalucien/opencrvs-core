@@ -1,6 +1,6 @@
 # Validate event
 
-In order to register the vital event, it first needs to be validated by an authorised user. In OpenCRVS, authorised users can review the data submitted in the declaration form, side by side with the supporting documents to ensure that it is accurate before the vital event is registered.
+In order to register the vital event, it first needs to be validated by an authorised user. In OpenCRVS, authorised users can review the data submitted in the declaration form, side by side with the supporting documents to ensure that it is accurate before the vital event is registered. If the information is correct, the Registrar can go on to register the vital event; if it is not correct, it can be sent for updates.
 
 ### Tasks and permissions
 

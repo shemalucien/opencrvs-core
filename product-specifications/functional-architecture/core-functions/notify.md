@@ -1,6 +1,6 @@
 # Notify event
 
-This functionality allows a partially complete declaration to be submitted for follow-up and action. This can be done by a user using OpenCRVS, starting and submitting an incomplete declaration form, or as a notification pushed from an existing digital health system.&#x20;
+This functionality allows a partially complete declaration to be submitted for follow-up and action. This can be done by a user using OpenCRVS, starting and submitting an incomplete declaration form, or as a notification pushed from an existing digital health system e.g. DHIS2.&#x20;
 
 ### Tasks and permissions
 

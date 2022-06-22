@@ -54,6 +54,7 @@
 * [1. Establish team](setup/1.-establish-team.md)
 * [2. Gather requirements](setup/2.-gather-requirements.md)
 * [3. Installation](setup/3.-installation/README.md)
+  * [Configure declaration forms](setup/3.-installation/configure-declaration-forms.md)
   * [3.1 Set-up a development environment](setup/3.-installation/3.1-set-up-a-development-environment/README.md)
     * [3.1.1 Install the required dependencies](setup/3.-installation/3.1-set-up-a-development-environment/3.1.1-install-the-required-dependencies.md)
     * [3.1.2 Install OpenCRVS locally](setup/3.-installation/3.1-set-up-a-development-environment/3.1.2-install-opencrvs-locally.md)

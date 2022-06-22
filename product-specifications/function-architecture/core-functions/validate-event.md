@@ -1,5 +1,7 @@
 # Validate event
 
+In order to register the vital event, it first needs to be validated by an authorised user. In OpenCRVS, authorised users can review the data submitted in the declaration form, side by side with the supporting documents to ensure that it is accurate before the vital event is registered.
+
 ### Tasks and permissions
 
 <table><thead><tr><th>#</th><th>Tasks</th><th>Version</th><th>Offline/Online</th><th data-type="checkbox">Field Agent</th><th data-type="checkbox">Registration Agent</th><th data-type="checkbox">Registrar</th><th data-type="checkbox">National Registrar</th><th data-type="checkbox">Performance Manager</th><th data-type="checkbox">Local System Admin</th><th data-type="checkbox">National System Admin</th></tr></thead><tbody><tr><td>3.1</td><td>Review a declaration</td><td>v1</td><td>Offline</td><td>false</td><td>true</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr><tr><td>3.2</td><td>Send declaration for approval</td><td>v1</td><td>Online</td><td>false</td><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr><tr><td>3.3</td><td>Send declaration for updates</td><td>v1</td><td>Online</td><td>false</td><td>true</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr><tr><td>3.4</td><td>Update rejected declaration (requires updates)</td><td>v1</td><td>Offline if data is already download</td><td>false</td><td>true</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr></tbody></table>

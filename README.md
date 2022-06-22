@@ -18,7 +18,7 @@ OpenCRVS is an open-source digital solution for civil registration designed for 
 
 ### Design Principles
 
-OpenCRVS tries to solve the question of "Why?” with a few principles:
+OpenCRVS solves the question of "Why?” with these principles:
 
 #### **Start with users' needs**
 

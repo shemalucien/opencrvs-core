@@ -17,23 +17,29 @@ Please join our .....    chatroom if you need to talk to us at any time regardin
 
 As you join the OpenCRVS community, we request that you collaborate in the spirit of our joint values.
 
-**We are open**\
-_****_We are a community. We share what we’re doing - code, designs, tools and ideas, and work well with others.
+#### **We are open**
 
-**We are rights-based**\
-_****_We take every action possible to ensure that no-one is left behind. We are inclusive, don't discriminate and protect as a priority.
+We are a community. We share what we’re doing - code, designs, tools and ideas, and work well with others.
 
-**We are human-centered**\
-_****We put people first._ _We design with our users to ensure that the system works for them._
+#### **We are rights-based**
 
-**We are future focused**\
-_****_We build for the future. We use proven technologies that can adapt to inevitable change.
+We take every action possible to ensure that no-one is left behind. We are inclusive, don't discriminate and protect as a priority.
 
-**We challenge the status quo**\
-****We challenge business as usual. Civil registration systems are broken so we need to think differently and innovate.
+#### **We are human-centered**
 
-**We are trusted**\
-****We respect privacy as a fundamental human right.
+We put people first. We design with our users to ensure that the system works for them.
+
+#### **We are future focused**
+
+We build for the future. We use proven technologies that can adapt to inevitable change.
+
+#### **We challenge the status quo**
+
+We challenge business as usual. Civil registration systems are broken so we need to think differently and innovate.
+
+#### **We are trusted**
+
+We respect privacy as a fundamental human right.
 
 
 

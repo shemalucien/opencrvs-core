@@ -1,5 +1,5 @@
 # Search for a record
 
-
+### Tasks and permissions
 
 <table><thead><tr><th>#</th><th>Tasks</th><th>Version</th><th>Offline/Online</th><th data-type="checkbox">Field Agent</th><th data-type="checkbox">Registration Agent</th><th data-type="checkbox">Registrar</th><th data-type="checkbox">National Registrar</th><th data-type="checkbox">Performance Manager</th><th data-type="checkbox">Local System Admin</th><th data-type="checkbox">National System Admin</th></tr></thead><tbody><tr><td>6.1</td><td>Search for a record by tracking no.</td><td>v1</td><td>Online</td><td>true</td><td>true</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr><tr><td>6.2</td><td>Search for a record by name</td><td>v1</td><td>Online</td><td>true</td><td>true</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr><tr><td>6.3</td><td>Search for a record by contact no.</td><td>v1</td><td>Online</td><td>true</td><td>true</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr><tr><td>6.4 </td><td>Search for a record by BRN/DRN</td><td>v1</td><td>Online</td><td>true</td><td>true</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr></tbody></table>

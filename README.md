@@ -1,4 +1,4 @@
-# Introduction
+# 👋 Introduction
 
 OpenCRVS is an open-source digital solution for civil registration designed for low resource settings and available as a Digital Public Good.
 

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [👋 Introduction](README.md)
 
 ## Product Specifications
 
@@ -10,7 +10,7 @@
     * [Examples](product-specifications/function-architecture/users/examples.md)
   * [Core functions](product-specifications/functional-architecture.md)
     * [Notify event](product-specifications/functional-architecture/core-functions/notify.md)
-    * [Declare event](product-specifications/functional-architecture/core-functions/declare-event.md)
+    * [Declare event](product-specifications/functional-architecture/core-functions/declare-an-event.md)
     * [Validate event](product-specifications/function-architecture/core-functions/validate-event.md)
     * [Register event](product-specifications/function-architecture/core-functions/register-event.md)
     * [Issue certificate](product-specifications/function-architecture/core-functions/issue-a-certificate.md)
@@ -95,7 +95,6 @@
 
 ## General
 
-* [Resources](general/resources.md)
 * [Contributing](general/contributing.md)
 * [Change log](general/change-log.md)
 * [Roadmap](general/roadmap.md)

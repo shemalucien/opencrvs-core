@@ -1,6 +1,6 @@
 # Correct record
 
-Mistakes can be made during any administrative process and therefore the ability to correct these in a safe and auditable way needs to be available. OpenCRVS allows authorised users to correct a record, provide a reason for the correction, attach accompanying supporting documents and make the correction, keeping an audit of all actions throughout.
+Mistakes can be made during any administrative process and therefore the ability to correct these in a safe manner, along with an audit trail, needs to be available. OpenCRVS allows authorised users to correct a record, provide a reason for the correction, attach accompanying supporting documents and make the correction, keeping an audit of all actions throughout.
 
 ### Tasks and permissions
 

@@ -1,5 +1,7 @@
 # Correct record
 
+Mistakes can be made during any administrative process and therefore the ability to correct these in a safe and auditable way needs to be available. OpenCRVS allows authorised users to correct a record, provide a reason for the correction, attach accompanying supporting documents and make the correction, keeping an audit of all actions throughout.
+
 ### Tasks and permissions
 
 <table><thead><tr><th>#</th><th>Tasks</th><th>Version</th><th>Offline/Online</th><th data-type="checkbox">Field Agent</th><th data-type="checkbox">Registration Agent</th><th data-type="checkbox">Registrar</th><th data-type="checkbox">National Registrar</th><th data-type="checkbox">Performance Manager</th><th data-type="checkbox">Local System Admin</th><th data-type="checkbox">National System Admin</th></tr></thead><tbody><tr><td>7.1</td><td>Validate requestor ID</td><td>v1</td><td>Online</td><td>false</td><td>false</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr><tr><td>7.2</td><td>Give reason for correction</td><td>v1</td><td>Online</td><td>false</td><td>false</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr><tr><td>7.3</td><td>Upload supporting documents</td><td>v1</td><td>Online</td><td>false</td><td>false</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr><tr><td>7.4 </td><td>Correct record</td><td>v1</td><td>Online</td><td>false</td><td>false</td><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td></tr></tbody></table>

@@ -1,6 +1,6 @@
 # Declare event
 
-A vital event declaration is the submission of the details of the occurrence and characteristics of the vital event as outlined in law, for the purpose of civil registration. This data is usually captured through a declaration form that includes a set of mandatory fields, alongside any mandatory supporting documents. OpenCRVS provides a digital vital event form that can be completed by a number of authorised users, also allowing users to attach a digital copy of the supporting documents required for registration.&#x20;
+A vital event declaration is the submission of the details of the occurrence and characteristics of the vital event as outlined in law, for the purpose of civil registration. This data is usually captured through a declaration form that includes a set of mandatory fields, alongside any mandatory supporting documents. OpenCRVS provides a digital vital event form that can be completed by a number of authorised users, also allowing users to attach a digital copy of the supporting documents required for registration. This data can then be sent for review and/or registered by a Registrar.
 
 ### Tasks and permissions
 

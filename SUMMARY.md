@@ -68,7 +68,7 @@
     * [3.2.3 Configure CR offices and Health facilities](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.3-configure-cr-offices-and-health-facilities/README.md)
       * [3.2.3.1 Prepare source file for CRVS Office facilities](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.3-configure-cr-offices-and-health-facilities/3.2.3.1-prepare-source-file-for-crvs-office-facilities.md)
       * [3.2.3.2 Prepare source file for health facilities](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.3-configure-cr-offices-and-health-facilities/3.2.3.2-prepare-source-file-for-health-facilities.md)
-    * [3.2.4 Configure employees for testing or production](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.4-import-employees-for-testing-or-production.md)
+    * [3.2.4 Set up employees for testing or production](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.4-set-up-employees-for-testing-or-production.md)
     * [3.2.5 Generate factory reset, reference data backups](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.5-generate-factory-reset-reference-data-backups.md)
     * [3.2.6 Set-up multi language content](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.6-set-up-multi-language-content.md)
     * [3.2.7 Configure BRN/DRN registration and interoperability](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.7-configure-brn-drn-registration-and-interoperability.md)

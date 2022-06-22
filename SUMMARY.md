@@ -51,7 +51,6 @@
 
 ## Setup
 
-* [0. Before you start](setup/0.-before-you-start.md)
 * [1. Establish team](setup/1.-establish-team.md)
 * [2. Gather requirements](setup/2.-gather-requirements.md)
 * [3. Installation](setup/3.-installation/README.md)
@@ -65,7 +64,7 @@
     * [3.2.2 Configure administrative address divisions](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.2-configure-administrative-address-structure.md)
       * [3.2.2.1 Prepare source files for state and district levels](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.2-configure-administrative-address-divisions/3.2.2.1-prepare-source-files-for-state-and-district-levels.md)
       * [3.2.2.2 Prepare source file for district level statistics](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.2-configure-administrative-address-divisions/3.2.2.2-prepare-source-file-for-district-level-statistics.md)
-    * [3.2.3 Configure CR offices and Health facilities](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.3-import-cr-offices-and-health-facilities.md)
+    * [3.2.3 Configure CR offices and Health facilities](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.3-configure-cr-offices-and-health-facilities/README.md)
       * [3.2.3.1 Prepare source file for CRVS Office facilities](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.3-configure-cr-offices-and-health-facilities/3.2.3.1-prepare-source-file-for-crvs-office-facilities.md)
       * [3.2.3.2 Prepare source file for health facilities](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.3-configure-cr-offices-and-health-facilities/3.2.3.2-prepare-source-file-for-health-facilities.md)
     * [3.2.4 Configure employees for testing or production](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.4-import-employees-for-testing-or-production.md)

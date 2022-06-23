@@ -40,7 +40,23 @@ Our international, development teams work in an Agile way, in tandem with local 
 
 ### What are the key OpenSource dependencies of OpenCRVS?
 
-The following dependencies are automatically provisioned alongside the OpenCRVS Core in [docker](https://www.docker.com/) containers.
+The following dependencies are automatically provisioned alongside the OpenCRVS Core in [docker](https://www.docker.com/) containers in a Docker Swarm on Ubuntu.
+
+### Why Docker Swarm?  Is there a plan for Kubernetes?
+
+[Docker Swarm](https://docs.docker.com/engine/swarm/) was chosen by our architects in 2018 for it's lack of accompanying dependencies, it's simplicity and in terms of installation and monitoring on a [Tier 2 private data centre](https://en.wikipedia.org/wiki/Data\_center), on bare metal servers with headless [Ubuntu OS](https://en.wikipedia.org/wiki/Ubuntu) which will be the requirement for many governments.
+
+Many nations may be located far from a developed world data-centre above Tier 2.&#x20;
+
+Many nations may not be able to legally support international data storage of citizen data ona public cloud.&#x20;
+
+Getting the legal approval for external storage of citizen data requires regulatory change which obviously can take some time.&#x20;
+
+In the short term, these nations may not have access to the development skills necessary to manage a private cloud and manage the dependencies of Kubernetes, so ease-of-use is paramount.
+
+Previously unskilled system administrators can quickly up-skill in the techniques of private and public cloud infrastructure management using Docker Swarm. We wanted to democratise containerisation benefits for developing nations.
+
+We are working on a [Kubernetes](https://kubernetes.io/) migration now that Kubernetes has become more mature, easier to use and configure thanks to dependencies like Helm and other plugins. As a result Kubernetes has seen a much a bigger increase in popularity since 2018.  in the meantime, Docker Swarm makes it easy to commence containerised microservice package distribution privately,  automatically configures a "round robin" load balanced cluster, and provides Service Discovery out-the-box.
 
 \
 

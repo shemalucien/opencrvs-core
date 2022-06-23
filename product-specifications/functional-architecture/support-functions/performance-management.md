@@ -1,4 +1,12 @@
+---
+description: User views a suite of performance and operational level data in a dashboard
+---
+
 # Performance management
+
+Real-time data visualisations of civil registration data help civil registration managers understand the health of their system and services and inform targeted corrective action. The dashboard as designed allows users to view key performance indicators at a national and sub-national level, as well as the performance of individual registration staff.&#x20;
+
+For a full list of KPIs available, see the table below.
 
 ### Tasks and permissions
 

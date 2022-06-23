@@ -1,4 +1,10 @@
+---
+description: Configure the product to reflect country needs
+---
+
 # Config management
+
+OpenCRVS makes it easy for you to configure it for your needs. Explore [Broken link](broken-reference "mention") for detailed step-by-step guidance of how to do this. Some tasks can be done directly in the user interface e.g. adding a logo, building your vital event forms, and uploading a certificate format; others need to be done in the back-end, such as uploading administrative data.
 
 ### Tasks and permissions
 

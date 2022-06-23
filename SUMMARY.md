@@ -42,7 +42,7 @@
     * [User / role mapping](product-specifications/farajaland/opencrvs-configuration/user-role-mapping.md)
     * [Application settings](product-specifications/farajaland/opencrvs-configuration/application-settings.md)
     * [Declaration forms](product-specifications/farajaland/opencrvs-configuration/declaration-forms.md)
-    * [Certificate template](product-specifications/farajaland/opencrvs-configuration/certificate-template.md)
+    * [Certificate templates](product-specifications/farajaland/farajaland-opencrvs-configuration/certificate-templates.md)
 
 ## Technology
 

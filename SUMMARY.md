@@ -98,7 +98,7 @@
   * [7.2 Infrastructure health](setup/7.-monitoring/7.3-server-health.md)
   * [7.3 Routine monitoring checklist](setup/7.-monitoring/7.4-routine-monitoring-checklist.md)
   * [7.4 Setting up alerts](setup/7.-monitoring/7.5-setting-up-alerts.md)
-  * [7.5 Managing a Docker Swarm](setup/7.-monitoring/7.5-managing-a-docker-swarm.md)
+  * [7.5 Managing a Docker Swarm](setup/7.5-managing-a-docker-swarm.md)
 
 ## General
 

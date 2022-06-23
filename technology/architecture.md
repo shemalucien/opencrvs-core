@@ -10,25 +10,16 @@ OpenCRVS business functions are designed using modular, event-driven [microservi
 
 OpenCRVS builds on these sound principles by additionally providing:
 
-Easy country configuration via simple csv files and a configuration UI
-
-Standards based multi language content management.
-
-A market-leading, powerful search and de-duplication engine powered by [ElasticSearch](https://www.elastic.co/).
-
-Real time performance analytics powered by the time-series database: [Influx](https://www.influxdata.com/).
-
-Increased performance by the use of [GraphQL](https://graphql.org/), reducing HTTP requests between client and server.
-
-An automated continuous integration, delivery and testing suite.
-
-A single JS, [TypeScript](https://www.typescriptlang.org/) codebase for backend, desktop and mobile using [Progressive Web Application](https://web.dev/progressive-web-apps/) for offline and low-connectivity access.
-
-External server and application health monitoring using [Kibana](https://www.elastic.co/kibana/)
-
-Automatic [LetsEncrypt](https://letsencrypt.org/) SSL configuration
-
-SMS 2 Factor Authentication considered & defined user role authorization privileges
+* Easy country configuration via simple csv files and a configuration UI
+* Standards based multi language content management.
+* A market-leading, powerful search and de-duplication engine powered by [ElasticSearch](https://www.elastic.co/).
+* Real time performance analytics powered by the time-series database: [Influx](https://www.influxdata.com/).
+* Increased performance by the use of [GraphQL](https://graphql.org/), reducing HTTP requests between client and server.
+* An automated continuous integration, delivery and testing suite.
+* A single JS, [TypeScript](https://www.typescriptlang.org/) codebase for backend, desktop and mobile using [Progressive Web Application](https://web.dev/progressive-web-apps/) for offline and low-connectivity access.
+* External server and application health monitoring using [Kibana](https://www.elastic.co/kibana/)
+* Automatic [LetsEncrypt](https://letsencrypt.org/) SSL configuration
+* SMS 2 Factor Authentication considered & defined user role authorization privileges
 
 OpenCRVS provides a full-stack designed for the lowest possible, "total cost of ownership" and peace of mind, with the understanding that both the OpenCRVS application and infrastructure is security penetration tested on each release by an independent, [CREST](https://www.crest-approved.org/) certified 3rd party to UK government standards.
 

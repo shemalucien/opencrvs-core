@@ -93,12 +93,12 @@
   * [4.5 Create system users](setup/4.-configuration/4.5-create-system-users.md)
 * [5. Testing](setup/5.-testing.md)
 * [6. Go live](setup/6.-go-live.md)
-* [7.5 Managing a Docker Swarm](setup/7.5-managing-a-docker-swarm.md)
 * [7. Monitoring](setup/7.-monitoring/README.md)
   * [7.1 Application logs](setup/7.-monitoring/7.1-application-logs.md)
   * [7.2 Infrastructure health](setup/7.-monitoring/7.3-server-health.md)
   * [7.3 Routine monitoring checklist](setup/7.-monitoring/7.4-routine-monitoring-checklist.md)
   * [7.4 Setting up alerts](setup/7.-monitoring/7.5-setting-up-alerts.md)
+  * [7.5 Managing a Docker Swarm](setup/7.-monitoring/7.5-managing-a-docker-swarm.md)
 
 ## General
 

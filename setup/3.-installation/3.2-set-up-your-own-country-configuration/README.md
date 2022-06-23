@@ -1,6 +1,6 @@
 # 3.2 Set-up your own country configuration
 
-This section instructs you how to set-up and provision factory reset reference data for your OpenCRVS country configuration, and replace our fictional country repository with your country's repository.
+This section instructs you how to set-up and provision factory reset reference data for your OpenCRVS country configuration, and replace the default repository (Farajaland) with your country's repository.
 
 The articles should be run step-by-step and they will walk you through how to:
 

@@ -29,7 +29,7 @@ Our international, development teams work in an Agile way, in tandem with local 
 
 {% file src="../.gitbook/assets/Application services and network diagram.png" %}
 
-### What are the key OpenSource dependencies of OpenCRVS?
+### Open source dependencies
 
 The following dependencies are automatically provisioned alongside the OpenCRVS Core in [docker](https://www.docker.com/) containers in a Docker Swarm on Ubuntu.
 
@@ -37,11 +37,9 @@ The following dependencies are automatically provisioned alongside the OpenCRVS 
 
 [Docker Swarm](https://docs.docker.com/engine/swarm/) was chosen by our architects in 2018 for it's lack of required dependencies, it's close alignment with Docker and it's simplicity in terms of installation and monitoring on a [Tier 2 private data centre](https://en.wikipedia.org/wiki/Data\_center), on bare metal servers with headless [Ubuntu OS](https://en.wikipedia.org/wiki/Ubuntu) .
 
-Many nations may be located far from a developed world data-centre above Tier 2.&#x20;
-
-Many nations may not be able to legally support international data storage of citizen data on a public cloud.&#x20;
-
-Getting the legal approval for external storage of citizen data requires regulatory change which obviously can take some time.&#x20;
+* Many nations may be located far from a developed world data-centre above Tier 2.&#x20;
+* Many nations may not be able to legally support international data storage of citizen data on a public cloud.&#x20;
+* Getting the legal approval for external storage of citizen data requires regulatory change which obviously can take some time.&#x20;
 
 In the short term, these nations may not have access to the development skills necessary to manage a private cloud and manage the dependencies of Kubernetes, so ease-of-use is paramount.
 

@@ -4,7 +4,7 @@ The OpenCRVS configuration for Farajaland has been developed to support the coun
 
 
 
-Name
+Name of application
 
 Reg rates
 

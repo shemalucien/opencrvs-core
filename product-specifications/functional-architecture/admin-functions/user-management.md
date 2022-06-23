@@ -1,4 +1,10 @@
+---
+description: Manage users, including creating new users and deactivating users
+---
+
 # User management
+
+System administration functionality needs to be easy for administrators at the national and sub-national level. Through a number of managerial and administrative user roles, users and teams can be easily managed and common user issues such as a change in phone number can be actioned quickly to maintain service availability.
 
 ### Tasks and permissions
 

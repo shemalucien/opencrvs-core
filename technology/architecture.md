@@ -44,7 +44,7 @@ The following dependencies are automatically provisioned alongside the OpenCRVS 
 
 ### Why Docker Swarm?  Is there a plan for Kubernetes?
 
-[Docker Swarm](https://docs.docker.com/engine/swarm/) was chosen by our architects in 2018 for it's lack of accompanying dependencies, it's simplicity and in terms of installation and monitoring on a [Tier 2 private data centre](https://en.wikipedia.org/wiki/Data\_center), on bare metal servers with headless [Ubuntu OS](https://en.wikipedia.org/wiki/Ubuntu) which will be the requirement for many governments.
+[Docker Swarm](https://docs.docker.com/engine/swarm/) was chosen by our architects in 2018 for it's lack of required dependencies, it's close alignment with Docker and it's simplicity in terms of installation and monitoring on a [Tier 2 private data centre](https://en.wikipedia.org/wiki/Data\_center), on bare metal servers with headless [Ubuntu OS](https://en.wikipedia.org/wiki/Ubuntu) .
 
 Many nations may be located far from a developed world data-centre above Tier 2.&#x20;
 

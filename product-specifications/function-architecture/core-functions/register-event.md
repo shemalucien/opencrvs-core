@@ -1,6 +1,6 @@
 # Register event
 
-A Registrar must register the vital event in line with the laws of the country. In OpenCRVS, authorised users can digitally register the event and this is then permanently stored as a registered vital event record.
+A Registrar must register the vital event in line with the rules and regulations of the country. In OpenCRVS, authorised users can digitally register the event and this is then permanently stored as a registered vital event record.
 
 ### Tasks and permissions
 

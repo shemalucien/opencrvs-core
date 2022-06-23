@@ -48,7 +48,7 @@ The following dependencies are automatically provisioned alongside the OpenCRVS 
 
 Many nations may be located far from a developed world data-centre above Tier 2.&#x20;
 
-Many nations may not be able to legally support international data storage of citizen data ona public cloud.&#x20;
+Many nations may not be able to legally support international data storage of citizen data on a public cloud.&#x20;
 
 Getting the legal approval for external storage of citizen data requires regulatory change which obviously can take some time.&#x20;
 
@@ -67,7 +67,7 @@ We are working on a [Kubernetes](https://kubernetes.io/) migration now that Kube
 
 In order to support configuration for limitless country scale, OpenCRVS was designed for [NoSQL](https://en.wikipedia.org/wiki/NoSQL), built on [MongoDB](https://www.mongodb.com/), and aligned to a globally recognised healthcare standard.
 
-Massively scalable and extensible, [Hearth](https://github.com/jembi/hearth) is an OpenSource NoSQL database server built by the OpenCRVS founding member [Jembi Health Systems](https://www.jembi.org/), using interoperable [Health Level 7](https://www.hl7.org) [FHIR](https://www.hl7.org/fhir/) v4 ([ANSI](https://www.ansi.org/) Accredited, Fast Healthcare Interoperability Resources) as standard.
+Massively scalable and extensible, [Hearth](https://github.com/opencrvs/hearth) is an OpenSource NoSQL database server originally built by the OpenCRVS founding member [Jembi Health Systems](https://www.jembi.org/), using interoperable [Health Level 7](https://www.hl7.org) [FHIR](https://www.hl7.org/fhir/) v4 ([ANSI](https://www.ansi.org/) Accredited, Fast Healthcare Interoperability Resources) as standard.
 
 We innovatively extended [FHIR](https://www.hl7.org/fhir/) to support the civil registration context. Our civil registration FHIR standard can be contributed to in this [repository](https://github.com/opencrvs/opencrvs-core-fhir-templates) at Jembi.
 
@@ -78,17 +78,11 @@ We innovatively extended [FHIR](https://www.hl7.org/fhir/) to support the civil 
 
 **ElasticSearch**
 
-ElasticSearch is used with Kibana for application and server health monitoring, along with optimisation.
-
-The Kibana login details that we use by default are:
-
-KIBANA\_USERNAME: **kibana@opencrvs.org** KIBANA\_PASSWORD: **test**
-
-These details should be configured in Github Actions for deployment to a server.
+OpenCRVS uses [ElasticSearch](https://www.elastic.co/), an industry standard, NoSQL document orientated, real-time de-duplication & search engine. Lightning fast, intelligent civil registration record returns are possible, even with imprecise, “fuzzy” search parameters.
 
 De-duplication management to ensure data integrity is essential to any respectable civil registration system. A fast search engine lowers operational costs and improves the user experience for frontline staff.
 
-OpenCRVS uses [ElasticSearch](https://www.elastic.co/), an industry standard, NoSQL document orientated, real-time de-duplication & search engine. Lightning fast, intelligent civil registration record returns are possible, even with imprecise, “fuzzy” search parameters.
+ElasticSearch is also used with [Kibana](https://www.elastic.co/kibana) for application and server health monitoring.
 
 \
 
@@ -137,7 +131,7 @@ Microservices:
 ![](https://static.wixstatic.com/media/93440e\_297d9c18fc9e48e78b39e885bbfdaa13\~mv2\_d\_1200\_1204\_s\_2.png/v1/fill/w\_70,h\_70,al\_c,q\_80,usm\_0.66\_1.00\_0.01/OAuth\_svg.webp)
 
 * [commons](https://github.com/opencrvs/opencrvs-core/tree/master/packages/commons) - a shared library package that all microservices use in order to validate JWTs
-* [config](https://github.com/opencrvs/opencrvs-core/tree/master/packages/config) - an application configuration microservice to serve country configuration settings in the upcoming Beta release scheduled for June 2022
+* [config](https://github.com/opencrvs/opencrvs-core/tree/master/packages/config) - an application configuration microservice to serve country configuration settings
 * [gateway](https://github.com/opencrvs/opencrvs-core/tree/master/packages/gateway) - the [GraphQL](https://graphql.org/) and [Apollo](https://www.apollographql.com/) API gateway for the OpenCRVS client.
 
 \

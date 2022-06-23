@@ -36,7 +36,7 @@
     * [Legacy paper import](product-specifications/functional-architecture/data-functions/legacy-paper-import.md)
 * [Farajaland](product-specifications/farajaland/README.md)
   * [Civil registration in Farajaland](product-specifications/farajaland/civil-registration-in-farajaland.md)
-  * [Process flows](product-specifications/farajaland/process-flows.md)
+  * [Business process flows](product-specifications/farajaland/business-process-flows.md)
   * [OpenCRVS Configuration](product-specifications/farajaland/opencrvs-configuration/README.md)
     * [User / role mapping](product-specifications/farajaland/opencrvs-configuration/user-role-mapping.md)
     * [Application Settings](product-specifications/farajaland/opencrvs-configuration/application-settings.md)

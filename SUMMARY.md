@@ -75,7 +75,7 @@
       * [3.2.3.2 Prepare source file for production employees](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.4-set-up-employees-for-testing-or-production/3.2.3.2-prepare-source-file-for-production-employees.md)
     * [3.2.5 Import set up files](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.5-generate-factory-reset-reference-data-backups.md)
     * [3.2.6 Create factory reset reference data backups](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.6-create-factory-reset-backups-for-development.md)
-    * [3.2.7 Set-up language content](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.7-set-up-language-content.md)
+    * [3.2.7 Set-up language content](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.6-set-up-multi-language-content.md)
     * [3.2.8 Set up required settings](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.8-set-up-required-settings.md)
     * [3.2.9 Optional: Customise and interoperate](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.9-optional-customise-and-interoperate.md)
   * [3.3 Set-up a server-hosted environment](setup/3.-installation/3.3-set-up-a-server-hosted-environment/README.md)

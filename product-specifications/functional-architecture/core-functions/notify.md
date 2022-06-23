@@ -1,6 +1,6 @@
 # Notify event
 
-A vital event notification ensures that the occurrence of a vital event is captured and shared with the civil registration authority. In OpenCRVS this features as a partially complete declaration to be submitted for follow-up and action. This can be done by a user using OpenCRVS, starting and submitting an incomplete declaration form, or as a notification pushed from an existing digital health system e.g. DHIS2.&#x20;
+A vital event notification involves the capture of a minimal set of data related to the occurrence of a vital event and transmission of this to the civil registration authority. In OpenCRVS a notification can be sent by a user by submitting a partially complete declaration, or it can be submitted from a digital health system e.g. DHIS2, both of which can then found in the "in-progress" workqueue for follow-up and action.
 
 ### Tasks and permissions
 

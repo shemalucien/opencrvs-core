@@ -1,4 +1,4 @@
-# 👋 Introduction
+# 👋 INTRODUCTION
 
 OpenCRVS is an open-source digital solution for civil registration designed for low resource settings and available as a Digital Public Good.
 
@@ -14,7 +14,7 @@ OpenCRVS is an open-source digital solution for civil registration designed for 
 * They are faced with bureaucratic civil registration process with long delays, requests for unofficial payments and are not kept informed about the status of their application
 * Systems are not integrated so birth registration does not lead to automatic access to other rights e.g. vaccination programmes, enrolment in social protection schemes etc.
 
-
+### Product Commitments
 
 ### Design Principles
 

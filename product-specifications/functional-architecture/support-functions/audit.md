@@ -4,7 +4,7 @@ description: User searches for and views audit logs for a record
 
 # Audit
 
-The ability to audit actions taken in OpenCRVS increases accountability of service providers and provides the ability to identify and take action on potentially fraudulent activity. A detailed record of all actions taken on each record is captured, permanently stored, and made visible to authorised users. For a full view of actions that are audited, see the table below.
+The ability to audit actions taken in OpenCRVS increases accountability of service providers and provides the ability to identify and take action on potentially fraudulent activity. A detailed record of all actions taken on each record is captured, permanently stored, and made visible to authorised users. For a full view of actions that are audited, see the History Actions table below.
 
 ### Tasks and permissions
 

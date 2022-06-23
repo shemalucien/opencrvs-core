@@ -27,7 +27,7 @@ Our international, development teams work in an Agile way, in tandem with local 
 
 {% embed url="https://www.figma.com/file/1WohPWFe53VH7zO7yILJDx/Architecture?node-id=0:1" %}
 
-![OpenCRCVS architecture](<../.gitbook/assets/Application services and network diagram.png>)
+{% file src="../.gitbook/assets/Application services and network diagram.png" %}
 
 ### What are the key OpenSource dependencies of OpenCRVS?
 

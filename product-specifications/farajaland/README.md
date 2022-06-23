@@ -27,4 +27,8 @@ Farajaland is a fictitious country used to illustrate how OpenCRVS is specifical
 **Key strategies to achieve the strategic goals:**
 
 * Partner with MoH to collect birth and death notifications at the health facility
-*
+
+#### Map of Farajaland
+
+![](<../../.gitbook/assets/farajaland-map (1).png>)
+

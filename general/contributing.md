@@ -1,3 +1,7 @@
+---
+description: How to contribute to the Digital Public Good for CRVS
+---
+
 # Contributing
 
 The value of open-source products as digital public goods is that an active community of contributors will help to maintain and grow the product.
@@ -17,31 +21,29 @@ Please join our .....    chatroom if you need to talk to us at any time regardin
 
 As you join the OpenCRVS community, we request that you collaborate in the spirit of our joint values.
 
-#### **We are open**
+**Better together**
 
-We are a community. We share what we’re doing - code, designs, tools and ideas, and work well with others.
+We know that the impact of our combined efforts is greater than any individual effort alone.
 
-#### **We are rights-based**
+That’s why we are passionate community builders, creating spaces where diverse opinions and voices come together to create smart solutions.
 
-We take every action possible to ensure that no-one is left behind. We are inclusive, don't discriminate and protect as a priority.
+We nurture meaningful partnerships built on mutual trust and friendship and grounded in a shared vision of the future.
 
-#### **We are human-centered**
+**Open, always**
 
-We put people first. We design with our users to ensure that the system works for them.
+We have an open attitude, ready to work on each new challenge with optimism and a fresh perspective.
 
-#### **We are future focused**
+We are radically transparent, openly sharing our ideas, our designs, our tools, and our code.
 
-We build for the future. We use proven technologies that can adapt to inevitable change.
+We are open-minded and curious. We actively listen to others then take action with integrity.
 
-#### **We challenge the status quo**
+**Because we care**
 
-We challenge business as usual. Civil registration systems are broken so we need to think differently and innovate.
+We work hard because we believe profoundly in our mission. ****&#x20;
 
-#### **We are trusted**
+We care deeply about the quality of our product and its implementation, knowing that it will profoundly affect people’s lives.
 
-We respect privacy as a fundamental human right.
-
-
+We act with purpose and determination because we know that time is running out to ensure we leave no one behind.
 
 ### Contributing to code <a href="#working-on-opencrvs-code" id="working-on-opencrvs-code"></a>
 
@@ -63,7 +65,9 @@ Make sure to include a detailed description of the bug. Open a bug report on [Gi
 
 #### Proposing a change <a href="#proposing-a-change" id="proposing-a-change"></a>
 
-If you would like to request a new feature or enhancement but are not yet thinking about opening a pull request, you can also file an issue with [t](https://github.com/facebook/docusaurus/issues/new?template=feature.md)he [feature template.](https://github.com/opencrvs/opencrvs-core/issues/new?assignees=\&labels=%E2%98%95%EF%B8%8F+Discussion\&template=---feature.md\&title=)
+If you would like to request a new feature or enhancement but are not yet thinking about opening a pull request, you can**:**
 
-
+1. Email us at team@opencrvs.org to explore the feature together.
+2. File an issue with [t](https://github.com/facebook/docusaurus/issues/new?template=feature.md)he [feature template.](https://github.com/opencrvs/opencrvs-core/issues/new?assignees=\&labels=%E2%98%95%EF%B8%8F+Discussion\&template=---feature.md\&title=)
+3. Join the community at [https://community.opencrvs.org/](https://community.opencrvs.org/) and ask what others think about your idea.
 

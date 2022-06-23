@@ -1,12 +1,4 @@
----
-description: >-
-  User reviews possible duplicate records identified by the system and takes
-  action
----
-
 # Deduplication
-
-To increase data quality, OpenCRVS uses a powerful matching algorithm (powered by ElasticSearch) to identify duplicate entries in the system. The system then automatically prompts the Registrar to review possible duplicates before registration.
 
 ### Tasks and permissions
 

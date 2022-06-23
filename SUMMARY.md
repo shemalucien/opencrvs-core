@@ -47,7 +47,7 @@
 
 * [Architecture](technology/architecture.md)
 * [Standards](technology/development-standards.md)
-* [APIS](technology/apis.md)
+* [Security](technology/security.md)
 * [Interoperability](technology/interoperability.md)
 
 ## Setup

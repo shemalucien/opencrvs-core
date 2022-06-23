@@ -34,15 +34,15 @@
   * [Data functions](product-specifications/functional-architecture/data-functions/README.md)
     * [Legacy data import](product-specifications/functional-architecture/data-functions/legacy-data-import.md)
     * [Legacy paper import](product-specifications/functional-architecture/data-functions/legacy-paper-import.md)
-  * [Status flow](product-specifications/functional-architecture/status-flow.md)
+  * [Status flow](product-specifications/status-flow.md)
 * [Farajaland](product-specifications/farajaland/README.md)
   * [Civil registration in Farajaland](product-specifications/farajaland/civil-registration-in-farajaland.md)
-  * [Farajaland business process flows](product-specifications/farajaland/farajaland-business-process-flows.md)
-  * [Farajaland OpenCRVS configuration](product-specifications/farajaland/farajaland-opencrvs-configuration/README.md)
-    * [User / role mapping](product-specifications/farajaland/farajaland-opencrvs-configuration/user-role-mapping.md)
-    * [Application settings](product-specifications/farajaland/farajaland-opencrvs-configuration/application-settings.md)
-    * [Declaration forms](product-specifications/farajaland/farajaland-opencrvs-configuration/declaration-forms.md)
-    * [Certificate template](product-specifications/farajaland/farajaland-opencrvs-configuration/certificate-template.md)
+  * [Farajaland business process flows](product-specifications/farajaland/business-process-flows.md)
+  * [Farajaland OpenCRVS configuration](product-specifications/farajaland/opencrvs-configuration/README.md)
+    * [User / role mapping](product-specifications/farajaland/opencrvs-configuration/user-role-mapping.md)
+    * [Application settings](product-specifications/farajaland/opencrvs-configuration/application-settings.md)
+    * [Declaration forms](product-specifications/farajaland/opencrvs-configuration/declaration-forms.md)
+    * [Certificate template](product-specifications/farajaland/opencrvs-configuration/certificate-template.md)
 
 ## Technology
 

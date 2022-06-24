@@ -1,7 +1,5 @@
 # Tasks and permissions
 
-
-
 | #   | Function               | Tasks                                                      | Offline/Online                      | Field Agent | Registration Agent | Registrar | National Registrar | Performance Manager | Local System Admin | National System Admin |
 | --- | ---------------------- | ---------------------------------------------------------- | ----------------------------------- | ----------- | ------------------ | --------- | ------------------ | ------------------- | ------------------ | --------------------- |
 | 1.0 | Notify an event        | Create a new notifications                                 |                                     |             |                    |           |                    |                     |                    |                       |

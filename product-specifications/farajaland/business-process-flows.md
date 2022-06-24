@@ -16,14 +16,14 @@ For each of the service delivery models a digitally enabled business process has
 
 ### Community notification
 
-![Community notification process in Farajaland](<../.gitbook/assets/Community Notification.png>)
+![Community notification process in Farajaland](<../../.gitbook/assets/Community Notification.png>)
 
 ### Notification from the health facility
 
-![Health facility notification process in Farajaland](<../.gitbook/assets/Health facility notification.png>)
+![Health facility notification process in Farajaland](<../../.gitbook/assets/Health facility notification.png>)
 
 ### Registration at the District Registration Office
 
-![Office registration process in Farajaland](<../.gitbook/assets/Office registration.png>)
+![Office registration process in Farajaland](<../../.gitbook/assets/Office registration.png>)
 
 &#x20;

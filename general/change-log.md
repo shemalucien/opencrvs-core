@@ -80,6 +80,6 @@ In this release we have forked and upgraded [Hearth](https://github.com/opencrvs
 
 #### Miscellaneous bugfixes and refactor
 
-A host of bugfixes were discovered and prioritsed by our QA team. Our test cases will soon be published in our documentation to be released at the end of June 2022. The development team have been bugfixing continuously and this release can be considered demo ready. We advise all system administrators to wait untill the end of June 2022 for the first minor patch release: v1.0.1 before proceeding with any implementations.
+A host of bugfixes were discovered and prioritsed by our QA team.
 
 **For full details of all product updates, visit** [**https://github.com/opencrvs/opencrvs-core/releases**](https://github.com/opencrvs/opencrvs-core/releases)****

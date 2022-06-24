@@ -2,8 +2,6 @@
 
 The next step is to prepare csv files to import into OpenCRVS all of the offices where civil registration staff work and all of the health facilities where births and deaths can occur in a medical setting.
 
-The facilities you create are saved into OpenCRVS as [FHIR Locations](https://www.hl7.org/fhir/location.html).
-
 CRVS\_OFFICE is an important location saved into [FHIR](https://build.fhir.org/location.html) to map registrations to a specific office. All civil registration employees have a CRVS\_OFFICE where they work, and every CRVS\_OFFICE is part of a second-level administrative division, ie a "district".  The CRVS\_OFFICE location provides a way for Local or National System Administrators to manage staff access and for OpenCRVS to record an audit trail of all staff interactions with registrations. &#x20;
 
 * The CRVS\_OFFICE is also recorded as the registration location for all vital events on the printed certificate.

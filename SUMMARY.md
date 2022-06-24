@@ -55,6 +55,8 @@
 * [Interoperability](technology/interoperability/README.md)
   * [Authentication and authorization](technology/interoperability/authentication-and-authorization.md)
   * [Webhooks](technology/interoperability/webhooks.md)
+  * [Mediators](technology/interoperability/mediators.md)
+  * [OpenCRVS FHIR Documents](technology/interoperability/opencrvs-fhir-documents.md)
 
 ## Setup
 

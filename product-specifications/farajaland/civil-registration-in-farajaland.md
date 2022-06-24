@@ -16,7 +16,7 @@ description: >-
 6. Until recently Farajaland has been using manual, paper-based processes and the performance of the CRVS system has been poor:&#x20;
    * Completeness rates (within 1 year of event) are at 40% (births) and 15% (deaths).
    * There are low levels of data quality and large numbers of duplicate entries in the civil registry.&#x20;
-   * Customer service are also poor, with many families complaining that they have to visit the Civil Registration Office a number of times to get vital events registered, which proves time consuming and expensive.&#x20;
+   * Customer service is also poor, with many families complaining that they have to visit the Civil Registration Office a number of times to get vital events registered, which proves time consuming and expensive.&#x20;
 7. The CRA developed the CRVS National Strategic Plan in 2021, which lays out a number of strategic goals to achieve by 2025:
    * \>90% completeness rates for both birth and death registration.
    * \>95 certification rates for both birth and death registration.

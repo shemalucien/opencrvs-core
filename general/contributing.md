@@ -21,29 +21,27 @@ Please join our .....    chatroom if you need to talk to us at any time regardin
 
 As you join the OpenCRVS community, we request that you collaborate in the spirit of our joint values.
 
-**Better together**
+#### **Better together**
 
-We know that the impact of our combined efforts is greater than any individual effort alone.
+> We know that the impact of our combined efforts is greater than any individual effort alone. That’s why we are passionate community builders, creating spaces where diverse opinions and voices come together too create smart solutions.
+>
+> We nurture meaningful partnerships built on mutual trust and friendship and grounded in a shared vision of the future.
 
-That’s why we are passionate community builders, creating spaces where diverse opinions and voices come together to create smart solutions.
+#### **Open, always**
 
-We nurture meaningful partnerships built on mutual trust and friendship and grounded in a shared vision of the future.
+> We have an open attitude, ready to work on each new challenge with optimism and a fresh perspective.
+>
+> We are radically transparent, openly sharing our ideas, our designs, our tools, and our code.
+>
+> We are open-minded and curious. We actively listen to others then take action with integrity.
 
-**Open, always**
+#### **Because we care**
 
-We have an open attitude, ready to work on each new challenge with optimism and a fresh perspective.
-
-We are radically transparent, openly sharing our ideas, our designs, our tools, and our code.
-
-We are open-minded and curious. We actively listen to others then take action with integrity.
-
-**Because we care**
-
-We work hard because we believe profoundly in our mission. ****&#x20;
-
-We care deeply about the quality of our product and its implementation, knowing that it will profoundly affect people’s lives.
-
-We act with purpose and determination because we know that time is running out to ensure we leave no one behind.
+> We work hard because we believe profoundly in our mission. ****&#x20;
+>
+> We care deeply about the quality of our product and its implementation, knowing that it will profoundly affect people’s lives.
+>
+> We act with purpose and determination because we know that time is running out to ensure we leave no one behind.
 
 ### Contributing to code <a href="#working-on-opencrvs-code" id="working-on-opencrvs-code"></a>
 

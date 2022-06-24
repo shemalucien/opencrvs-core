@@ -18,6 +18,8 @@ This release contains major new features and improvements, a number of dependenc
 * Dependency upgrades
 * Miscellaneous bugfixes and refactor
 
+For a full list of all updates, see [https://github.com/opencrvs/opencrvs-core/releases](https://github.com/opencrvs/opencrvs-core/releases).&#x20;
+
 All following major releases of OpenCRVS will document any breaking changes and a migration guide for system administrators.
 
 ### Major Features

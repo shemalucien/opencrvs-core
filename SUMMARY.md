@@ -80,7 +80,6 @@
     * [3.2.6 Create factory reset reference data backups](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.6-create-factory-reset-backups-for-development.md)
     * [3.2.7 Set-up language content](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.6-set-up-multi-language-content.md)
     * [3.2.8 Set up initialisation settings and env variables](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.8-set-up-initialisation-settings-and-env-variables.md)
-    * [3.2.9 Optional: Customise and interoperate](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.9-optional-customise-and-interoperate.md)
   * [3.3 Set-up a server-hosted environment](setup/3.-installation/3.3-set-up-a-server-hosted-environment/README.md)
     * [3.3.1 Provision your server nodes with SSH access](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.1-provision-your-server-nodes-with-ssh-access.md)
     * [3.3.2 Install dependencies](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.2-install-dependencies.md)

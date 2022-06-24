@@ -1,33 +1,8 @@
-# Interoperability
+# Authentication and authorization
 
-### OpenCRVS provides flexible interoperability options via OpenHIM, FHIR and a Webhooks microservice
+You can either use the OpenHIM GUI to create an exposed channel and configure authentication using [OpenHIM documentation](http://openhim.org/docs/configuration/authentication), or alternatively your mediator can be registered as an authorized system client.
 
-It is really up to you how you would like to interoperate with OpenCRVS.  You have 2 main options:
-
-1. OpenHIM tracks and exposes events and documents as [FHIR](https://hl7.org/FHIR/).  You can accces these events directly via authenticated API integrations to OpenHIM or ...
-2. &#x20;Subscribe to the OpenCRVS **Webhooks** microservice. &#x20;
-
-You perform any data manipulation or conversion that you may need using small custom microservices called: Mediators.
-
-
-
-
-
-To integrate with OpenCRVS, the recommended approach is to host a microservice on your platform that can interact with OpenHIM. This microservice is referred to as a mediator.
-
-
-
-**MOSIP Example**
-
-A technical proof of concept mediator that exposes civil registration events via a Webhook to the [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) is documented [here](https://docs.mosip.io/1.2.0/integrations/mosip-opencrvs-integration).
-
-This integration represents A FHIR standardised approach to ensuring that a birth registration directly creates a National ID number with optional biometrics. This interoperability ensures that the legal identity established at birth is then utilised as a foundational identity to access other services (e.g. health, education, financial inclusion, passport, mobile phone etc.) and to ensure that we leave no one behind.
-
-
-
-A mediator, with the right scope and permissions can interact with existing endpoints in the OpenCRVS stack. But the most logical integration point is to subscribe to OpenCRVS Webhooks.
-
-To set up a mediator with the right permissions there is no GUI, your system administrator is required to:
+To set up a system client with the right permissions there is no GUI, your system administrator is required to:
 
 1. SSH into the OpenCRVS manager node and register a new system client. Described below.
 2. Securely host the system `client_id`, `client_secret` and `sha_secret`, returned in the registration process, as environment variables or secrets that your mediator or webhook subscriber service has secure access to.
@@ -39,9 +14,7 @@ Your mediator microservice is then required to:
 
 #### Register a system client
 
-**In the upcoming OpenCRVS Beta release the following process will be deprecated and replaced by a GUI in the System Administrator User Team Management functionality.**
-
-Using a valid system administrator JWT token returned during OpenCRVS client authentication, SSH into your manager instance and run the following commands to register a new client.
+Using a valid National System Administrator JWT token returned during OpenCRVS client authentication, SSH into your manager instance and run the following commands to register a new client.
 
 Find a running auth service Docker container ID. NOTE: You may need to connect to a worker node if auth is not running on the manager.
 
@@ -67,9 +40,9 @@ Example json
 }
 ```
 
-| Parameter | Sample value  | Description                                                                                                          |
-| --------- | ------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `scope`   | `NATIONAL_ID` | Available integration scopes currently include: **NATIONAL\_ID** **HEALTH** **AGE\_CHECK** **EXTERNAL\_VALIDATION**. |
+| Parameter | Sample value  | Description                                                                                                                                               |
+| --------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `scope`   | `NATIONAL_ID` | <p>Available integration scopes currently include: <strong>NATIONAL_ID</strong> </p><p><strong>HEALTH</strong>  <strong>EXTERNAL_VALIDATION</strong>.</p> |
 
 **Request Response**
 

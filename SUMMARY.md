@@ -52,7 +52,8 @@
 * [Architecture](technology/architecture.md)
 * [Standards](technology/development-standards.md)
 * [Security](technology/security.md)
-* [Interoperability](technology/interoperability.md)
+* [Interoperability](technology/interoperability/README.md)
+  * [Authentication and authorization](technology/interoperability/authentication-and-authorization.md)
 
 ## Setup
 

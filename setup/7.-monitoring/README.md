@@ -20,8 +20,6 @@ Once the environment is installed, the monitoring suite can be accessed using th
 
 The login credentials are the ones you used as `KIBANA_USERNAME`  and `KIBANA_PASSWORD` as part of the [deployment](../3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy.md). &#x20;
 
-### What's included?
-
 #### Metricbeat
 
 Metricbeat gets installed on all host machines in your infrastructure. Its sole purpose is to collect data about the network, the host machines and the Docker environment. The data is stored in the OpenCRVS Elasticsearch database. This data can be viewed by navigating to **Observability -> Metrics** and selecting either **Inventory** or **Metrics Explorer.** The data can be visualised, grouped and filtered in these views.
@@ -35,8 +33,6 @@ The OpenCRVS monitoring stack comes with a pre-installed Application Performance
 #### Logstash
 
 Logstash receives log entries in [GELF format](https://docs.graylog.org/docs/gelf) from all OpenCRVS services and writes them into the Elasticsearch database. These logs can be viewed in real-time from **Observability -> Logs -> Stream** or through APM. By default, OpenCRVS stores all logs for three days before they are removed. Read more about logging in [7.1 Application logs](7.1-application-logs.md).
-
-
 
 ### Read more
 

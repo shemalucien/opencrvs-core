@@ -1,6 +1,6 @@
 # Security
 
-**We treat the security of OpenCRVS and the personally identifiable citizen data it stores with sincerity and dedication.**
+**We treat the security of OpenCRVS and the personally identifiable citizen data it stores with utmost care.**
 
 Every release of the OpenCRVS application and infrastructure has been security penetration tested by an independent, [CREST](https://www.crest-approved.org/) and [CyberEssentials](https://www.ncsc.gov.uk/cyberessentials/overview) certified 3rd party to UK government standards. &#x20;
 

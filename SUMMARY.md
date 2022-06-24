@@ -54,6 +54,7 @@
 * [Security](technology/security.md)
 * [Interoperability](technology/interoperability/README.md)
   * [Authentication and authorization](technology/interoperability/authentication-and-authorization.md)
+  * [Webhooks](technology/interoperability/webhooks.md)
 
 ## Setup
 

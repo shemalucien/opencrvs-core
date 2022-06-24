@@ -1,3 +1,7 @@
+---
+description: Product features for v2.0
+---
+
 # Roadmap
 
 A list of potential functionality that will be included in the next release is listed below. R2.0 scope will be determined based on requirements from reference implementations and other requests. Get in touch via team@opencrvs.org to join the Product Council and specify your priority features.

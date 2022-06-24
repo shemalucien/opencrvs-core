@@ -21,7 +21,7 @@ OpenCRVS builds on these sound principles by additionally providing:
 * Automatic [LetsEncrypt](https://letsencrypt.org/) SSL configuration
 * SMS 2 Factor Authentication considered & defined user role authorization privileges
 
-OpenCRVS provides a full-stack designed for the lowest possible, "total cost of ownership".
+OpenCRVS provides a full-stack designed for the lowest possible, "total cost of ownership" and peace of mind, with the understanding that both the OpenCRVS application and infrastructure is security penetration tested on each release by an independent, [CREST](https://www.crest-approved.org/) certified 3rd party to UK government standards.
 
 Our international, development teams work in an Agile way, in tandem with local development resources and human centred designers, following the [Scrum](https://www.atlassian.com/agile/scrum) methodology, to rapidly design, build, deploy, test and maintain OpenCRVS releases.
 

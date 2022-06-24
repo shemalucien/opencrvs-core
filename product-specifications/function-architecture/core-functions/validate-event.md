@@ -1,7 +1,3 @@
----
-description: User reviews submitted declaration form against supporting documents
----
-
 # Validate event
 
 In order to register the vital event, it first needs to be validated by an authorised user, checking that all necessary documentation is correct.&#x20;

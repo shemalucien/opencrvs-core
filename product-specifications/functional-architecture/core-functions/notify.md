@@ -1,10 +1,3 @@
----
-description: >-
-  User or external system sends a vital event notification to an assigned
-  office. The notification appears in the 'In Progress' workqueue for follow-up
-  and completion.
----
-
 # Notify event
 
 A vital event notification involves the capture of a minimal set of data related to the occurrence of a vital event and transmission of this to the civil registration authority. In OpenCRVS a notification can be sent by a user by submitting a partially complete declaration, or it can be submitted from a digital health system e.g. DHIS2, both of which can then found in the "in-progress" workqueue for follow-up and action.

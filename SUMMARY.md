@@ -36,17 +36,6 @@
   * [22. Legacy paper import](product-specifications/data-functions/22.-legacy-paper-import.md)
 * [Status flow](product-specifications/status-flow.md)
 
-## Default configuration
-
-* [Intro to Farajaland](default-configuration/intro-to-farajaland.md)
-* [Civil registration in Farajaland](product-specifications/farajaland/civil-registration-in-farajaland.md)
-* [Farajaland OpenCRVS configuration](product-specifications/farajaland/opencrvs-configuration/README.md)
-  * [User / role mapping](product-specifications/farajaland/opencrvs-configuration/user-role-mapping.md)
-  * [Application settings](product-specifications/farajaland/opencrvs-configuration/application-settings.md)
-  * [Declaration forms](product-specifications/farajaland/opencrvs-configuration/declaration-forms.md)
-  * [Certificate templates](product-specifications/farajaland/farajaland-opencrvs-configuration/certificate-templates.md)
-* [Farajaland business process flows](product-specifications/farajaland/business-process-flows.md)
-
 ## Technology
 
 * [Architecture](technology/architecture.md)
@@ -57,6 +46,17 @@
   * [Webhooks](technology/interoperability/webhooks.md)
   * [Mediators](technology/interoperability/mediators.md)
   * [OpenCRVS FHIR Documents](technology/interoperability/opencrvs-fhir-documents.md)
+
+## Default configuration
+
+* [Intro to Farajaland](default-configuration/intro-to-farajaland.md)
+* [Civil registration in Farajaland](product-specifications/farajaland/civil-registration-in-farajaland.md)
+* [Farajaland OpenCRVS configuration](product-specifications/farajaland/opencrvs-configuration/README.md)
+  * [User / role mapping](product-specifications/farajaland/opencrvs-configuration/user-role-mapping.md)
+  * [Application settings](product-specifications/farajaland/opencrvs-configuration/application-settings.md)
+  * [Declaration forms](product-specifications/farajaland/opencrvs-configuration/declaration-forms.md)
+  * [Certificate templates](product-specifications/farajaland/farajaland-opencrvs-configuration/certificate-templates.md)
+* [Farajaland business process flows](product-specifications/farajaland/business-process-flows.md)
 
 ## Setup
 

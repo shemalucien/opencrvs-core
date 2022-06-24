@@ -38,7 +38,7 @@
 
 ## Default configuration
 
-* [Farajaland Context](product-specifications/farajaland/README.md)
+* [Intro to Farajaland](default-configuration/intro-to-farajaland.md)
 * [Civil registration in Farajaland](product-specifications/farajaland/civil-registration-in-farajaland.md)
 * [Farajaland OpenCRVS configuration](product-specifications/farajaland/opencrvs-configuration/README.md)
   * [User / role mapping](product-specifications/farajaland/opencrvs-configuration/user-role-mapping.md)

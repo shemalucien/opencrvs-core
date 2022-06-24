@@ -19,4 +19,6 @@ This integration represents A FHIR standardised approach to ensuring that a birt
 
 
 
+**Mediator authentication**
+
 ****

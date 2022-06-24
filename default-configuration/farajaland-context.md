@@ -2,7 +2,7 @@
 description: Provides details of the OpenCRVS default configuration
 ---
 
-# Farajaland
+# Farajaland Context
 
 Farajaland is a fictitious country used to illustrate how OpenCRVS is specifically designed to meet the needs of typical low-resource settings. The OpenCRVS demos are built around the needs of this country, which reflect a variety of real-life contexts from around the world.&#x20;
 
@@ -23,6 +23,6 @@ Take time to become familiar with Farajaland and its requirements for a digital 
 
 #### Map of Farajaland
 
-![Provinces and Districts of Farajaland](<../../.gitbook/assets/farajaland-map (2).png>)
+![Provinces and Districts of Farajaland](<../.gitbook/assets/farajaland-map (2).png>)
 
 ****

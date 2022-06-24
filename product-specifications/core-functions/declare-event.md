@@ -1,3 +1,9 @@
+---
+description: >-
+  User completes declaration form in an office or roaming (mobile) and either
+  sends for review or registers it
+---
+
 # Declare event
 
 A vital event declaration is the submission of the details of the occurrence and characteristics of the vital event as outlined in law, for the purpose of civil registration. This data is usually captured through a declaration form that includes a set of mandatory fields, alongside any mandatory supporting documents.&#x20;

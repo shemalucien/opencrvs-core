@@ -1,3 +1,7 @@
+---
+description: User prints and issues a certificate
+---
+
 # Issue certificate
 
 A vital event certificate is a critical legal document, proving the occurrence and pertinent details of the vital event. A birth certificate is a child's first right and proof of legal identity. OpenCRVS provides an issuance process that checks the collector's ID, provides for the collection of payment and issue of receipt (where relevant), and printing of a paper certificate either in advance or for a customer in-person.

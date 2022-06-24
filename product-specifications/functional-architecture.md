@@ -1,12 +1,8 @@
-# Core functions
+# Functional Architecture
 
-| Function                                                                                   | Description                                                                                                                                                           |   |
-| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
-| [Notify event](functional-architecture/core-functions/notify.md)                           | User or external system sends a vital event notification to an assigned office. The notification appears in the 'In Progress' workqueue for follow-up and completion. |   |
-| [Declare even](functional-architecture/core-functions/declare-an-event.md)t                | User completes declaration form in an office or roaming (mobile) and either sends for review or registers it                                                          |   |
-| [Validate event](function-architecture/core-functions/validate-event.md)                   | User reviews submitted declaration form against supporting documents                                                                                                  |   |
-| [Register event](function-architecture/core-functions/register-event.md)                   | User registers vital event                                                                                                                                            |   |
-| [Issue certificate](function-architecture/core-functions/issue-a-certificate.md)           | User prints and issues a certificate                                                                                                                                  |   |
-| [Correct record](functional-architecture/core-functions/function-3.md)                     | User corrects a record, providing a reason for the correction                                                                                                         |   |
-| [Verify record](function-architecture/core-functions/verify-record.md)                     | User is able to verify the existence of a birth record and see relevant details                                                                                       |   |
-| [Vital statistics export](function-architecture/core-functions/vital-statistics-export.md) | User is able to view vital statistics data and download in required format                                                                                            |   |
+{% embed url="https://www.figma.com/file/aF3iB0u9yIxTHB9uOFII3G/Functional-Architecture?node-id=0:1" %}
+
+
+
+
+

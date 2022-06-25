@@ -77,8 +77,6 @@ The property `context` contains the FHIR bundles that are required for successfu
 
 Links to biometric documents that are hosted by a 3rd party vendor service such as [Simprints](https://www.simprints.com/) could be contained here as additional DocumentReferences thus connecting OpenCRVS to a functional and foundational National ID system.
 
-See the bottom of this page for an understanding of how the Simprints application could work alongside OpenCRVS and MOSIP to capture biometrics during event registration.
-
 ```
 POST / HTTPS/1.1
 Content-Type: application/json
@@ -385,5 +383,11 @@ Authorization: Bearer <token>
 **Response**
 
 **204** status code and an empty response will be returned when the webhook has been successfully deleted.
+
+
+
+### Requesting the FHIR Composition for a birth event
+
+The payload of the birth registration event webhook contains the [FHIR Composition](https://www.hl7.org/fhir/composition.html) id, that can be used to retrieve all subsequent details for the registration. So, subscribing to this webhook is good way to access all other details in the [OpenCRVS FHIR Documents](https://app.gitbook.com/o/zub8C4BetmW3a9Bj4Cd4/s/qI5B1zX9fZVx3HCjIY12/\~/changes/6pHhtQvucSfdH5ndyWpd/technology/interoperability/opencrvs-fhir-documents)
 
 ####

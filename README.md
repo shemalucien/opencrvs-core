@@ -4,17 +4,12 @@ OpenCRVS is an open-source digital solution for civil registration designed spec
 
 In this documentation you will find all you need to design, configure, operate and maintain an OpenCRVS application that meets your country's needs.&#x20;
 
-This documentation can be used by governments, system integrators and development partners, depending on what you are trying to achieve:
+This documentation can be used by governments, system integrators and development partners, depending on what you need to do:
 
-* If you want to explore the OpenCRVS functionality to see how it could meet your country needs, go to [Product Specifications](broken-reference)
-* Link learn about x
-* Link learn about y
-
-There are also translations of the documentation into other languages:
-
-*
-
-If you're maintaining a translation, feel free to pull request it here!
+* If you want to explore the OpenCRVS functionality and see how it could meet your country needs, check out the [Product Specifications ](broken-reference)and the [Default Configuration](broken-reference) for Farajaland&#x20;
+* If you want to understand how OpenCRVS works technically, go to [Technology](broken-reference)
+* If you want to setup you own OpenCRVS instance and get it quickly into the hands of users, then go to [Setup](broken-reference)
+* If you want to see what's coming next for OpenCRVS, see the [Product Roadmap](general/product-roadmap.md)
 
 {% hint style="info" %}
 We recommend that you use this documentation in combination with the [CRVS Digitisation Guidebook](http://www.crvs-dgb.org/en/), an online resource that provides step-by-step guidance for countries to implement digitized systems and automated processes for CRVS.
@@ -46,11 +41,11 @@ We still stand by our original product commitments for OpenCRVS and these help s
 
 ### Design Principles
 
-We are passionate about the our design principles, so we want to share them with your here.
+We are passionate about the our design principles and firmly believe they make a big difference.
 
-#### **Start with users' needs**
+#### **Start with users' needs:**&#x20;
 
-Listen too, engage with and observe users. Spend time to understand their needs, assume nothing, and work with your users to create designs.
+#### Listen to, engage with and observe users. Spend time to understand their needs, assume nothing, and work with your users to create designs.
 
 #### **Prioritise offline**
 

@@ -9,7 +9,7 @@ This documentation can be used by governments, system integrators and developmen
 * If you want to explore the OpenCRVS functionality and see how it could meet your country needs, check out the [Product Specifications ](broken-reference)and the [Default Configuration](broken-reference) for Farajaland&#x20;
 * If you want to understand how OpenCRVS works technically, go to [Technology](broken-reference)
 * If you want to setup you own OpenCRVS instance and get it quickly into the hands of users, then go to [Setup](broken-reference)
-* If you want to see what's coming next for OpenCRVS, see the [Product Roadmap](general/product-roadmap.md)
+* If you want to see what's coming next for OpenCRVS, see the [Product Roadmap](general/roadmap.md)
 
 {% hint style="info" %}
 We recommend that you use this documentation in combination with the [CRVS Digitisation Guidebook](http://www.crvs-dgb.org/en/), an online resource that provides step-by-step guidance for countries to implement digitized systems and automated processes for CRVS.
@@ -31,21 +31,21 @@ Through our extensive research of CRVS systems around the world (including Pakis
 
 We still stand by our original product commitments for OpenCRVS and these help steer the strategic direction of the product.
 
-* Fully open-source, with no license fees or ties to specific vendors
-* Configurable for all country contexts&#x20;
-* Interoperable with other government systems&#x20;
-* Highly accessible to ensure inclusion, even in remote areas
-* Safe and secure to keep personal data protected&#x20;
-* Easy to deploy and use in low resource settings&#x20;
-* Enabling new models of civil registration that can help achieve universal registration
+1. Fully open-source, with no license fees or ties to specific vendors
+2. Configurable for all country contexts&#x20;
+3. Interoperable with other government systems&#x20;
+4. Highly accessible to ensure inclusion, even in remote areas
+5. Safe and secure to keep personal data protected&#x20;
+6. Easy to deploy and use in low resource settings&#x20;
+7. Enabling new models of civil registration that can help achieve universal registration
 
 ### Design Principles
 
-We are passionate about the our design principles and firmly believe they make a big difference.
+We are passionate about our design principles and firmly believe they make a big difference. We continue to be inspired by them and hope you will be to...&#x20;
 
-#### **Start with users' needs:**&#x20;
+#### **Start with users' needs**
 
-#### Listen to, engage with and observe users. Spend time to understand their needs, assume nothing, and work with your users to create designs.
+Listen to, engage with and observe users. Spend time to understand their needs, assume nothing, and work with your users to create designs.
 
 #### **Prioritise offline**
 
@@ -57,7 +57,7 @@ The user shouldn't have any questions about what to do - it should be intuitive.
 
 #### **Test, learn and iterate**
 
-The best way to develop new features is to start small and release early. Get it into the hands of your users, listen - learn, and iterate.
+The best way to develop new features is to get an early version into the hands of users, then listen -> learn -> iterate.
 
 #### **Enable rights**
 
@@ -65,15 +65,15 @@ We want to empower and protect those who use and are served by OpenCRVS. Is what
 
 #### **Be consistent**
 
-Every part of the product should look and feel part of the whole - make use of the component library.
+Every part of the product should look and feel part of the whole - always use of the component library.
 
-#### **Be hyper accessible**
+#### **Be hyper-accessible**
 
-Our users are from across the world with varying levels of digital literacy. Whatever we design must be as inclusive, legible and accessible as possible.
+Our users are from across the world with varying levels of digital literacy. Whatever we design must be intuitive, legible and as accessible as possible.
 
 #### **Words matter**
 
-Every word should be understood by users, with no room for interpretation. When drafting text, avoid use of administrative language and test it with local users.
+Every word should be understood by users, with no room for ambiguity. When drafting text, avoid use of administrative language and test it with local users.
 
 #### **Design with data**
 
@@ -82,23 +82,3 @@ Use data generated from the system to inform design improvements.
 #### **Consider other contexts**
 
 OpenCRVS is a global product. Consider the variability of what you are designing - will it work in other countries and contexts, and how will it be easily configured?
-
-### Demo
-
-Check out the live demo…?
-
-***
-
-###
-
-***
-
-### Contributing
-
-Intro to contributing, intro to community. link to in depth resources
-
-***
-
-### Releases
-
-v.1.0 beta

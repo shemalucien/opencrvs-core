@@ -4,6 +4,18 @@ OpenCRVS is an open-source digital solution for civil registration designed spec
 
 In this documentation you will find all you need to design, configure, operate and maintain an OpenCRVS application that meets your country's needs.&#x20;
 
+This documentation can be used by governments, system integrators and development partners, depending on what you are trying to achieve:
+
+* If you want to explore the OpenCRVS functionality to see how it could meet your country needs, go to [Product Specifications](broken-reference)
+* Link learn about x
+* Link learn about y
+
+There are also translations of the documentation into other languages:
+
+*
+
+If you're maintaining a translation, feel free to pull request it here!
+
 {% hint style="info" %}
 We recommend that you use this documentation in combination with the [CRVS Digitisation Guidebook](http://www.crvs-dgb.org/en/), an online resource that provides step-by-step guidance for countries to implement digitized systems and automated processes for CRVS.
 {% endhint %}
@@ -22,7 +34,7 @@ Through our extensive research of CRVS systems around the world (including Pakis
 
 ### Product Commitments
 
-We still stand by our original product commitments for OpenCRVS and these help steer the strategic direction of the product:
+We still stand by our original product commitments for OpenCRVS and these help steer the strategic direction of the product.
 
 * Fully open-source, with no license fees or ties to specific vendors
 * Configurable for all country contexts&#x20;
@@ -34,7 +46,7 @@ We still stand by our original product commitments for OpenCRVS and these help s
 
 ### Design Principles
 
-OpenCRVS solves the question of "Why?” with these principles:
+We are passionate about the our design principles, so we want to share them with your here.
 
 #### **Start with users' needs**
 
@@ -76,29 +88,13 @@ Use data generated from the system to inform design improvements.
 
 OpenCRVS is a global product. Consider the variability of what you are designing - will it work in other countries and contexts, and how will it be easily configured?
 
-
-
-Refer to CRVS-DGB
-
 ### Demo
 
 Check out the live demo…?
 
 ***
 
-### Documentation
-
-What this documentation is, who it is for
-
-* Link to getting started
-* Link learn about x
-* Link learn about y
-
-There are also translations of the documentation into other languages:
-
-*
-
-If you're maintaining a translation, feel free to pull request it here!
+###
 
 ***
 

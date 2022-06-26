@@ -34,7 +34,7 @@
 * [Data functions](product-specifications/functional-architecture/data-functions/README.md)
   * [21. Legacy data import](product-specifications/data-functions/21.-legacy-data-import.md)
   * [22. Legacy paper import](product-specifications/data-functions/22.-legacy-paper-import.md)
-* [Status flow](product-specifications/status-flow.md)
+* [Status flow diagram](product-specifications/status-flow-diagram.md)
 
 ## Technology
 

@@ -34,7 +34,7 @@
 * [Data functions](product-specifications/functional-architecture/data-functions/README.md)
   * [21. Legacy data import](product-specifications/data-functions/21.-legacy-data-import.md)
   * [22. Legacy paper import](product-specifications/data-functions/22.-legacy-paper-import.md)
-* [Status flow diagram](product-specifications/status-flow-diagram.md)
+* [Status flow diagram](product-specifications/status-flow.md)
 
 ## Technology
 
@@ -99,7 +99,7 @@
   * [4.4 Configure a certificate template](setup/4.-configuration/4.4-configure-a-certificate-template.md)
   * [4.5 Create system users](setup/4.-configuration/4.5-create-system-users.md)
 * [5. Testing](setup/5.-testing.md)
-* [6. Go live](setup/6.-go-live.md)
+* [6. Go-live](setup/6.-go-live.md)
 * [7. Monitoring](setup/7.-monitoring/README.md)
   * [7.1 Application logs](setup/7.-monitoring/7.1-application-logs.md)
   * [7.2 Infrastructure health](setup/7.-monitoring/7.3-server-health.md)

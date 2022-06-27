@@ -4,12 +4,12 @@ OpenCRVS is an open-source digital solution for civil registration, designed spe
 
 In this documentation you will find all you need to design, configure, operate and maintain an OpenCRVS application that meets your country's needs.&#x20;
 
-This documentation can be used by governments, system integrators and development partners, depending on what you need to do:
+This documentation can be used by governments, system integrators and development partners:
 
-* If you want to explore the OpenCRVS functionality and see how it could meet your country needs, check out the [Product Specifications ](broken-reference)and the [Default Configuration](broken-reference) for Farajaland&#x20;
-* If you want to understand how OpenCRVS works technically, go to [Technology](broken-reference)
-* If you want to setup you own OpenCRVS instance and get it quickly into the hands of users, then go to [Setup](broken-reference)
-* If you want to see what's coming next for OpenCRVS, see the [Product Roadmap](general/roadmap.md)
+* explore the OpenCRVS functionality and see how it could meet your country needs, check out the [Product Specifications ](broken-reference)and the [Default Configuration](broken-reference) for Farajaland&#x20;
+* understand how OpenCRVS works technically, go to [Technology](broken-reference)
+* setup you own OpenCRVS instance and get it quickly into the hands of users, then go to [Setup](broken-reference)
+* see what's coming next for OpenCRVS, see the [Product Roadmap](general/roadmap.md)
 
 {% hint style="info" %}
 We recommend that you use this documentation in combination with the [CRVS Digitisation Guidebook](http://www.crvs-dgb.org/en/), an online resource that provides step-by-step guidance for countries to implement digitized systems and automated processes for CRVS.

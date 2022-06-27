@@ -6,7 +6,7 @@ description: >-
 
 # Civil registration in Farajaland
 
-### **Civil registration in Farajaland**
+Detailed below is an explanation of the current state and operations of civil registration in Farajaland.
 
 1. The Civil Registration Authority (CRA) has the mandate to register all births and deaths in Farajaland, as per the Births and Deaths Registration Act, last amended in 2021.\
 

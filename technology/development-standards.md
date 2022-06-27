@@ -1,7 +1,3 @@
----
-description: Overview of how OpenCRVS uses best-practice technology standards
----
-
 # Standards
 
 At OpenCRVS we are obsessed with conforming to good, existing standards.  We want to make implementers' lives as easy as possible, so we have no intention of re-inventing the wheel when we don't have to.&#x20;

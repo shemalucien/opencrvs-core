@@ -10,7 +10,7 @@ By using [FHIR](https://hl7.org/FHIR/) as a standard for our NoSQL datastore, [H
 
 We have extended FHIR's model to include custom codes and extensions that assist the Civil Registration context.  These customisations are listed here.
 
-To understand the framework of Civil Registration documents exposed in FHIR in OpenCRVS, read the Interoperability section:  [OpenCRVS FHIR Documents](https://app.gitbook.com/o/zub8C4BetmW3a9Bj4Cd4/s/qI5B1zX9fZVx3HCjIY12/\~/changes/6pHhtQvucSfdH5ndyWpd/technology/interoperability/opencrvs-fhir-documents)
+To understand more about how and why we use FHIR, click [here](interoperability/opencrvs-fhir-documents.md).
 
 #### **Interoperability**
 

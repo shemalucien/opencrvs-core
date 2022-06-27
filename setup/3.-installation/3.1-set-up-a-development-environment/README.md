@@ -11,5 +11,5 @@ In order to run OpenCRVS, we expect that you have a working knowledge of Linux /
 
 OpenCRVS consists of multiple servers which run in Docker containers and requires NodeJS. You should be familiar with the concepts of Docker and NodeJS web application software development. Having familiarity with NodeJS, Docker Containerisation and Microservice architectures is a big plus if you intend on contributing.
 
-It is really important that regardless of your experience, that you carefully follow these instructions step-by-step.
+It is really important, regardless of your experience, that you carefully follow these instructions step-by-step.
 {% endhint %}

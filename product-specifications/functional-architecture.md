@@ -1,3 +1,7 @@
+---
+description: Overview of core functions
+---
+
 # Core functions
 
 | Function                                                                | Description                                                                                                                                                           |   |

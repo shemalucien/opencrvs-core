@@ -6,7 +6,7 @@ We treat the security of OpenCRVS and the personally identifiable citizen data i
 
 Every release of the OpenCRVS application and infrastructure has been security penetration tested by an independent, [CREST](https://www.crest-approved.org/) and [CyberEssentials](https://www.ncsc.gov.uk/cyberessentials/overview) certified 3rd party to UK government standards. &#x20;
 
-The latest penetration test of OpenCRVS was performed by [GoFore](https://gofore.com/) - [NORAD's](https://www.norad.no/) preferred security testing provider. [GoFore](https://gofore.com/) Plc conducts security assessments for public and private organisations in the form of white hat penetration testing (aka ethical hacking) to simulate an adversary attacking the system and identifying vulnerabilities that may be exploited to compromise data confidentiality, integrity and availability.
+The latest penetration test of OpenCRVS was performed by the consultancy [GoFore](https://gofore.com/) - [NORAD's](https://www.norad.no/) preferred security testing provider.  Gofore Plc conducts security assessments for public and private organisations in the form of white hat penetration testing (aka ethical hacking) to simulate an adversary attacking the system and identifying vulnerabilities that may be exploited to compromise data confidentiality, integrity and availability.
 
 Gofore pentesters utilise proven pentesting methods of code review, automated enumeration scans via the public internet, fuzzing with diverse input, and manual tests. The security assessment was conducted in two rounds, first to identify and report vulnerabilities, and then reassessed to ensure reported vulnerabilities were resolved.
 

@@ -35,15 +35,15 @@ The following dependencies are automatically provisioned alongside the OpenCRVS 
 
 ### Why Docker Swarm?  Is there a plan for Kubernetes?
 
-[Docker Swarm](https://docs.docker.com/engine/swarm/) was chosen by our architects in 2018 for it's lack of requirement of other essential dependencies, it's close alignment with Docker and it's simplicity in terms of installation and monitoring on a [Tier 2 private data centre](https://en.wikipedia.org/wiki/Data\_center), on bare metal servers with headless [Ubuntu OS](https://en.wikipedia.org/wiki/Ubuntu) .   Why not use AWS, public cloud SaaS or serverless you might be thinking?
+[Docker Swarm](https://docs.docker.com/engine/swarm/) was chosen by our architects in 2018 for it's lack of requirement of other essential dependencies, it's close alignment with Docker and it's simplicity in terms of installation and monitoring on a [Tier 2 private data centre](https://en.wikipedia.org/wiki/Data\_center), on bare metal servers with headless [Ubuntu OS](https://en.wikipedia.org/wiki/Ubuntu). Why not use AWS, public cloud SaaS or serverless you might be thinking?
 
-* Many nations may be located far from a developed world data-centre above Tier 2.&#x20;
-* Many nations may not be able to legally support international data storage of citizen data on a public cloud. Getting the legal approval for external storage of citizen data requires regulatory change which obviously can take some time.&#x20;
-* Because some nations may not be able to maintain complex software independently, we are considering a SaaS solution, provided enough countries get regulatory approval.  Over time this situation appears to be slowly evolving and we are monitoring it closely.
+* Many countries may be located far from a high-quality data-centre above Tier 2.&#x20;
+* Many countries may not legally support international data storage of citizen data on a public cloud. Getting the legal approval for external storage of citizen data requires regulatory change which can take a considerable amount of time.&#x20;
+* Because some countries may not be able to maintain complex software independently, we are considering a SaaS solution, provided enough countries get regulatory approval.  Over time, this situation appears to be slowly evolving and we are monitoring it closely.
 
-Previously unskilled system administrators can quickly up-skill in the techniques of private cloud infrastructure management using Docker Swarm. We wanted to democratise containerisation benefits for developing nations.
+Previously unskilled system administrators can quickly up-skill in the techniques of private cloud infrastructure management using Docker Swarm. We wanted to democratise containerisation benefits for all countries.
 
-We are working on a [Kubernetes](https://kubernetes.io/) migration now that Kubernetes has become more mature, easier to use and configure thanks to dependencies like Helm and other plugins. As a result Kubernetes has seen a much a bigger increase in popularity since 2018.  in the meantime, Docker Swarm makes it easy to commence containerised microservice package distribution privately,  automatically configures a "round robin" load balanced cluster, and provides Service Discovery out-the-box.
+We are working on a [Kubernetes](https://kubernetes.io/) migration now that Kubernetes has become a more mature, easier to use and configure solution, thanks to dependencies like Helm and other plugins increasing popularity since 2018. In the meantime, Docker Swarm makes it easy to commence containerised microservice package distribution privately,  automatically configures a "round robin" load balanced cluster, and provides Service Discovery out-the-box.
 
 \
 
@@ -56,7 +56,7 @@ In order to support configuration for limitless country scale, OpenCRVS was desi
 
 Massively scalable and extensible, [Hearth](https://github.com/opencrvs/hearth) is an OpenSource NoSQL database server originally built by the OpenCRVS founding member [Jembi Health Systems](https://www.jembi.org/), using interoperable [Health Level 7](https://www.hl7.org) [FHIR](https://www.hl7.org/fhir/) v4 ([ANSI](https://www.ansi.org/) Accredited, Fast Healthcare Interoperability Resources) as standard.
 
-We extended [FHIR](https://www.hl7.org/fhir/) to support the civil registration context. Our civil registration FHIR standard is discussed [here](interoperability/opencrvs-fhir-documents.md).
+We extended [FHIR](https://www.hl7.org/fhir/) to support the civil registration context. Our civil registration FHIR standard is described [here](interoperability/opencrvs-fhir-documents.md).
 
 \
 
@@ -65,7 +65,7 @@ We extended [FHIR](https://www.hl7.org/fhir/) to support the civil registration 
 
 **ElasticSearch**
 
-OpenCRVS uses [ElasticSearch](https://www.elastic.co/), an industry standard, NoSQL document orientated, real-time de-duplication & search engine. Lightning fast, intelligent civil registration record returns are possible, even with imprecise, “fuzzy” search parameters.
+OpenCRVS uses [ElasticSearch](https://www.elastic.co/), an industry standard, NoSQL document orientated, real-time de-duplication & search engine. Lightning fast, intelligent civil registration record returns are possible, even with imprecise “fuzzy” search parameters.
 
 De-duplication management to ensure data integrity is essential to any civil registration system. A fast search engine lowers operational costs and improves the user experience for frontline staff.
 
@@ -78,7 +78,7 @@ ElasticSearch is also used with [Kibana](https://www.elastic.co/kibana) for appl
 
 **InfluxData**
 
-The hyper-efficient [Influx](https://www.influxdata.com) "time series database" is used our stack for  for "big data" performance insights. Millisecond level query times facilitate civil registration statistical queries over years of data, disaggregated by gender, location and configurable operational and statistical parameters.
+The hyper-efficient [Influx](https://www.influxdata.com) "time series database" is used in our stack for "big data" performance insights. Millisecond level query times facilitate civil registration statistical queries over years of data, disaggregated by gender, location and configurable operational and statistical parameters.
 
 \
 
@@ -109,7 +109,7 @@ The microservices are written in [TypeScript](https://github.com/microsoft/TypeS
 
 Each microservice in OpenCRVS has no knowledge of other services or business requirements in the application, and each exposes it’s capabilities via [JWT](https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/) secured APIs.
 
-Microservices:
+**Microservices:**
 
 * [auth](https://github.com/opencrvs/opencrvs-core/tree/master/packages/auth) - the authentication microservice for OpenCRVS, [JWT](https://jwt.io/) token generation and management in [Redis](https://www.redislabs.com/). Our client applications are protected by SMS [2-Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor\_authentication). Our apps and microservices utilise [OAuth best practices](https://tools.ietf.org/id/draft-ietf-oauth-jwt-bcp-02.html) for JWT tokens.
 
@@ -144,7 +144,7 @@ Microservices:
 
 Using an Android [progressive web application](https://developers.google.com/web/progressive-web-apps) for our client applications means that we can take advantage of offline functionality and native mobile features using [Workbox](https://developers.google.com/web/tools/workbox), without the overhead of maintaining multiple web and mobile codebases and respective App/Play Store releases.
 
-In remote areas, registrars can save a configurable number of registrations offline on their mobile phone using [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB\_API).
+In remote areas, registrars can save a configurable number of registrations offline on their mobile phone, using [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB\_API).
 
 Client [npm](https://www.npmjs.com/) dependencies and enablers include:
 

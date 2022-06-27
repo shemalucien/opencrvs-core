@@ -1,6 +1,6 @@
 # Users
 
-The different user roles in the system, and defined below, reflect common actors involved in civil registration services around the world. To see how these roles are mapped to user types in Farajaland, see [opencrvs-configuration-in-farajaland](../../../default-configuration/opencrvs-configuration-in-farajaland/ "mention").
+The different user roles in the system, and defined below, reflect common actors involved in civil registration services around the world. To see how these roles are mapped to user types in Farajaland, see [user-role-mapping.md](../../../default-configuration/opencrvs-configuration-in-farajaland/user-role-mapping.md "mention").
 
 | Role                  | Description | Responsibilities                                                                                                                     |
 | --------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |

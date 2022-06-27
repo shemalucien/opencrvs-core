@@ -2,18 +2,18 @@
 
 The technical architecture of OpenCRVS was designed to conform to the [Open Health Information Exchange (OpenHIE) architectural standard](https://ohie.org/) and interoperate using [HL7 (Fast Healthcare Interoperability Resources) or FHIR](https://www.hl7.org/fhir/). FHIR is a global standard application programming interface or (API) for exchanging electronic health records.
 
-By following the OpenHIE framework, OpenCRVS seamlessly connects civil registration to health services and other systems. Firstly, by utilising the OpenHIE interoperability reference middleware: [OpenHIM](http://openhim.org/) - A FHIR standard enterprise service bus. And secondly by using a scalable, modular, NoSQL FHIR datastore, called [Hearth](https://github.com/opencrvs/hearth).
+By following the OpenHIE framework, OpenCRVS seamlessly connects civil registration to health services and other systems. Firstly, by utilising the OpenHIE interoperability reference middleware [OpenHIM](http://openhim.org/), a FHIR standard enterprise service bus; and secondly, by using a scalable, modular, NoSQL FHIR datastore, called [Hearth](https://github.com/opencrvs/hearth).
 
-We use OpenHIM to receive birth and death notifications from the hospital setting and expose registration events to any other technical system, such as [MOSIP foundational national ID](https://mosip.io/), or [DHIS2 health Information Management](https://dhis2.org/) via an API gateway.
+We use OpenHIM to receive birth and death notifications from a hospital setting, and expose registration events to any other technical system via an API gateway e.g. [MOSIP foundational national ID](https://mosip.io/), or [DHIS2 health Information Management](https://dhis2.org/).
 
-OpenCRVS business functions are designed using modular, event-driven [microservices](https://en.wikipedia.org/wiki/Microservices). Each micro service, and every OpenCRVS component is independently scalable in private or public cloud, in large or small data centres, and easy to manage, load balance and network using included [Docker Swarm](https://docs.docker.com/engine/swarm/) configurations.
+OpenCRVS business functions are designed using modular, event-driven [microservices](https://en.wikipedia.org/wiki/Microservices). Each micro service and every OpenCRVS component is independently scalable in private or public cloud, in large or small data centres, and easy to manage, load balance and network using included [Docker Swarm](https://docs.docker.com/engine/swarm/) configurations.
 
 OpenCRVS builds on these sound principles by additionally providing:
 
-* Easy country configuration via simple csv files and a configuration UI
-* Standards based multi language content management.
+* Easy country configuration via simple csv files and a configuration UI.
+* Standards-based multi-language content management.
 * A market-leading, powerful search and de-duplication engine powered by [ElasticSearch](https://www.elastic.co/).
-* Real time performance analytics powered by the time-series database: [Influx](https://www.influxdata.com/).
+* Real-time performance analytics powered by the time-series database [Influx](https://www.influxdata.com/).
 * Increased performance by the use of [GraphQL](https://graphql.org/), reducing HTTP requests between client and server.
 * An automated continuous integration, delivery and testing suite.
 * A single JS, [TypeScript](https://www.typescriptlang.org/) codebase for backend, desktop and mobile using [Progressive Web Application](https://web.dev/progressive-web-apps/) technology for offline and low-connectivity access.
@@ -23,7 +23,7 @@ OpenCRVS builds on these sound principles by additionally providing:
 
 OpenCRVS is a full-stack that is designed to give you the lowest possible ["total cost of ownership"](https://en.wikipedia.org/wiki/Total\_cost\_of\_ownership).
 
-Our international, development teams work in an Agile way, in tandem with local development resources and human centred designers, following the [Scrum](https://www.atlassian.com/agile/scrum) methodology, to rapidly design, build, deploy, test and maintain OpenCRVS releases.
+Our international development teams work in an Agile way, in tandem with local development resources and human-centred designers, following the [Scrum](https://www.atlassian.com/agile/scrum) methodology, to rapidly design, build, deploy, test and maintain OpenCRVS releases.
 
 {% embed url="https://www.figma.com/file/1WohPWFe53VH7zO7yILJDx/Architecture?node-id=0:1" %}
 

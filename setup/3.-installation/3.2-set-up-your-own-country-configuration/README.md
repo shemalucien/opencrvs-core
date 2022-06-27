@@ -2,7 +2,7 @@
 
 This section instructs you how to set-up and provision factory reset reference data for your OpenCRVS country configuration, and replace the default repository (Farajaland) with your country's repository.
 
-The articles should be run step-by-step and they will walk you through how to:
+The instructions should be conducted sequentially as laid out in each step, and will include:
 
 1. Fork our fictional country configuration "Farajaland" into your own country configuration repository.
 2. Configure your country's administrative address structure to be used as standardised and interoperable geolocation for registrations, employees, civil registration offices and health facilities.

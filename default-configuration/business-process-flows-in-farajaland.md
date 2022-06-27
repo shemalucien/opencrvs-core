@@ -4,7 +4,7 @@ description: >-
   OpenCRVS
 ---
 
-# Farajaland business process flows
+# Business process flows in Farajaland
 
 There are 3 main service delivery models employed in Farajaland to provide effective civil registration services to the public. These service delivery models are as follows:
 
@@ -16,14 +16,14 @@ For each of the service delivery models a digitally enabled business process has
 
 ### Community declaration via a community leader
 
-![](<../../.gitbook/assets/Community declaration.png>)
+![](<../.gitbook/assets/Community declaration.png>)
 
 ### Notification from the health facility
 
-![Health facility notification process in Farajaland](<../../.gitbook/assets/Health facility notification.png>)
+![Health facility notification process in Farajaland](<../.gitbook/assets/Health facility notification.png>)
 
 ### Registration at the District Registration Office
 
-![Office registration process in Farajaland](<../../.gitbook/assets/Office registration.png>)
+![Office registration process in Farajaland](<../.gitbook/assets/Office registration.png>)
 
 &#x20;

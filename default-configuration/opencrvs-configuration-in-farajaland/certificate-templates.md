@@ -4,10 +4,10 @@ The following birth and death certificate samples have been configured to meet t
 
 ### Birth certificate
 
-![](<../../../.gitbook/assets/Farajaland birth certificate.png>)
+![](<../../.gitbook/assets/Farajaland birth certificate.png>)
 
 ### Death certificate
 
-![](<../../../.gitbook/assets/Farajaland death certificate.png>)
+![](<../../.gitbook/assets/Farajaland death certificate.png>)
 
 ###

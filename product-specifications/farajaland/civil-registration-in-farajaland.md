@@ -6,7 +6,7 @@ description: >-
 
 # Civil registration in Farajaland
 
-**Civil registration in Farajaland**
+### **Civil registration in Farajaland**
 
 1. The Civil Registration Authority (CRA) has the mandate to register all births and deaths in Farajaland, as per the Births and Deaths Registration Act, last amended in 2021.\
 
@@ -42,10 +42,9 @@ description: >-
    * Automate a number of the manual and time-consuming registration steps.
    * Digitise the paper records and make them available in the system for quick search and action.&#x20;
 
-#### **Implementation of OpenCRVS**
+### **Implementation of OpenCRVS**
 
 The CRA has recently implemented OpenCRVS as part of a digital transformation programme in Farajaland, in order to respond to the current CRVS performance challenges and to contribute to the strategic goals of the CRVS National Strategic Plan. &#x20;
 
 The CRA has invested in the necessary infrastructure and connectivity at the District Registration Offices, which now have a stable broadband service.
 
-\--> Insert system architecture??

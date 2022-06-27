@@ -14,15 +14,25 @@ Gofore pentesters utilise proven pentesting methods of code review, automated en
 >
 > GoFore Cyber Security Consultant
 
-#### **Some key security points**
+### **Key security points**
+
+#### **Two factor authentication**
 
 Our mobile application and microservices are secure, protected by [2-Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor\_authentication) utilising [OAuth JWT best practices](https://tools.ietf.org/id/draft-ietf-oauth-jwt-bcp-02.html).  2FA codes are sent to the user's mobile device in order log in.  These codes time out after 5 minutes preventing brute force attack and ensuring only authenticated users with access to authenticated hardware can access OpenCRVS.
 
+#### Access controls
+
 User types and access controls are managed in order to segregate personally identifiable data to only to the users who need it. These user types can be set up in the Team GUI accessible by National and Local System Administrators.  Every access to a specific declaration or registration is audited in order to track who viewed the data thus protecting citizen rights.
+
+#### Ansible firewalls
 
 All OpenCRVS data is encrypted in transit and at rest. OpenCRVS includes daily, automated, external back up as a configurable option in our [Ansible](https://www.ansible.com/) script.  The Ansible script automatically provisions a secure firewall to OpenCRVS on each node.
 
+#### SSL certificate
+
 OpenCRVS SSL certificate is automatically provisioned by [Traefik](https://traefik.io/) signed by [LetsEncrypt](https://letsencrypt.org/), and automatically rotates
+
+#### Database encryption
 
 Encryption keys to the databases, API keys and sensitive environment secrets are never stored in .env files but instead are stored in RAM in inaccessible [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) and provided to deployment by inaccessible [Github Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 

@@ -51,12 +51,12 @@
 
 * [Intro to Farajaland](default-configuration/intro-to-farajaland.md)
 * [Civil registration in Farajaland](product-specifications/farajaland/civil-registration-in-farajaland.md)
-* [Farajaland OpenCRVS configuration](product-specifications/farajaland/opencrvs-configuration/README.md)
-  * [User / role mapping](product-specifications/farajaland/opencrvs-configuration/user-role-mapping.md)
-  * [Application settings](product-specifications/farajaland/opencrvs-configuration/application-settings.md)
-  * [Declaration forms](product-specifications/farajaland/opencrvs-configuration/declaration-forms.md)
-  * [Certificate templates](product-specifications/farajaland/farajaland-opencrvs-configuration/certificate-templates.md)
-* [Farajaland business process flows](product-specifications/farajaland/business-process-flows.md)
+* [OpenCRVS configuration in Farajaland](default-configuration/opencrvs-configuration-in-farajaland/README.md)
+  * [User / role mapping](default-configuration/opencrvs-configuration-in-farajaland/user-role-mapping.md)
+  * [Application settings](default-configuration/opencrvs-configuration-in-farajaland/application-settings.md)
+  * [Declaration forms](default-configuration/opencrvs-configuration-in-farajaland/declaration-forms.md)
+  * [Certificate templates](default-configuration/opencrvs-configuration-in-farajaland/certificate-templates.md)
+* [Business process flows in Farajaland](default-configuration/business-process-flows-in-farajaland.md)
 
 ## Setup
 

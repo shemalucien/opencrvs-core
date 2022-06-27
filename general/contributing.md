@@ -49,11 +49,11 @@ OpenCRVS uses [GitHub](https://github.com/opencrvs/opencrvs-core) as its source 
 
 #### Reporting new issues <a href="#reporting-new-issues" id="reporting-new-issues"></a>
 
-We use [GitHub Issues](https://github.com/opencrvs/opencrvs-core/issues) if you would like to raise a bug or propose a change or feature. If you just have a general topic of discussion, or would like some technical help, please chat with us on [Gitter](https://gitter.im/opencrvs/community).
+We use [GitHub Issues](https://github.com/opencrvs/opencrvs-core/issues) if you would like to raise a bug or propose a change or feature. If you just have a general topic of discussion, or would like some technical help, please chat with us on [Github Discussions](https://github.com/opencrvs/opencrvs-core/discussions).
 
 #### Reporting bugs <a href="#reporting-bugs" id="reporting-bugs"></a>
 
-We use [GitHub Issues](https://github.com/opencrvs/opencrvs-core/issues) for our public bugs. If you would like to report a problem, take a look around and see if someone already opened an issue about it, or chat with us on [Gitter](https://gitter.im/opencrvs/community). If you are certain this is a new, unreported bug, you can submit a bug report.
+We use [GitHub Issues](https://github.com/opencrvs/opencrvs-core/issues) for our public bugs. If you would like to report a problem, take a look around and see if someone already opened an issue about it, or chat with us on [Github Discussions](https://github.com/opencrvs/opencrvs-core/discussions). If you are certain this is a new, unreported bug, you can submit a bug report.
 
 Take screenshots or record your screen. [Loom](https://www.loom.com/) is a great tool you can use to record a video and paste a link to it into your bug. Open a bug report on [Github](https://github.com/opencrvs/opencrvs-core/issues/new?assignees=\&labels=%F0%9F%91%B9Bug\&template=---bug.md\&title=) following the guidance.
 

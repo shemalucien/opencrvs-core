@@ -2,13 +2,12 @@
 
 The different user roles in the system, and defined below, reflect common actors involved in civil registration services around the world. To see how these roles are mapped to user types in Farajaland, see [user-role-mapping.md](../../../default-configuration/opencrvs-configuration-in-farajaland/user-role-mapping.md "mention").
 
-| Role                  | Description | Responsibilities                                                                                                                     |
-| --------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Field agent           |             | <ul><li>Create birth and death notifications</li></ul>                                                                               |
-| Registration agent    |             | <ul><li>Create birth and death declarations</li><li>Validate and send declarations for approval</li><li>Issue certificates</li></ul> |
-| Registrar             |             | <ul><li>Creating birth and death declarations</li><li>Approve and register declarations</li><li>Issue certificates</li></ul>         |
-| National Registrar    |             |                                                                                                                                      |
-| Local System Admin    |             |                                                                                                                                      |
-| National System Admin |             |                                                                                                                                      |
-| Performance Manager   |             |                                                                                                                                      |
-| Public??              |             |                                                                                                                                      |
+| Role                  | Responsibilities                                                                                                                                                         | Types                                                                      |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| Field agent           | <ul><li>Create birth and death notifications</li></ul>                                                                                                                   | <p>Healthcare Worker<br>Police Office<br>Local Leader<br>Social Worker</p> |
+| Registration agent    | <ul><li>Create birth and death declarations</li><li>Validate and send declarations for approval</li><li>Issue certificates</li><li>View performance statistics</li></ul> |                                                                            |
+| Registrar             | <ul><li>Create birth and death declarations</li><li>Approve and register declarations</li><li>Issue certificates</li><li>View performance statistics</li></ul>           |                                                                            |
+| National Registrar    | <ul><li>Create birth and death declarations</li><li>Approve and register declarations</li><li>Issue certificates</li><li>View performance statistics</li></ul>           |                                                                            |
+| Local System Admin    | <ul><li>Create users</li><li>Edit users</li></ul>                                                                                                                        |                                                                            |
+| National System Admin | <ul><li>Config management</li><li>Create users</li><li>Edit users</li></ul>                                                                                              |                                                                            |
+| Performance Manager   | <ul><li>View performance statistics</li></ul>                                                                                                                            |                                                                            |

@@ -6,7 +6,6 @@
 
 * [Functional Architecture](product-specifications/functional-architecture/core-functions/README.md)
 * [Users](product-specifications/function-architecture/users/README.md)
-  * [Tasks and permissions](product-specifications/function-architecture/users/tasks-and-permissions.md)
   * [Examples](product-specifications/function-architecture/users/examples.md)
 * [Core functions](product-specifications/functional-architecture.md)
   * [1. Notify event](product-specifications/core-functions/1.-notify-event.md)

@@ -33,7 +33,7 @@ Our international development teams work in an Agile way, in tandem with local d
 
 The following dependencies are automatically provisioned alongside the OpenCRVS Core in [docker](https://www.docker.com/) containers in a Docker Swarm on Ubuntu.
 
-### Why Docker Swarm?  Is there a plan for Kubernetes?
+#### Docker Swarm
 
 [Docker Swarm](https://docs.docker.com/engine/swarm/) was chosen by our architects in 2018 for it's lack of requirement of other essential dependencies, it's close alignment with Docker and it's simplicity in terms of installation and monitoring on a [Tier 2 private data centre](https://en.wikipedia.org/wiki/Data\_center), on bare metal servers with headless [Ubuntu OS](https://en.wikipedia.org/wiki/Ubuntu). Why not use AWS, public cloud SaaS or serverless you might be thinking?
 
@@ -43,10 +43,11 @@ The following dependencies are automatically provisioned alongside the OpenCRVS 
 
 Previously unskilled system administrators can quickly up-skill in the techniques of private cloud infrastructure management using Docker Swarm. We wanted to democratise containerisation benefits for all countries.
 
+#### **Is there a plan for Kubernetes?**
+
 We are working on a [Kubernetes](https://kubernetes.io/) migration now that Kubernetes has become a more mature, easier to use and configure solution, thanks to dependencies like Helm and other plugins increasing popularity since 2018. In the meantime, Docker Swarm makes it easy to commence containerised microservice package distribution privately,  automatically configures a "round robin" load balanced cluster, and provides Service Discovery out-the-box.
 
-\
-
+###
 
 ![](https://static.wixstatic.com/media/93440e\_d04078ae922a4126b8e9dd3f96066505\~mv2.png/v1/fill/w\_136,h\_39,al\_c,q\_80,usm\_0.66\_1.00\_0.01/FHIR\_Foundation.webp)
 
@@ -58,7 +59,6 @@ Massively scalable and extensible, [Hearth](https://github.com/opencrvs/hearth) 
 
 We extended [FHIR](https://www.hl7.org/fhir/) to support the civil registration context. Our civil registration FHIR standard is described [here](interoperability/opencrvs-fhir-documents.md).
 
-\
 
 
 ![](https://static.wixstatic.com/media/93440e\_21c72b72ff3a405596448e33f80a719c\~mv2\_d\_3422\_1781\_s\_2.png/v1/fill/w\_136,h\_70,al\_c,q\_80,usm\_0.66\_1.00\_0.01/Elasticsearch-Logo-Color-V.webp)
@@ -69,8 +69,7 @@ OpenCRVS uses [ElasticSearch](https://www.elastic.co/), an industry standard, No
 
 De-duplication management to ensure data integrity is essential to any civil registration system. A fast search engine lowers operational costs and improves the user experience for frontline staff.
 
-ElasticSearch is also used with [Kibana](https://www.elastic.co/kibana) for application and server health monitoring.
-
+ElasticSearch is also used with [Kibana](https://www.elastic.co/kibana) for application and server health monitoring.\
 \
 
 
@@ -78,8 +77,7 @@ ElasticSearch is also used with [Kibana](https://www.elastic.co/kibana) for appl
 
 **InfluxData**
 
-The hyper-efficient [Influx](https://www.influxdata.com) "time series database" is used in our stack for "big data" performance insights. Millisecond level query times facilitate civil registration statistical queries over years of data, disaggregated by gender, location and configurable operational and statistical parameters.
-
+The hyper-efficient [Influx](https://www.influxdata.com) "time series database" is used in our stack for "big data" performance insights. Millisecond level query times facilitate civil registration statistical queries over years of data, disaggregated by gender, location and configurable operational and statistical parameters.\
 \
 
 
@@ -89,19 +87,16 @@ The hyper-efficient [Influx](https://www.influxdata.com) "time series database" 
 
 The [OpenHIM (Health Information Mediator)](https://github.com/jembi/openhim-core-js) is a NodeJS enterprise service bus designed to ease interoperability between OpenCRVS and external systems such as Health & National ID. It provides external access to the system via secure APIs. OpenHIM channels and governs internal transactions, routing, orchestrating and translating requests into [FHIR](https://www.hl7.org/fhir/) between services and the database layer.
 
-### What is inside the OpenCRVS packages?
+### OpenCRVS packages
 
 The core of OpenCRVS is a monorepo organised using [Lerna](https://github.com/lerna/lerna). Each package reports unit test coverage in [Jest](https://jestjs.io/). Following the [microservice](https://en.wikipedia.org/wiki/Microservices), 1 service per container model, every package is independently scalable in a single [docker](https://www.docker.com/) container.
 
-\
-\
 
 
-![](https://static.wixstatic.com/media/93440e\_168a1efc9a3d4a47bc9282c5b684df6e\~mv2.png/v1/fill/w\_70,h\_70,al\_c,q\_80,usm\_0.66\_1.00\_0.01/typescript.webp) ![](https://static.wixstatic.com/media/93440e\_0e7fdde3dc404a8cbafdf70c18cedbc6\~mv2.png/v1/fill/w\_100,h\_70,al\_c,q\_80,usm\_0.66\_1.00\_0.01/hapi-logo.webp) ![](https://static.wixstatic.com/media/93440e\_65930e880f9e4efc822db3d5f3ddeb8a\~mv2.png/v1/fill/w\_90,h\_51,al\_c,q\_80,usm\_0.66\_1.00\_0.01/node.webp)
+![](<../.gitbook/assets/image (10).png>)  ![](<../.gitbook/assets/image (1).png>)  ![](<../.gitbook/assets/image (17).png>)\
 
 
-
-#### OpenCRVS microservice business layer packages
+#### Microservice business layer packages
 
 The OpenCRVS microservice architecture enables continuous evolution of its business requirements.
 
@@ -109,22 +104,14 @@ The microservices are written in [TypeScript](https://github.com/microsoft/TypeS
 
 Each microservice in OpenCRVS has no knowledge of other services or business requirements in the application, and each exposes it’s capabilities via [JWT](https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/) secured APIs.
 
-**Microservices:**
-
 * [auth](https://github.com/opencrvs/opencrvs-core/tree/master/packages/auth) - the authentication microservice for OpenCRVS, [JWT](https://jwt.io/) token generation and management in [Redis](https://www.redislabs.com/). Our client applications are protected by SMS [2-Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor\_authentication). Our apps and microservices utilise [OAuth best practices](https://tools.ietf.org/id/draft-ietf-oauth-jwt-bcp-02.html) for JWT tokens.
-
-![](https://static.wixstatic.com/media/93440e\_297d9c18fc9e48e78b39e885bbfdaa13\~mv2\_d\_1200\_1204\_s\_2.png/v1/fill/w\_70,h\_70,al\_c,q\_80,usm\_0.66\_1.00\_0.01/OAuth\_svg.webp)
-
 * [commons](https://github.com/opencrvs/opencrvs-core/tree/master/packages/commons) - a shared library package that all microservices use in order to validate JWTs
 * [config](https://github.com/opencrvs/opencrvs-core/tree/master/packages/config) - an application configuration microservice to power a configuration GUI for forms, application settings and certificates
 * [gateway](https://github.com/opencrvs/opencrvs-core/tree/master/packages/gateway) - the [GraphQL](https://graphql.org/) and [Apollo](https://www.apollographql.com/) API gateway for the OpenCRVS client.  [GraphQL](https://graphql.org/) allows OpenCRVS to perform much faster and more responsively in remote areas by drastically reducing the number of HTTP requests that are required in order to render a view in the presentation layer.  The OpenCRVS GraphQL Gateway is a JWT protected [Apollo](https://www.apollographql.com/) server that requests and resolves [FHIR](https://www.hl7.org/fhir/) resources from [Hearth](https://github.com/jembi/hearth) via [OpenHIM](https://github.com/jembi/openhim-core-js) into GraphQL, for easy consumption in the client applications.
 
-\
 
 
 ![](https://static.wixstatic.com/media/93440e\_d1ec46ba4c2d4c1dbb6afe6b9b7143de\~mv2.png/v1/fill/w\_133,h\_40,al\_c,q\_80,usm\_0.66\_1.00\_0.01/graphql.webp)
-
-
 
 * [metrics](https://github.com/opencrvs/opencrvs-core/tree/master/packages/metrics) - the civil registration metrics and analytics microservice using the [Influx](https://www.influxdata.com) time series database.
 * [notification](https://github.com/opencrvs/opencrvs-core/tree/master/packages/notification) - the microservice that manages SMS communications from OpenCRVS, communicating with a choice of 2 3rd party SMS Gateways.
@@ -132,7 +119,7 @@ Each microservice in OpenCRVS has no knowledge of other services or business req
 * [user-mgnt](https://github.com/opencrvs/opencrvs-core/tree/master/packages/user-mgnt) - the user management microservice for the OpenCRVS client. User permissions and roles can be centrally managed, supporting IT organisations that conform to [ISO27001](https://www.iso.org/isoiec-27001-information-security.html) certification.
 * [workflow](https://github.com/opencrvs/opencrvs-core/tree/master/packages/workflow) - the OpenCRVS business process orchestration microservice, mediating civil registration vital event status and audit updates.
 
-#### OpenCRVS client application packages
+#### Client application packages
 
 ![](https://static.wixstatic.com/media/93440e\_50ed7c9e719e44daa7ca7d3e183f4071\~mv2.png/v1/fill/w\_121,h\_55,al\_c,q\_80,usm\_0.66\_1.00\_0.01/react.webp)
 
@@ -156,12 +143,12 @@ Client [npm](https://www.npmjs.com/) dependencies and enablers include:
 * Read-only application state management using [redux](https://github.com/reduxjs/redux)
 * Unit tests coverage with [Jest](https://jestjs.io/) & [Enzyme](https://airbnb.io/enzyme/) UI component tests.
 
-#### Supporting packages that are not part of the running OpenCRVS stack
+#### Support packages
 
 * [integration](https://github.com/opencrvs/opencrvs-core/tree/master/packages/integration) - performance tests for OpenCRVS using the [K6](https://k6.io/) framework.
 * [components](https://github.com/opencrvs/opencrvs-core/tree/master/packages/components) - a UI component library package for the clients using [React Storybook](https://storybook.js.org/)
 
-#### What automated testing support is there?
+#### Automated testing support
 
 OpenCRVS Core displays [Codecov](https://about.codecov.io/) enforced 80% unit testing coverage on git.  We supply example e2e UI test scripts using [Cypress](https://www.cypress.io/) and cover the main registration business functionality in those tests.
 

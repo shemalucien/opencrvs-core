@@ -9,9 +9,9 @@ In order to make OpenCRVS as useful and open as possible to other systems, OpenC
 * Birth corrected
 * Death corrected
 
-Included in these webhooks is be a **FHIR Resource type and unique ID** to the resource associated. In these cases, a **FHIR Composition id**. Once a subscriber receives the event, they can query OpenCRVS for **demographics, attachments and links to biometric data** for the registration in a dedicated and secure API.
+Included in these webhooks is a **FHIR Resource type and unique ID** to the resource associated, in these cases, a **FHIR Composition ID**. Once a subscriber receives the event, they can query OpenCRVS for **demographics, attachments and links to biometric data** for the registration in a dedicated and secure API.
 
-Subscribing to an OpenCRVS webhook requires you to develop a mediator that has **system client** privileges explained previously. As an example, we have written [**this mediator**](https://github.com/opencrvs/mosip-mediator) that subscribes to a birth registration event and retrieves the data required by the [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) to register a national ID.:
+Subscribing to an OpenCRVS webhook requires you to develop a mediator that has **system client** privileges, explained previously. As an example, we have written [**this mediator**](https://github.com/opencrvs/mosip-mediator) that subscribes to a birth registration event and retrieves the data required by [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) to register a national ID.:
 
 A mediator that subscribes to an OpenCRVS webhook must:
 
@@ -56,7 +56,7 @@ Sample:
 | `challenge` | `1158201444`       | A random cryptographic string that you must pass back to OpenCRVS     |
 | `topic`     | `BIRTH_REGISTERED` | A supported OpenCRVS event type string that will trigger this webhook |
 
-Note: The supported events and associated topic strings are explained later in this document when studying the subscription process
+Note: The supported events and associated topic strings are explained later in this document when studying the subscription process.
 
 #### **Validating Verification Requests**
 

@@ -41,7 +41,7 @@ We continue to stand by our original product commitments for OpenCRVS and these 
 
 ### Design Principles
 
-Our design principles are here to provide a clear framework to all those working on OpenCRVS of how to make design decisions that will affect how the product works. OpenCRVS is a digital product that serves low resource settings and these design principles reflect our constant effort to ensure that it fulfils our mission.
+We are passionate about designing a product that fulfils our mission - to make civil registration easy and valuable for everyone by making high-quality and cost-effective digital systems widely available and sustainable. Our design principles are here to provide a clear framework to all those working on OpenCRVS of how to make design decisions that will affect how the product works.
 
 #### **Start with users' needs**
 

@@ -44,7 +44,7 @@
   * [Authentication and authorization](technology/interoperability/authentication-and-authorization.md)
   * [Webhooks](technology/interoperability/webhooks.md)
   * [Mediators](technology/interoperability/mediators.md)
-  * [OpenCRVS FHIR Documents](technology/interoperability/opencrvs-fhir-documents/README.md)
+  * [OpenCRVS FHIR Documents](technology/interoperability/opencrvs-fhir-documents.md)
     * [Event Composition](technology/interoperability/opencrvs-fhir-documents/event-composition.md)
     * [Person](technology/interoperability/opencrvs-fhir-documents/person.md)
     * [The Registration Task](technology/interoperability/opencrvs-fhir-documents/the-registration-task.md)

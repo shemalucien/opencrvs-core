@@ -1,6 +1,8 @@
 # Security
 
-**We treat the security of OpenCRVS and the personally identifiable citizen data it stores with utmost care.**
+{% hint style="info" %}
+We treat the security of OpenCRVS and the personally identifiable citizen data it stores with utmost care.
+{% endhint %}
 
 Every release of the OpenCRVS application and infrastructure has been security penetration tested by an independent, [CREST](https://www.crest-approved.org/) and [CyberEssentials](https://www.ncsc.gov.uk/cyberessentials/overview) certified 3rd party to UK government standards. &#x20;
 
@@ -12,7 +14,7 @@ Gofore pentesters utilise proven pentesting methods of code review, automated en
 >
 > GoFore Cyber Security Consultant
 
-**Some key security points**
+#### **Some key security points**
 
 Our mobile application and microservices are secure, protected by [2-Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor\_authentication) utilising [OAuth JWT best practices](https://tools.ietf.org/id/draft-ietf-oauth-jwt-bcp-02.html).  2FA codes are sent to the user's mobile device in order log in.  These codes time out after 5 minutes preventing brute force attack and ensuring only authenticated users with access to authenticated hardware can access OpenCRVS.
 

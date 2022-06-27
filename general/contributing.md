@@ -15,7 +15,7 @@ The [Open Source Guides](https://opensource.guide/) website has a collection of 
 
 #### Github Discussions <a href="#gitter" id="gitter"></a>
 
-Please join our .....    chatroom if you need to talk to us at any time regarding technical issues, feature ideas, or anything else you would like to share with the OpenCRVS community. If you would like to reach out to our management team, complete our online contact form at [opencrvs.org](https://www.opencrvs.org/)
+If you need to talk to us at any time regarding technical issues or feature ideas please refer to [Github Discussions](https://github.com/opencrvs/opencrvs-core/discussions).&#x20;
 
 ### Our values <a href="#our-values" id="our-values"></a>
 

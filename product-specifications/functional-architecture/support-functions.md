@@ -1,3 +1,9 @@
+---
+description: >-
+  Overview of functionality that enables users to conduct civil registration
+  services safely, securely, and most effectively.
+---
+
 # Support functions
 
 | Function                                                                     | Description                                                                                                          |

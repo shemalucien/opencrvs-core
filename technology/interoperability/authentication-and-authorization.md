@@ -155,11 +155,3 @@ The token is a [JWT](https://jwt.io/) containing with the following structure an
 | `aud`     | `['opencrvs.auth']`          | An array of services that will respond to this JWT.                                                                                                                                                                                        |
 | `iss`     | `'opencrvs.auth'`            | The issuing service of the JWT.                                                                                                                                                                                                            |
 | `sub`     | `'5ee75eb2104ccf88d9ac0c3d'` | Equal to the user or system id.                                                                                                                                                                                                            |
-
-###
-
-###
-
-
-
-****

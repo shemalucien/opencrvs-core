@@ -6,7 +6,7 @@ OpenCRVS provides flexible interoperability options via OpenHIM, FHIR and a Webh
 
 Choose how you would like to interoperate with OpenCRVS:
 
-1. OpenHIM tracks and exposes events and documents as [FHIR](https://hl7.org/FHIR/).  You can access these events directly via authenticated API integrations to OpenHIM
+1. OpenHIM tracks and exposes events and documents as [FHIR](https://hl7.org/FHIR/).  You can access these events directly via authenticated API integrations to OpenHIM, following the [documentation](http://openhim.org/docs/introduction/about).
 2. Subscribe to the OpenCRVS **Webhooks** microservice. &#x20;
 
 You perform any data manipulation or conversion that you may need using small custom microservices called **Mediators**.

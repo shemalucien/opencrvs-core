@@ -14,20 +14,18 @@ All the steps in this section must be completed before OpenCRVS can be configure
 
 Once this section is completed a less technical system administrator can login as a National System Administrator user to perform application, form and certificate configuration steps, documented in the Configuration section.&#x20;
 
-
-
-#### Steps
+### Steps
 
 {% content-ref url="3.1-set-up-a-development-environment/" %}
 [3.1-set-up-a-development-environment](3.1-set-up-a-development-environment/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 {% content-ref url="3.2-set-up-your-own-country-configuration/" %}
 [3.2-set-up-your-own-country-configuration](3.2-set-up-your-own-country-configuration/)
+{% endcontent-ref %}
+
+{% content-ref url="3.3-set-up-a-server-hosted-environment/" %}
+[3.3-set-up-a-server-hosted-environment](3.3-set-up-a-server-hosted-environment/)
 {% endcontent-ref %}
 
 

@@ -41,7 +41,7 @@ We continue to stand by our original product commitments for OpenCRVS and these 
 
 ### Design Principles
 
-We are passionate about our design principles and firmly believe they make a big difference. We continue to be inspired by them and hope you will be to...&#x20;
+Our design principles are here to provide a clear framework to all those working on OpenCRVS of how to make design decisions that will affect how the product works. OpenCRVS is a digital product that serves low resource settings and these design principles reflect our constant effort to ensure that it fulfils our mission.
 
 #### **Start with users' needs**
 

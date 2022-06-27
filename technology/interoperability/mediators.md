@@ -1,6 +1,6 @@
 # Mediators
 
-[Mediators](http://openhim.org/docs/dev-guide/developing-mediators/) are separate micro services that run independently to OpenCRVS and perform additional mediation tasks for a particular use case. The common tasks within a mediator are as follows:
+[Mediators](http://openhim.org/docs/dev-guide/developing-mediators/) are separate microservices that run independently to OpenCRVS and perform additional mediation tasks for a particular use case. The common tasks within a mediator are as follows:
 
 * **Message format adaptation** - this is the transformation of messages received in a certain format into another format (eg. HL7 v2 to HL7 v3 or MHD to XDS.b).
 * **Message orchestration** - this is the execution of a business function that may need to call out to one or more other service endpoint on other systems. (eg. Enriching a message with a client’s unique identifier retrieved from a client registry then sending the enriched message to a shared health record).
@@ -11,9 +11,13 @@ Mediators must register themselves with the OpenHIM-core, accept request from th
 
 If you are interested in developing your own mediators, read the [OpenHIM Documentation](http://openhim.org/docs/dev-guide/developing-mediators/)
 
-### Security guidance: Mediator authorization to OpenCRVS data
+### Security guidance
 
+{% hint style="warning" %}
 **OpenCRVS FHIR Resources contain sensitive patient data.** When you are writing your mediator, it is your responsibility as an OpenCRVS implementor in your nation to ensure that you security check the accessing client. The following steps are essential:
+{% endhint %}
+
+#### Mediator authorisation to OpenCRVS data
 
 1. The mediator's exposed client endpoints must be protected by SSL so that data is encrypted in transit.
 2. The endpoints must enforce JWT authentication.

@@ -57,7 +57,7 @@ In order to support configuration for limitless country scale, OpenCRVS was desi
 
 Massively scalable and extensible, [Hearth](https://github.com/opencrvs/hearth) is an OpenSource NoSQL database server originally built by the OpenCRVS founding member [Jembi Health Systems](https://www.jembi.org/), using interoperable [Health Level 7](https://www.hl7.org) [FHIR](https://www.hl7.org/fhir/) v4 ([ANSI](https://www.ansi.org/) Accredited, Fast Healthcare Interoperability Resources) as standard.
 
-We extended [FHIR](https://www.hl7.org/fhir/) to support the civil registration context. Our civil registration FHIR standard is described [here](interoperability/opencrvs-fhir-documents.md).
+We extended [FHIR](https://www.hl7.org/fhir/) to support the civil registration context. Our civil registration FHIR standard is described [here](standards/fhir-documents/).
 
 
 

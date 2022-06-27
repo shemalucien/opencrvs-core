@@ -38,18 +38,18 @@
 ## Technology
 
 * [Architecture](technology/architecture.md)
-* [Standards](technology/development-standards.md)
+* [Standards](technology/standards/README.md)
+  * [FHIR Documents](technology/standards/fhir-documents/README.md)
+    * [Event Composition](technology/standards/fhir-documents/event-composition.md)
+    * [Person](technology/standards/fhir-documents/person.md)
+    * [Registration Task](technology/standards/fhir-documents/registration-task.md)
+    * [Event Observations](technology/standards/fhir-documents/event-observations.md)
+    * [Locations](technology/standards/fhir-documents/locations.md)
 * [Security](technology/security.md)
 * [Interoperability](technology/interoperability/README.md)
   * [Authentication and authorization](technology/interoperability/authentication-and-authorization.md)
   * [Webhooks](technology/interoperability/webhooks.md)
   * [Mediators](technology/interoperability/mediators.md)
-  * [FHIR Documents](technology/interoperability/opencrvs-fhir-documents.md)
-    * [Event Composition](technology/interoperability/opencrvs-fhir-documents/event-composition.md)
-    * [Person](technology/interoperability/opencrvs-fhir-documents/person.md)
-    * [Registration Task](technology/interoperability/opencrvs-fhir-documents/the-registration-task.md)
-    * [Event Observations](technology/interoperability/opencrvs-fhir-documents/event-observations.md)
-    * [Locations](technology/interoperability/opencrvs-fhir-documents/locations.md)
 
 ## Default configuration
 

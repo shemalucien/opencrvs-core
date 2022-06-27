@@ -8,20 +8,20 @@ In OpenCRVS we extend [FHIR Locations](https://www.hl7.org/fhir/location.html) t
 
 [FHIR Locations](https://www.hl7.org/fhir/location.html) are saved into OpenCRVS during configuration.
 
-**URL**
+#### **URL**
 
 ```
 GET http://openhim-core:5001/fhir/Location/43f37076-bf0e-46c6-97cb-4c2bd12dbdac
 ```
 
-**Request headers**
+#### **Request headers**
 
 ```
 Content-Type: application/json
 Authorization: Bearer <token>
 ```
 
-**Administrative area location payload, such as a state or district**
+#### **Administrative area location payload, such as a state or district**
 
 ```
 {
@@ -93,7 +93,7 @@ Authorization: Bearer <token>
 }
 ```
 
-**Facility location payload such as a civil registration office or hospital**
+#### **Facility location payload such as a civil registration office or hospital**
 
 ```
 {

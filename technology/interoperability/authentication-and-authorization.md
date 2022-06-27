@@ -44,7 +44,7 @@ Example json
 | --------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `scope`   | `NATIONAL_ID` | <p>Available integration scopes currently include: <strong>NATIONAL_ID</strong> </p><p><strong>HEALTH</strong>  <strong>EXTERNAL_VALIDATION</strong>.</p> |
 
-**Request Response**
+#### **Request Response**
 
 The command will return the following details:
 
@@ -112,7 +112,7 @@ wget -S --header="Authorization: Bearer <Insert your valid JWT here>" \
 POST https://auth.<your-open-crvs-host.com>/authenticateSystemClient
 ```
 
-**Request payload**
+#### **Request payload**
 
 Example json
 
@@ -128,7 +128,7 @@ Example json
 | `client_id`     | `2fd153ab-86c8-45fb-990d-721140e46061` | The client id used in the authentication process for system clients.     |
 | `client_secret` | `8636abe2-affb-4238-8bff-200ed3652d1e` | The client secret used in the authentication process for system clients. |
 
-**Request Response**
+#### **Request Response**
 
 ```
 {
@@ -138,14 +138,14 @@ Example json
 
 The token is a [JWT](https://jwt.io/) containing with the following structure and must be included as an `Authorization: Bearer <token>` in all future requests:
 
-**Token Header**
+#### **Token Header**
 
 | Parameter | Sample value | Description                 |
 | --------- | ------------ | --------------------------- |
 | `alg`     | `RS256`      | Signing algorithm.          |
 | `typ`     | `JWT`        | This value is always `JWT`. |
 
-**Token Payload**
+#### **Token Payload**
 
 | Parameter | Sample value                 | Description                                                                                                                                                                                                                                |
 | --------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

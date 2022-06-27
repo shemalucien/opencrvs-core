@@ -44,12 +44,12 @@
   * [Authentication and authorization](technology/interoperability/authentication-and-authorization.md)
   * [Webhooks](technology/interoperability/webhooks.md)
   * [Mediators](technology/interoperability/mediators.md)
-  * [OpenCRVS FHIR Documents](technology/interoperability/opencrvs-fhir-documents.md)
-    * [Event Composition](technology/interoperability/opencrvs-fhir-documents/event-composition.md)
-    * [Person](technology/interoperability/opencrvs-fhir-documents/person.md)
-    * [The Registration Task](technology/interoperability/opencrvs-fhir-documents/the-registration-task.md)
-    * [Event Observations](technology/interoperability/opencrvs-fhir-documents/event-observations.md)
-    * [Locations](technology/interoperability/opencrvs-fhir-documents/locations.md)
+  * [FHIR Documents](technology/interoperability/fhir-documents/README.md)
+    * [Event Composition](technology/interoperability/fhir-documents/event-composition.md)
+    * [Person](technology/interoperability/fhir-documents/person.md)
+    * [Registration Task](technology/interoperability/fhir-documents/registration-task.md)
+    * [Event Observations](technology/interoperability/fhir-documents/event-observations.md)
+    * [Locations](technology/interoperability/fhir-documents/locations.md)
 
 ## Default configuration
 

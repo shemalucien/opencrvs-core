@@ -4,7 +4,7 @@
 
 A number of other configurable and unidentifiable data points can be captured for the event lifecycle, such as; who was present at the birth, what was the birth weight etc. For this kind of data, we use [FHIR Observations](https://www.hl7.org/fhir/observation.html).
 
-**URL**
+#### **URL**
 
 To request all the [Observations](https://www.hl7.org/fhir/observation.html) associated with the event use the `birth-encounter` resource reference:
 
@@ -12,14 +12,14 @@ To request all the [Observations](https://www.hl7.org/fhir/observation.html) ass
 GET http://openhim-core:5001/fhir/Observation?encounter=Encounter/af7be33b-3e0c-4012-b894-c32d4bcc5100
 ```
 
-**Request headers**
+#### **Request headers**
 
 ```
 Content-Type: application/json
 Authorization: Bearer <token>
 ```
 
-**Observations payload**
+#### **Observations payload**
 
 Multiple FHIR Resources are returned in a [FHIR Bundle](https://www.hl7.org/fhir/bundle.html) containing an `entry` array.
 

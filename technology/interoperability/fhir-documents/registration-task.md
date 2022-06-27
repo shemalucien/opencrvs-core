@@ -1,10 +1,10 @@
-# The Registration Task
+# Registration Task
 
-### Requesting the FHIR Task for a birth event contianing the Birth Registration Number
+### Requesting FHIR Task for a birth event containing the Birth Registration Number
 
 The FHIR Task [FHIR Bundle](https://www.hl7.org/fhir/bundle.html) contains valuable audit information regarding the event. It contains the generated **Birth Registration Number** from the event which is later saved into the Patient's identifiers.
 
-**URL**
+#### **URL**
 
 To request the FHIR Task [FHIR Bundle](https://www.hl7.org/fhir/bundle.html) associated with the event use the Composition `id`:
 
@@ -12,7 +12,7 @@ To request the FHIR Task [FHIR Bundle](https://www.hl7.org/fhir/bundle.html) ass
 http://localhost:3447/fhir/Task?focus=Composition/bab755e0-7bbd-4d90-b155-352ffa283467
 ```
 
-**Request headers**
+#### **Request headers**
 
 ```
 Content-Type: application/json
@@ -21,7 +21,7 @@ Authorization: Bearer <token>
 
 Multiple FHIR task Resources are returned in a [FHIR Bundle](https://www.hl7.org/fhir/bundle.html) containing an `entry` array.
 
-**Task payload**
+#### **Task payload**
 
 ```
 {
@@ -124,7 +124,7 @@ Multiple FHIR task Resources are returned in a [FHIR Bundle](https://www.hl7.org
 }
 ```
 
-**Key bundle entries**
+#### **Key bundle entries**
 
 | Entry            | Sample value                                                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

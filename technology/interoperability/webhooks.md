@@ -1,26 +1,24 @@
 # Webhooks
 
-In order to make OpenCRVS as useful and open as possible to other systems, OpenCRVS publishes the following civil registration events as Webhooks that mediators can subscribe to.
+In order to make OpenCRVS as useful and open as possible to other systems, OpenCRVS publishes the following civil registration events as webhooks that mediators can subscribe to.
 
-* **Birth registration**
-* **Death registration**
-* **Birth certified**
-* **Death certified**
-* **Birth corrected**
-* **Death corrected**
+* Birth registration
+* Death registration
+* Birth certified
+* Death certified
+* Birth corrected
+* Death corrected
 
-Included in these webhooks is be a **FHIR Resource type and uniqe ID** to the resource associated. In these cases, a **FHIR Composition id**. Once a subscriber receives the event, they can query OpenCRVS for **demographics, attachments and links to biometric data** for the registration in a dedicated and secure API.
+Included in these webhooks is be a **FHIR Resource type and unique ID** to the resource associated. In these cases, a **FHIR Composition id**. Once a subscriber receives the event, they can query OpenCRVS for **demographics, attachments and links to biometric data** for the registration in a dedicated and secure API.
 
-Subscribing to an OpenCRVS Webhook requires you to develop a mediator that has **system client** privileges explained previously. As an example, we have written [**this mediator**](https://github.com/opencrvs/mosip-mediator) that subscribes to a **birth registration** event and retrieves the data required by the [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) to register a national ID.:
+Subscribing to an OpenCRVS webhook requires you to develop a mediator that has **system client** privileges explained previously. As an example, we have written [**this mediator**](https://github.com/opencrvs/mosip-mediator) that subscribes to a **birth registration** event and retrieves the data required by the [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) to register a national ID.:
 
 A mediator that subscribes to an OpenCRVS webhook must:
 
-1. Expose endpoints on a secure server that can process HTTPS requests and respond to a Webhook following the [WebSub](https://www.w3.org/TR/websub/) pattern.
+1. Expose endpoints on a secure server that can process HTTPS requests and respond to a webhook following the [WebSub](https://www.w3.org/TR/websub/) pattern.
 2. Authenticate and query OpenCRVS to find a list of available event webhooks.
-3. Authenticate and subscribe to the Webhook of choice.
-4. Respond to the Webhook event as you wish internally, and request further details from OpenHIM to suit your business case. Refer to the [mediator](https://github.com/opencrvs/opencrvs.github.io/blob/master/website/docs/technology/mediators) page for examples of raw FHIR resources.
-
-These steps are explained in detail below.
+3. Authenticate and subscribe to the webhook of choice.
+4. Respond to the webhook event as you wish internally, and request further details from OpenHIM to suit your business case. Refer to the [mediator](https://github.com/opencrvs/opencrvs.github.io/blob/master/website/docs/technology/mediators) page for examples of raw FHIR resources.
 
 ### Sequence diagram
 
@@ -38,7 +36,7 @@ The following sections explain what will be in each type of request to these end
 
 Anytime you try to subscribe to a Webhook, OpenCRVS will send a GET request to this endpoint URL to confirm that your microservice is prepared to receive webhooks.
 
-**Sample Verification Request**
+#### **Sample Verification Request**
 
 ```
 GET https://www.your-clever-domain-name.com/webhooks?
@@ -55,7 +53,7 @@ GET https://www.your-clever-domain-name.com/webhooks?
 
 Note: The supported events and associated topic strings are explained later in this document when studying the subscription process
 
-**Validating Verification Requests**
+#### **Validating Verification Requests**
 
 Whenever your endpoint receives a verification request, it must:
 
@@ -239,7 +237,7 @@ X-Hub-Signature: sha1={super-long-SHA1-signature}
 | `hmac`                    | `sha256=d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f` | The request signature that is created using your `sha_secret` explained below.                                  |
 | `context`                 | `[{ ... }]`                                                       | The [FHIR resources](https://www.hl7.org/fhir/resource.html) bundle associated with the target of this webhook. |
 
-**Validating Payloads**
+#### **Validating Payloads**
 
 We sign all Event Notification payloads with an HMAC **SHA256** hash and include the hash in the request's `hmac` property, preceded with `sha256=`. You should validate this against your `sha_secret` environment variable.
 
@@ -251,11 +249,11 @@ Generate a **SHA256** signature using the `context` array contents at position \
 
 Please note that we generate the signature using an escaped unicode version of the payload, with lowercase hex digits. If you just calculate against the decoded bytes, you will end up with a different signature. For example, the string `äöå` should be escaped to `\u00e4\u00f6\u00e5`.
 
-**Responding to Event Notifications**
+#### **Responding to Event Notifications**
 
 Your endpoint should respond to all Event Notifications with `200 OK HTTPS`.
 
-**Frequency** Be sure to adjust your servers to handle each Webhook individually and at any time.
+**Frequency:** Be sure to adjust your servers to handle each Webhook individually and at any time.
 
 Unacknowledged responses are retried according to the capabilities of our library used [bullmq](https://docs.bullmq.io/what-is-bullmq).
 
@@ -275,14 +273,14 @@ This API returns webhooks that are owned by the authenticated client service
 GET https://webhooks.<your-open-crvs-host.com>/webhooks
 ```
 
-**Request headers**
+#### **Request headers**
 
 ```
 Content-Type: application/json
 Authorization: Bearer <token>
 ```
 
-**Response payload**
+#### **Response payload**
 
 Example json
 
@@ -309,20 +307,20 @@ Example json
 
 This API subscribes a client service to an OpenCRVS webhook using a supported OpenCRVS event type string as a trigger.
 
-**URL**
+#### **URL**
 
 ```
 POST https://webhooks.<your-open-crvs-host.com>/webhooks
 ```
 
-**Request headers**
+#### **Request headers**
 
 ```
 Content-Type: application/json
 Authorization: Bearer <token>
 ```
 
-**Request payload**
+#### **Request payload**
 
 ```
 {
@@ -357,7 +355,7 @@ The supported events and associated topic string:
 | `Birth corrected`    | `BIRTH_CORRECTED`  |
 | `Death corrected`    | `DEATH_CORRECTED`  |
 
-**Response payload**
+#### **Response payload**
 
 The subscribe process will test the authenticity of the `sha_secret` and additionally make a test GET request to the **Verification Request**
 
@@ -367,20 +365,20 @@ Provided all is successfully completeed, your webhook will be subscribed and you
 
 This API unsubscribes a client service to an OpenCRVS webhook using the webhook id.
 
-**URL**
+#### **URL**
 
 ```
 DELETE https://webhooks.<your-open-crvs-host.com>/webhooks/<your-webhook-id>
 ```
 
-**Request headers**
+#### **Request headers**
 
 ```
 Content-Type: application/json
 Authorization: Bearer <token>
 ```
 
-**Response**
+#### **Response**
 
 **204** status code and an empty response will be returned when the webhook has been successfully deleted.
 

@@ -9,7 +9,7 @@ The FHIR Composition id is a powerful identifier and should only be accessible b
 | `target.id`           | `bab755e0-7bbd-4d90-b155-352ffa283467` | The unique `id` for the [FHIR resource](https://www.hl7.org/fhir/resource.html) target that this webhook refers to.                                                                                       |
 | `target.resourceType` | `Composition`                          | The [FHIR resource](https://www.hl7.org/fhir/resource.html) type associated with the target `id` of this webhook, e.g. `Composition` for a [FHIR Composition](https://www.hl7.org/fhir/composition.html). |
 
-**URL**
+#### **URL**
 
 You can request the composition payload via the OpenHIM core using an [authentication token](https://github.com/opencrvs/opencrvs.github.io/blob/master/website/docs/technology/technicalInteroperability) and Composition `id`.
 
@@ -23,14 +23,14 @@ NOTE: If the webhook returned a different resourceType, you could do this:
 GET http://openhim-core:5001/fhir/<target.resourceType>/<target.id>
 ```
 
-**Request headers**
+#### **Request headers**
 
 ```
 Content-Type: application/json
 Authorization: Bearer <token>
 ```
 
-**Composition payload**
+#### **Composition payload**
 
 ```
 {
@@ -166,7 +166,7 @@ Authorization: Bearer <token>
 }
 ```
 
-**Key payload parameters**
+#### **Key payload parameters**
 
 | Parameter          | Sample value                           | Description                                                                                                                                                                                                                                             |
 | ------------------ | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

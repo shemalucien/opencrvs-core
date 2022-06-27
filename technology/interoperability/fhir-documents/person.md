@@ -1,14 +1,16 @@
 # Person
 
-### Requesting the FHIR Patient data for individiuals associated with the event
+### Requesting FHIR Patient data for individuals associated with the event
 
 The [FHIR patient](https://www.hl7.org/fhir/patient.html) resource contains all names, addresses, contact details, gender details and other information. It also contains an array of identifiers for which the created National ID, alongside other IDs such as Social Security or Birth Registration Number can be stored.
 
 For standardised addresses ie: states, districts and other administrative structure levels, configurable [FHIR Location](https://www.hl7.org/fhir/location.html) resources can be loaded into OpenCRVS and referred to by their resource `id` in the address. You can read more about [FHIR Locations](https://www.hl7.org/fhir/location.html) in later sections below.
 
+{% hint style="danger" %}
 **YOUR MEDIATOR MUST FOLLOW THE SECURITY GUIDANCE ABOVE, BEFORE PERMITTING ACCESS TO SENSITIVE, IDENTIFIABLE PATIENT DATA**
+{% endhint %}
 
-**URL**
+#### **URL**
 
 You can request all resources via OpenHIM in subsequent individual requests following this example URL for a Patient, to retrieve the details of the mother. So the format is **your-openhim-core-url** / **resourceType** / **id** :
 
@@ -22,14 +24,14 @@ Created from the previous composition like this:
 GET http://openhim-core:5001/fhir/<section[0].entry[0].reference>
 ```
 
-**Request headers**
+#### **Request headers**
 
 ```
 Content-Type: application/json
 Authorization: Bearer <token>
 ```
 
-**Patient payload**
+#### **Patient payload**
 
 ```
 {

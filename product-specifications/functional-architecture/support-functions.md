@@ -1,6 +1,10 @@
+---
+description: >-
+  Overview of functionality that enables users to do their job safely, securely
+  and effectively.
+---
+
 # Support functions
-
-
 
 | Function                                                                     | Description                                                                                                          |   |
 | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | - |

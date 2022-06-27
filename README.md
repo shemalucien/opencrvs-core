@@ -29,7 +29,7 @@ Through our extensive research of CRVS systems around the world (including Pakis
 
 ### Product Commitments
 
-We still stand by our original product commitments for OpenCRVS and these help steer the strategic direction of the product.
+We continue to stand by our original product commitments for OpenCRVS and these help steer the strategic direction of the product.
 
 1. Fully open-source, with no license fees or ties to specific vendors
 2. Configurable for all country contexts&#x20;

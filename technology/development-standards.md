@@ -8,9 +8,7 @@ By using [FHIR](https://hl7.org/FHIR/) as a standard for our NoSQL datastore, [H
 
 [FHIR](https://hl7.org/FHIR/) was created by [Health Level Seven International (HL7)](http://hl7.org/), a not-for-profit, ANSI-accredited, standards organization dedicated to providing a comprehensive framework and related standards for the exchange, integration, sharing and retrieval of electronic health information that supports clinical practice and the management, delivery and evaluation of health services.
 
-We have extended FHIR's model to include custom codes and extensions that assist the Civil Registration context.  These customisations are listed here.
-
-To understand more about how and why we use FHIR, click [here](interoperability/opencrvs-fhir-documents.md).
+We have extended FHIR's model to include custom codes and extensions that assist the Civil Registration context.  To understand more about how and why we use FHIR, click [here](interoperability/opencrvs-fhir-documents.md).
 
 #### **Interoperability**
 

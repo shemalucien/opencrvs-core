@@ -19,7 +19,7 @@ We recommend that you use this documentation in combination with the [CRVS Digit
 
 Civil registration is the foundation of legal identity and rights-based service delivery. A Civil Registration and Vital Statistics (CRVS) system records the details of all major life events, such as births, deaths, marriage and divorce. It is an essential component of the "leave no one behind" agenda and without it working effectively, it is virtually impossible to ensure inclusive growth.&#x20;
 
-Unfortunately in many countries CRVS systems are broken. 1 in 4 children under the age of 5 have not had their birth registered and hence do not officially exist. As a result, they struggle to access basic rights like education, healthcare and social protection.
+Unfortunately, in many countries CRVS systems are broken. 1 in 4 children under the age of 5 have not had their birth registered and hence do not officially exist. As a result, they struggle to access basic rights like education, healthcare and social protection. Two thirds of the world's deaths are not recorded, meaning that governments cannot design effective public health policies or measure their impact.
 
 Through our extensive research of CRVS systems around the world (including Pakistan, Bangladesh, Indonesia, Malawi, Uganda and Ghana) we understand many of the specific challenges that are often experienced by civil registration staff and the families trying to register vital events:
 

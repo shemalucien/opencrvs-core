@@ -1,6 +1,10 @@
+---
+description: Overview of functionality that transforms legacy data.
+---
+
 # Data functions
 
-| Functions           | Description                                |   |
-| ------------------- | ------------------------------------------ | - |
-| Legacy data import  | Import legacy digital data for ongoing use |   |
-| Legacy paper import | Import paper records for ongoing use       |   |
+| Functions           | Description                                |
+| ------------------- | ------------------------------------------ |
+| Legacy data import  | Import legacy digital data for ongoing use |
+| Legacy paper import | Import paper records for ongoing use       |

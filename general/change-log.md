@@ -1,6 +1,6 @@
 # Change log
 
-**OpenCRVS v1.0.0** is a major release of OpenCRVS Core. It is to be used in conjunction with a forked country configuration release [v1.0.0](https://github.com/opencrvs/opencrvs-farajaland/releases/tag/v1.0.0)
+**OpenCRVS v1.0.1** is a major release of OpenCRVS Core. It is to be used in conjunction with a forked country configuration release [v1.0.1](https://github.com/opencrvs/opencrvs-farajaland/releases/tag/v1.0.1)
 
 This release contains major new features and improvements, a number of dependency upgrades and many bug-fixes. The release includes:
 
@@ -14,6 +14,7 @@ This release contains major new features and improvements, a number of dependenc
 * New user roles (National Registrar, National System Administrator, Performance Manager)
 * UI design refresh of the navigation, workqueues and all other pages
 * Archive / Reinstate records
+* Conflicts
 * 3rd party penetration test fixes
 * Dependency upgrades
 * Miscellaneous bugfixes and refactor
@@ -69,6 +70,10 @@ System administrators who have tried out previous versions of OpenCRVS will noti
 #### Archive / Reinstate
 
 As long as the declaration has been submitted for review, it is now possible to archive an existing record, thus removing it from any workqueue. As every submitted declaration has a unique tracking ID, it can be retrieved in nationwide searches by a Registrar user and reinstated.
+
+#### Conflicts
+
+When a Registration Agent or a Registrar downloads a declaration in order to perform an action, they are "Assigned" the record. Other users will notice if they search for the same record that it is already assigned. Registration Agents must ask a Registrar to check and "Unassign" the record. This prevents users from making conflicting changes to the same record. A Registrar has the authority to "Unassign" the record from an individual who has it "Assigned" to them to overrule this process.
 
 #### 3rd party penetration test fixes
 

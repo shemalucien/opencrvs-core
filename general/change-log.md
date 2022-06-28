@@ -1,8 +1,8 @@
 # Change log
 
-**OpenCRVS v1.0.1** is a major release of OpenCRVS Core. It is to be used in conjunction with a forked country configuration release [v1.0.1](https://github.com/opencrvs/opencrvs-farajaland/releases/tag/v1.0.1)
+**OpenCRVS v1.0.1** is a minor patch release and considered an official public release of OpenCRVS. It contains the Conflicts feature and essential bugfixes for the major v1.0.0 OpenCRVS Core release. It is to be used in conjunction with a forked country configuration release [v1.0.1](https://github.com/opencrvs/opencrvs-farajaland/releases/tag/v1.0.1)
 
-This release contains major new features and improvements, a number of dependency upgrades and many bug-fixes. The release includes:
+The v1.0.0 and v1.0.1 patch contains major new features and improvements, a number of dependency upgrades and many bug-fixes. The release includes:
 
 * Correct a record
 * Record audit

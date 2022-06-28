@@ -15,3 +15,7 @@ It is really important, regardless of your experience, that you carefully follow
 {% endhint %}
 
 First, check out the OpenCRVS Core code:  [https://github.com/opencrvs/opencrvs-core](https://github.com/opencrvs/opencrvs-core)
+
+```
+git clone https://github.com/opencrvs/opencrvs-core.git
+```

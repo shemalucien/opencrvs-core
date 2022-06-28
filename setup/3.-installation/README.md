@@ -1,5 +1,5 @@
 ---
-description: Short one line description of step....
+description: Installation steps for OpenCRVS
 ---
 
 # 3. Installation
@@ -7,7 +7,7 @@ description: Short one line description of step....
 This section introduces the installation steps that your Technical System Administrator will be required to run in order to:
 
 1. Set-up a **local, demo development environment of OpenCRVS** using our fictional country configuration: "Farajaland".
-2. Fork our Farajaland country configuration repository and configure it with the technical reference data required in order to run your own OpenCRVS for your country.
+2. Fork our Farajaland country configuration repository and configure it with the technical reference data required in order to run OpenCRVS for your country.
 3. Provision server hosting to deploy your OpenCRVS country configuration to a secure and publicly accessible server on the Internet.
 
 All the steps in this section must be completed before OpenCRVS can be configured.

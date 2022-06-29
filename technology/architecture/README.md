@@ -16,7 +16,7 @@ OpenCRVS builds on these sound principles by additionally providing:
 * Real-time performance analytics powered by the time-series database [Influx](https://www.influxdata.com/).
 * Increased performance by the use of [GraphQL](https://graphql.org/), reducing HTTP requests between client and server.
 * An automated continuous integration, delivery and testing suite.
-* A single JS, [TypeScript](https://www.typescriptlang.org/) codebase for backend, desktop and mobile using [Progressive Web Application](https://web.dev/progressive-web-apps/) technology for offline and low-connectivity access.
+* A single JS, [TypeScript](https://www.typescriptlang.org/) codebase for backend, desktop and mobile using [Progressive Web Application technology](https://developer.mozilla.org/en-US/docs/Web/Progressive\_web\_apps/Introduction) for offline and low-connectivity access.
 * External server and application health monitoring using [Kibana](https://www.elastic.co/kibana/)
 * Automatic [LetsEncrypt](https://letsencrypt.org/) SSL configuration
 * SMS 2-Factor Authentication with well defined user role authorization privileges

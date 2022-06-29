@@ -14,6 +14,10 @@ OpenCRVS consists of multiple servers which run in Docker containers and require
 It is really important, regardless of your experience, that you carefully follow these instructions in the order of the steps provided.
 {% endhint %}
 
+
+
+{% embed url="https://www.loom.com/share/6e649d5d32464523ac40b5d9c4c750d5" %}
+
 First, check out the OpenCRVS Core code:  [https://github.com/opencrvs/opencrvs-core](https://github.com/opencrvs/opencrvs-core)
 
 ```

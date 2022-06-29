@@ -129,7 +129,7 @@ Each microservice in OpenCRVS has no knowledge of other services or business req
 
 ![](https://static.wixstatic.com/media/93440e\_8452ed95c717459e86c95ed0e17378ad\~mv2.png/v1/fill/w\_136,h\_70,al\_c,q\_80,usm\_0.66\_1.00\_0.01/PWA-Progressive-Web-App-Logo.webp)
 
-Using an Android [progressive web application](https://developers.google.com/web/progressive-web-apps) for our client applications means that we can take advantage of offline functionality and native mobile features using [Workbox](https://developers.google.com/web/tools/workbox), without the overhead of maintaining multiple web and mobile codebases and respective App/Play Store releases.
+Using an Android [progressive web application](https://developer.mozilla.org/en-US/docs/Web/Progressive\_web\_apps/Introduction) for our client applications means that we can take advantage of offline functionality and native mobile features using [Workbox](https://developers.google.com/web/tools/workbox), without the overhead of maintaining multiple web and mobile codebases and respective App/Play Store releases.
 
 In remote areas, registrars can save a configurable number of registrations offline on their mobile phone, using [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB\_API).
 

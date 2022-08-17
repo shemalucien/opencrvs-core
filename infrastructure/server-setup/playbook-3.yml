@@ -29,7 +29,7 @@
 
     - name: 'Add docker repository'
       apt_repository:
-        repo: 'deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} edge'
+        repo: 'deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable'
         state: present
         update_cache: yes
 
@@ -64,6 +64,13 @@
       docker_login:
         username: '{{dockerhub_username}}'
         password: '{{dockerhub_password}}'
+
+    # Docker compose is installed only so that images
+    # can be downloaded before updating docker stack
+    - name: 'Install docker-compose'
+      apt:
+        name: docker-compose
+        state: present
 
     - name: 'Setup crontab to clean up docker images'
       cron:

@@ -33,7 +33,9 @@ import {
   goToPerformanceView,
   goToTeamView,
   goToFormConfigHome,
-  goToApplicationConfig
+  goToApplicationConfig,
+  goToPerformanceDashboard,
+  goToPerfomanceVSReport
 } from '@client/navigation'
 import { redirectToAuthentication } from '@client/profile/profileActions'
 import { getUserDetails } from '@client/profile/profileSelectors'
@@ -67,7 +69,9 @@ export const WORKQUEUE_TABS = {
   sentForApproval: 'approvals',
   readyToPrint: 'print',
   externalValidation: 'waitingValidation',
+  dashboard: 'dashboard',
   performance: 'performance',
+  vsreports: 'vsreports',
   team: 'team',
   config: 'config',
   application: 'application',
@@ -130,6 +134,8 @@ const USER_SCOPE: IUSER_SCOPE = {
     WORKQUEUE_TABS.requiresUpdate,
     WORKQUEUE_TABS.readyToPrint,
     WORKQUEUE_TABS.performance,
+    WORKQUEUE_TABS.dashboard,
+    WORKQUEUE_TABS.vsreports,
     WORKQUEUE_TABS.team,
     GROUP_ID.declarationGroup,
     GROUP_ID.menuGroup
@@ -143,6 +149,8 @@ const USER_SCOPE: IUSER_SCOPE = {
     WORKQUEUE_TABS.performance,
     WORKQUEUE_TABS.team,
     WORKQUEUE_TABS.config,
+    WORKQUEUE_TABS.dashboard,
+    WORKQUEUE_TABS.vsreports,
     GROUP_ID.menuGroup
   ],
   PERFORMANCE_MANAGEMENT: [WORKQUEUE_TABS.performance, GROUP_ID.menuGroup]
@@ -270,6 +278,7 @@ export const NavigationView = (props: IFullProps) => {
     WORKQUEUE_TABS.declarationForms
   ]
   const [isConfigExpanded, setIsConfigExpanded] = React.useState(false)
+  const [isPerformExpanded, setIsPerformExpanded] = React.useState(false)
   const { loading, error, data, initialSyncDone } = workqueue
   const filteredData = filterProcessingDeclarationsFromQuery(
     data,
@@ -492,20 +501,60 @@ export const NavigationView = (props: IFullProps) => {
                   USER_SCOPE[userDetails.role].includes(
                     WORKQUEUE_TABS.performance
                   ) && (
-                    <NavigationItem
-                      icon={() => <Activity />}
-                      id={`navigation_${WORKQUEUE_TABS.performance}`}
-                      label={intl.formatMessage(
-                        navigationMessages[WORKQUEUE_TABS.performance]
+                    <>
+                      <NavigationItem
+                        icon={() => <Activity />}
+                        id={`navigation_${WORKQUEUE_TABS.performance}`}
+                        label={intl.formatMessage(
+                          navigationMessages[WORKQUEUE_TABS.performance]
+                        )}
+                        onClick={
+                          () => setIsPerformExpanded(!isPerformExpanded)
+                          // props.goToPerformanceViewAction(userDetails)
+                        }
+                        isSelected={
+                          enableMenuSelection &&
+                          configTab.includes(activeMenuItem)
+
+                          // activeMenuItem === WORKQUEUE_TABS.performance
+                        }
+                        expandableIcon={() =>
+                          isConfigExpanded ||
+                          configTab.includes(activeMenuItem) ? (
+                            <Expandable selected={true} />
+                          ) : (
+                            <Expandable />
+                          )
+                        }
+                      />
+                      {(isPerformExpanded ||
+                        configTab.includes(activeMenuItem)) && (
+                        <>
+                          <NavigationSubItem
+                            label={intl.formatMessage(
+                              navigationMessages[WORKQUEUE_TABS.performance]
+                            )}
+                            id={`navigation_${WORKQUEUE_TABS.application}`}
+                            onClick={goToApplicationConfigAction}
+                            isSelected={
+                              enableMenuSelection &&
+                              activeMenuItem === WORKQUEUE_TABS.performance
+                            }
+                          />
+                          {/* <NavigationSubItem
+                            label={intl.formatMessage(
+                              navigationMessages[WORKQUEUE_TABS.vsreports]
+                            )}
+                            id={`navigation_${WORKQUEUE_TABS.vsreports}`}
+                            onClick={goToPerfomanceVSReport}
+                            isSelected={
+                              enableMenuSelection &&
+                              activeMenuItem === WORKQUEUE_TABS.vsreports
+                            }
+                          /> */}
+                        </>
                       )}
-                      onClick={() =>
-                        props.goToPerformanceViewAction(userDetails)
-                      }
-                      isSelected={
-                        enableMenuSelection &&
-                        activeMenuItem === WORKQUEUE_TABS.performance
-                      }
-                    />
+                    </>
                   )}
                 {userDetails?.role &&
                   USER_SCOPE[userDetails.role].includes(

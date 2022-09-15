@@ -60,7 +60,7 @@ import { CertificatesConfig } from './views/SysAdmin/Config/Certificates'
 import { UserList } from './views/SysAdmin/Team/user/UserList'
 import { FormConfigHome, FormConfigWizard } from './views/SysAdmin/Config/Forms'
 import { Roles } from '@client/utils/authUtils'
-import VSExprt from './views/SysAdmin/Performance/Vsexports/VSExprt'
+import VSExport from './views/SysAdmin/Performance/Vsexports/VSExport'
 
 interface IAppProps {
   client?: ApolloClient<{}>
@@ -350,7 +350,7 @@ export class App extends React.Component<IAppProps> {
                                               Roles.NATIONAL_REGISTRAR
                                             ]}
                                             path={routes.PERFORMANCE_VSREPORT}
-                                            component={FieldAgentList}
+                                            component={VSExport}
                                           />
                                           <ProtectedRoute
                                             exact

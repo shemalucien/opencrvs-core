@@ -70,6 +70,7 @@ export const WORKQUEUE_TABS = {
   readyToPrint: 'print',
   externalValidation: 'waitingValidation',
   dashboard: 'dashboard',
+  performanceDashboard: 'performanceDashboard',
   performance: 'performance',
   vsreports: 'vsreports',
   team: 'team',
@@ -135,6 +136,7 @@ const USER_SCOPE: IUSER_SCOPE = {
     WORKQUEUE_TABS.readyToPrint,
     WORKQUEUE_TABS.performance,
     WORKQUEUE_TABS.dashboard,
+    WORKQUEUE_TABS.performanceDashboard,
     WORKQUEUE_TABS.vsreports,
     WORKQUEUE_TABS.team,
     GROUP_ID.declarationGroup,
@@ -150,6 +152,7 @@ const USER_SCOPE: IUSER_SCOPE = {
     WORKQUEUE_TABS.team,
     WORKQUEUE_TABS.config,
     WORKQUEUE_TABS.dashboard,
+    WORKQUEUE_TABS.performanceDashboard,
     WORKQUEUE_TABS.vsreports,
     GROUP_ID.menuGroup
   ],
@@ -186,6 +189,7 @@ interface IProps {
 interface IDispatchProps {
   goToHomeTab: typeof goToHomeTab
   goToCertificateConfigAction: typeof goToCertificateConfig
+  goToVSReportConfigAction: typeof goToPerfomanceVSReport
   goToFormConfigAction: typeof goToFormConfigHome
   goToApplicationConfigAction: typeof goToApplicationConfig
   redirectToAuthentication: typeof redirectToAuthentication
@@ -254,6 +258,7 @@ export const NavigationView = (props: IFullProps) => {
     loadWorkqueueStatuses = true,
     activeMenuItem,
     goToCertificateConfigAction,
+    goToVSReportConfigAction,
     goToFormConfigAction,
     goToApplicationConfigAction,
     navigationWidth,
@@ -534,24 +539,27 @@ export const NavigationView = (props: IFullProps) => {
                             label={intl.formatMessage(
                               navigationMessages[WORKQUEUE_TABS.performance]
                             )}
-                            id={`navigation_${WORKQUEUE_TABS.application}`}
-                            onClick={goToApplicationConfigAction}
+                            id={`navigation_${WORKQUEUE_TABS.performance}`}
+                            onClick={() =>
+                              props.goToPerformanceViewAction(userDetails)
+                            }
                             isSelected={
                               enableMenuSelection &&
                               activeMenuItem === WORKQUEUE_TABS.performance
                             }
                           />
-                          {/* <NavigationSubItem
+
+                          <NavigationSubItem
                             label={intl.formatMessage(
                               navigationMessages[WORKQUEUE_TABS.vsreports]
                             )}
                             id={`navigation_${WORKQUEUE_TABS.vsreports}`}
-                            onClick={goToPerfomanceVSReport}
+                            onClick={goToVSReportConfigAction}
                             isSelected={
                               enableMenuSelection &&
                               activeMenuItem === WORKQUEUE_TABS.vsreports
                             }
-                          /> */}
+                          />
                         </>
                       )}
                     </>
@@ -697,6 +705,7 @@ export const Navigation = connect<
   goToCertificateConfigAction: goToCertificateConfig,
   goToFormConfigAction: goToFormConfigHome,
   goToApplicationConfigAction: goToApplicationConfig,
+  goToVSReportConfigAction: goToPerfomanceVSReport,
   goToPerformanceViewAction: goToPerformanceView,
   goToTeamViewAction: goToTeamView,
   redirectToAuthentication,

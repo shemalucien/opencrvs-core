@@ -172,9 +172,6 @@ export function goToHome() {
 export function goToCertificateConfig() {
   return push(CERTIFICATE_CONFIG)
 }
-// export function goToPerformanceDashboard() {
-//   return push(PERFORMANCE_DASHBOARD)
-// }
 export function goToPerfomanceVSExport() {
   return push(PERFORMANCE_VSREPORT)
 }

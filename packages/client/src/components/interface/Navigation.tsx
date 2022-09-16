@@ -135,7 +135,6 @@ const USER_SCOPE: IUSER_SCOPE = {
     WORKQUEUE_TABS.readyToPrint,
     WORKQUEUE_TABS.performance,
     WORKQUEUE_TABS.dashboard,
-    WORKQUEUE_TABS.performanceDashboard,
     WORKQUEUE_TABS.vsexports,
     WORKQUEUE_TABS.team,
     GROUP_ID.declarationGroup,
@@ -151,7 +150,6 @@ const USER_SCOPE: IUSER_SCOPE = {
     WORKQUEUE_TABS.team,
     WORKQUEUE_TABS.config,
     WORKQUEUE_TABS.dashboard,
-    WORKQUEUE_TABS.performanceDashboard,
     WORKQUEUE_TABS.vsexports,
     GROUP_ID.menuGroup
   ],
@@ -282,7 +280,7 @@ export const NavigationView = (props: IFullProps) => {
     WORKQUEUE_TABS.declarationForms
   ]
   const performanceTab: string[] = [
-    WORKQUEUE_TABS.performanceDashboard,
+    WORKQUEUE_TABS.performance,
     WORKQUEUE_TABS.vsexports
   ]
   const [isConfigExpanded, setIsConfigExpanded] = React.useState(false)
@@ -517,7 +515,7 @@ export const NavigationView = (props: IFullProps) => {
                           navigationMessages[WORKQUEUE_TABS.performance]
                         )}
                         onClick={() => {
-                          // props.goToPerformanceViewAction(userDetails)
+                          props.goToPerformanceViewAction(userDetails)
                           setIsPerformExpanded(!isPerformExpanded)
                         }}
                         isSelected={
@@ -542,7 +540,7 @@ export const NavigationView = (props: IFullProps) => {
                                 WORKQUEUE_TABS.performanceDashboard
                               ]
                             )}
-                            id={`navigation_${WORKQUEUE_TABS.performanceDashboard}`}
+                            id={`navigation_${WORKQUEUE_TABS.performance}`}
                             onClick={() =>
                               props.goToPerformanceViewAction(userDetails)
                             }
@@ -682,7 +680,9 @@ const mapStateToProps: (state: IStoreState) => IStateProps = (state) => {
     workqueue: state.workqueueState.workqueue,
     storedDeclarations: state.declarationsState.declarations,
     userDetails: getUserDetails(state),
-    activeMenuItem: window.location.href.includes(WORKQUEUE_TABS.performance)
+    activeMenuItem: window.location.href.includes(
+      `${WORKQUEUE_TABS.performance}?`
+    )
       ? WORKQUEUE_TABS.performance
       : window.location.href.includes(WORKQUEUE_TABS.team)
       ? WORKQUEUE_TABS.team

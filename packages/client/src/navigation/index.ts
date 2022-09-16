@@ -49,7 +49,7 @@ import {
   DECLARATION_RECORD_AUDIT,
   FORM_CONFIG_WIZARD,
   FORM_CONFIG_HOME,
-  PERFORMANCE_DASHBOARD,
+  // PERFORMANCE_DASHBOARD,
   PERFORMANCE_VSREPORT
 } from '@client/navigation/routes'
 import {
@@ -172,9 +172,9 @@ export function goToHome() {
 export function goToCertificateConfig() {
   return push(CERTIFICATE_CONFIG)
 }
-export function goToPerformanceDashboard() {
-  return push(PERFORMANCE_DASHBOARD)
-}
+// export function goToPerformanceDashboard() {
+//   return push(PERFORMANCE_DASHBOARD)
+// }
 export function goToPerfomanceVSReport() {
   return push(PERFORMANCE_VSREPORT)
 }

@@ -516,7 +516,10 @@ export const NavigationView = (props: IFullProps) => {
                         label={intl.formatMessage(
                           navigationMessages[WORKQUEUE_TABS.performance]
                         )}
-                        onClick={() => setIsPerformExpanded(!isPerformExpanded)}
+                        onClick={() => {
+                          props.goToPerformanceViewAction(userDetails)
+                          setIsPerformExpanded(!isPerformExpanded)
+                        }}
                         isSelected={
                           enableMenuSelection &&
                           perfromanceTab.includes(activeMenuItem)

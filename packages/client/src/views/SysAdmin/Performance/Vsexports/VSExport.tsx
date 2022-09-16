@@ -82,7 +82,11 @@ const VSExport = () => {
   // TODO: Reflace with Frame component */
   return (
     <>
-      <SysAdminContentWrapper id="vsexport-wrapper" hideBackground={true}>
+      <SysAdminContentWrapper
+        id="vsexport-wrapper"
+        hideBackground={true}
+        isCertificatesConfigPage={true}
+      >
         <UserTable id="vsexport_list">
           <Content
             title={intl.formatMessage(messages.vsexport)}

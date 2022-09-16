@@ -29,7 +29,7 @@ import {
   subItemCertificates,
   subItemDashboard,
   subItemForms,
-  subItemVsreports
+  subItemVsexports
 } from './NavigationSubItem.stories'
 
 const DeclarationTemplate: Story<INavigationGroup> = (args) => (
@@ -51,7 +51,7 @@ const SettingTemplate: Story<INavigationGroup> = (args) => (
   <div {...args}>
     <NavigationItem {...itemPerformance.args}>
       <NavigationSubItem {...subItemDashboard.args} />
-      <NavigationSubItem {...subItemVsreports.args} />
+      <NavigationSubItem {...subItemVsexports.args} />
     </NavigationItem>
     <NavigationItem {...itemTeam.args} />
     <NavigationItem {...itemConfiguration.args}>

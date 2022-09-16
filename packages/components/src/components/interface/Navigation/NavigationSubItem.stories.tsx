@@ -23,10 +23,10 @@ export const subItemDashboard = Template.bind({})
 subItemDashboard.args = {
   label: 'Dashboard'
 }
-export const subItemVsreports = Template.bind({})
+export const subItemVsexports = Template.bind({})
 
-subItemVsreports.args = {
-  label: 'Vsreports'
+subItemVsexports.args = {
+  label: 'Vsexports'
 }
 
 export const subItemCertificates = Template.bind({})

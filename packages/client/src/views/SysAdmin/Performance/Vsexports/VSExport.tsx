@@ -40,7 +40,6 @@ export enum TabId {
   DEATH = 'death'
 }
 function BirthTabContent() {
-  const intl = useIntl()
   return (
     <>
       <ListViewSimplified>
@@ -53,8 +52,6 @@ function BirthTabContent() {
 }
 
 function DeathTabContent() {
-  const intl = useIntl()
-
   return (
     <>
       <ListViewSimplified>

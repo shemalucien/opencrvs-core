@@ -115,6 +115,6 @@
 ## General
 
 * [Contributing](general/contributing.md)
-* [Releases](general/releases/README.md)
-  * [v1.0.1](general/releases/v1.0.1.md)
+* [Releases](general/change-log.md)
+  * [v1.1.0-stable: Release Notes](general/releases/v1.1.0-stable-release-notes.md)
 * [Product Roadmap](general/roadmap.md)

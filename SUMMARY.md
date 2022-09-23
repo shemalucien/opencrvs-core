@@ -115,5 +115,6 @@
 ## General
 
 * [Contributing](general/contributing.md)
-* [Change log](general/change-log.md)
+* [Releases](general/releases/README.md)
+  * [v1.0.1](general/releases/v1.0.1.md)
 * [Product Roadmap](general/roadmap.md)

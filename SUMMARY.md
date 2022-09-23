@@ -116,5 +116,5 @@
 
 * [Contributing](general/contributing.md)
 * [Releases](general/change-log.md)
-  * [v1.1.0-stable: Release Notes](general/releases/v1.1.0-stable-release-notes.md)
+  * [v1.1.0-stable: release notes](general/releases/v1.1.0-stable-release-notes.md)
 * [Product Roadmap](general/roadmap.md)

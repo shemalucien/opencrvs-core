@@ -1,12 +1,12 @@
 import React from 'react'
 import { SysAdminContentWrapper } from '@client/views/SysAdmin/SysAdminContentWrapper'
-import { FormTabs } from '@opencrvs/components/lib/forms'
+// import { FormTabs } from '@opencrvs/components/lib/forms'
 import styled from 'styled-components'
 import { useIntl } from 'react-intl'
-import { BodyContent } from '@opencrvs/components/lib/layout'
-import { Content } from '@opencrvs/components/lib/interface/Content'
+import { BodyContent, Content } from '@opencrvs/components/lib/layout'
+// import { Content } from '@opencrvs/components/lib/interface/Content'
 import { messages } from '@client/i18n/messages/views/config'
-import { ListViewSimplified } from '@opencrvs/components/lib/interface/ListViewSimplified/ListViewSimplified'
+// import { ListViewSimplified } from '@opencrvs/components/lib/interface/ListViewSimplified/ListViewSimplified'
 import {
   BirthDelayedRegistrationTarget,
   BirthLateRegistrationPeriod,
@@ -16,16 +16,8 @@ import {
   DeathDelayedRegistrationTarget,
   DeathRegistrationTarget
 } from '@client/views/SysAdmin/Config/Application/Tabs/DeathProperties'
-const ListGroupTitle = styled.div`
-  color: ${({ theme }) => theme.colors.grey400};
-  width: 100%;
-  height: 56px;
-  text-align: left;
-  ${({ theme }) => theme.fonts.bold14};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.grey200};
-  display: flex;
-  align-items: center;
-`
+import { TopAlignedListViewItemSimplified } from '@client/views/Settings/items/components'
+import { StickyFormTabs } from '@client/views/RegisterForm/StickyFormTabs'
 
 const UserTable = styled(BodyContent)`
   padding: 0px;
@@ -39,14 +31,15 @@ export enum TabId {
   BIRTH = 'birth',
   DEATH = 'death'
 }
+
 function BirthTabContent() {
   return (
     <>
-      <ListViewSimplified>
+      <TopAlignedListViewItemSimplified>
         <BirthRegistrationTarget />
         <BirthLateRegistrationPeriod />
         <BirthDelayedRegistrationTarget />
-      </ListViewSimplified>
+      </TopAlignedListViewItemSimplified>
     </>
   )
 }
@@ -54,10 +47,10 @@ function BirthTabContent() {
 function DeathTabContent() {
   return (
     <>
-      <ListViewSimplified>
+      <TopAlignedListViewItemSimplified>
         <DeathRegistrationTarget />
         <DeathDelayedRegistrationTarget />
-      </ListViewSimplified>
+      </TopAlignedListViewItemSimplified>
     </>
   )
 }
@@ -89,7 +82,7 @@ const VSExport = () => {
             title={intl.formatMessage(messages.vsexport)}
             titleColor={'copy'}
             tabBarContent={
-              <FormTabs
+              <StickyFormTabs
                 sections={tabSections}
                 activeTabId={activeTabId}
                 onTabClick={(id: TabId) => setActiveTabId(id)}

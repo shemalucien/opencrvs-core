@@ -14,16 +14,16 @@ services:
   # Note: these published port will override UFW rules as Docker manages it's own iptables
   # Only publish the exact ports that are required for OpenCRVS to work
   traefik:
-    image: traefik:1.7.16
+    image: traefik:v2.8
     ports:
       - '80:80'
       - '443:443'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /data/traefik/acme.json:/acme.json
-    configs:
-      - source: traefik.{{ts}}
-        target: /etc/traefik/traefik.toml
+    # configs:
+    #   - source: traefik.{{ts}}
+    #     target: /etc/traefik/traefik.toml
     deploy:
       replicas: 1
       placement:
@@ -109,13 +109,15 @@ services:
     deploy:
       labels:
         # https://doc.traefik.io/traefik/v1.7/configuration/backends/docker/#labels-overriding-default-behavior
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: kibana.{{hostname}}'
-        - 'traefik.port=5601'
-        - 'traefik.docker.network=opencrvs_overlay_net'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: kibana.{{hostname}}'
+        # - 'traefik.port=5601'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        - 'traefik.http.routers.kibana.rule=Host(`kibana.{{hostname}}`)'
+        - 'traefik.tcp.services.kibana.loadbalancer.server.port=5601'
     networks:
       - overlay_net
     environment:
@@ -249,13 +251,14 @@ services:
     command: server --address ":9000" --console-address ":9001" /data/minio
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: documents.{{hostname}}'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
-        - 'traefik.port=80'
-        - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: documents.{{hostname}}'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.port=80'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        - 'traefik.http.routers.minio.rule=Host(`documents.{{hostname}}`)'
     networks:
       - overlay_net
 
@@ -392,16 +395,18 @@ services:
       - MINIO_URL=document.{{hostname}}
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: register.{{hostname}},{{hostname}}'
-        - 'traefik.frontend.redirect.regex=^https?://{{hostname}}/(.*)'
-        - 'traefik.frontend.redirect.replacement=https://register.{{hostname}}/$${1}'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
-        - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
-        - 'traefik.port=80'
-        - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: register.{{hostname}},{{hostname}}'
+        # - 'traefik.frontend.redirect.regex=^https?://{{hostname}}/(.*)'
+        # - 'traefik.frontend.redirect.replacement=https://register.{{hostname}}/$${1}'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        # - 'traefik.port=80'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+
+        - 'traefik.http.routers.client.rule=Host(`register.{{hostname}}`)'
       replicas: 2
     networks:
       - overlay_net
@@ -414,16 +419,17 @@ services:
   components:
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: styleguide.{{hostname}},{{hostname}}'
-        - 'traefik.frontend.redirect.regex=^https?://{{hostname}}/(.*)'
-        - 'traefik.frontend.redirect.replacement=https://styleguide.{{hostname}}/$${1}'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
-        - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
-        - 'traefik.port=80'
-        - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: styleguide.{{hostname}},{{hostname}}'
+        # - 'traefik.frontend.redirect.regex=^https?://{{hostname}}/(.*)'
+        # - 'traefik.frontend.redirect.replacement=https://styleguide.{{hostname}}/$${1}'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        # - 'traefik.port=80'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        - 'traefik.http.routers.components.rule=Host(`styleguide.{{hostname}}`)'
       replicas: 2
     networks:
       - overlay_net
@@ -436,14 +442,15 @@ services:
   countryconfig:
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: countryconfig.{{hostname}}'
-        - 'traefik.port=3040'
-        - 'traefik.docker.network=opencrvs_overlay_net'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
-        - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: countryconfig.{{hostname}}'
+        # - 'traefik.port=3040'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        - 'traefik.http.routers.countryconfig.rule=Host(`countryconfig.{{hostname}}`)'
       replicas: 2
     environment:
       - APN_SERVICE_URL=http://apm-server:8200
@@ -460,14 +467,15 @@ services:
       - HOST={{hostname}}
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: login.{{hostname}}'
-        - 'traefik.port=80'
-        - 'traefik.docker.network=opencrvs_overlay_net'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
-        - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: login.{{hostname}}'
+        # - 'traefik.port=80'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        - 'traefik.http.routers.login.rule=Host(`login.{{hostname}}`)'
       replicas: 2
     networks:
       - overlay_net
@@ -488,14 +496,16 @@ services:
       - HOSTNAME={{hostname}}
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: auth.{{hostname}}'
-        - 'traefik.port=4040'
-        - 'traefik.docker.network=opencrvs_overlay_net'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
-        - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: auth.{{hostname}}'
+        # - 'traefik.port=4040'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        - 'traefik.http.routers.auth.rule=Host(`auth.{{hostname}}`)'
+        - 'traefik.tcp.services.auth.loadbalancer.server.port=4040'
       replicas: 2
     networks:
       - overlay_net
@@ -545,14 +555,16 @@ services:
       - HOSTNAME={{hostname}}
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: gateway.{{hostname}}'
-        - 'traefik.port=7070'
-        - 'traefik.docker.network=opencrvs_overlay_net'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
-        - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: gateway.{{hostname}}'
+        # - 'traefik.port=7070'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        - 'traefik.http.routers.gateway.rule=Host(`gateway.{{hostname}}`)'
+        - 'traefik.tcp.services.gateway.loadbalancer.server.port=7070'
       replicas: 2
     networks:
       - overlay_net
@@ -642,14 +654,16 @@ services:
       - HOSTNAME={{hostname}}
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: config.{{hostname}}'
-        - 'traefik.port=2021'
-        - 'traefik.docker.network=opencrvs_overlay_net'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
-        - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: config.{{hostname}}'
+        # - 'traefik.port=2021'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        - 'traefik.http.routers.config.rule=Host(`config.{{hostname}}`)'
+        - 'traefik.tcp.services.config.loadbalancer.server.port=2021'
       replicas: 2
     networks:
       - overlay_net
@@ -689,16 +703,18 @@ services:
       - mongo1
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.docker.network=opencrvs_overlay_net'
-        - 'traefik.openhim-api.frontend.rule=Host: openhim-api.{{hostname}}'
-        - 'traefik.openhim-api.protocol=https'
-        - 'traefik.openhim-api.port=8080'
-        - 'traefik.router.frontend.rule=Host: api.{{hostname}}'
-        - 'traefik.router.port=5001'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.enable=true'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.openhim-api.frontend.rule=Host: openhim-api.{{hostname}}'
+        # - 'traefik.openhim-api.protocol=https'
+        # - 'traefik.openhim-api.port=8080'
+        # - 'traefik.router.frontend.rule=Host: api.{{hostname}}'
+        # - 'traefik.router.port=5001'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        - 'traefik.http.routers.openhim-core.rule=Host(`openhim-api.{{hostname}}`)'
+        - 'traefik.tcp.services.openhim-core.loadbalancer.server.port=8080'
       replicas: 2
     networks:
       - overlay_net
@@ -710,13 +726,14 @@ services:
   openhim-console:
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: openhim.{{hostname}}'
-        - 'traefik.port=80'
-        - 'traefik.docker.network=opencrvs_overlay_net'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: openhim.{{hostname}}'
+        # - 'traefik.port=80'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        - 'traefik.http.routers.openhim-console.rule=Host(`openhim.{{hostname}}`)'
       replicas: 2
     configs:
       - source: openhim-console-conf.{{ts}}
@@ -738,14 +755,16 @@ services:
       - CERT_PUBLIC_KEY_PATH=/run/secrets/jwt-public-key.{{ts}}
     deploy:
       labels:
-        - 'traefik.enable=true'
-        - 'traefik.frontend.rule=Host: webhooks.{{hostname}}'
-        - 'traefik.port=2525'
-        - 'traefik.docker.network=opencrvs_overlay_net'
-        - 'traefik.frontend.headers.STSSeconds=31536000'
-        - 'traefik.frontend.headers.STSIncludeSubdomains=true'
-        - 'traefik.frontend.headers.STSPreload=true'
-        - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        # - 'traefik.enable=true'
+        # - 'traefik.frontend.rule=Host: webhooks.{{hostname}}'
+        # - 'traefik.port=2525'
+        # - 'traefik.docker.network=opencrvs_overlay_net'
+        # - 'traefik.frontend.headers.STSSeconds=31536000'
+        # - 'traefik.frontend.headers.STSIncludeSubdomains=true'
+        # - 'traefik.frontend.headers.STSPreload=true'
+        # - 'traefik.frontend.headers.customResponseHeaders=Pragma:no-cache||Cache-control:no-store||X-Robots-Tag:none'
+        - 'traefik.http.routers.webhooks.rule=Host(`webhooks.{{hostname}}`)'
+        - 'traefik.tcp.services.webhooks.loadbalancer.server.port=2020'
       replicas: 2
     networks:
       - overlay_net

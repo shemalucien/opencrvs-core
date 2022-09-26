@@ -1,6 +1,6 @@
 # Releases
 
-**OpenCRVS Release Process & Calendar**
+### **OpenCRVS Release Process & Calendar**
 
 
 
@@ -14,7 +14,7 @@ The OpenCRVS Core team issue product releases once every 4 months with each rele
 
 
 
-**OpenCRVS Semantic Versioning**
+### **OpenCRVS Semantic Versioning**
 
 As a digital public good we are aware that implementers may only periodically perform upgrades. It is not sustainable for us or our community to follow the strict interpretation of semantic versioning in our full-stack microservice application, where every new feature would have a dedicated minor release. Our interpretation of semantic versioning for our project should therefore be interpreted is as follows.
 
@@ -26,7 +26,7 @@ Additional labels for "stable" and "beta" metadata are available as extensions t
 
 
 
-**OpenCRVS Gitflow and "Quality Gates"**
+### **OpenCRVS Gitflow and "Quality Gates"**
 
 We follow the "[Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" branching model with a "Quality Gate" concept (which defines specific quality assurance flows for features, beta releases, stable releases and hot-fixes).  It is imperative that implementers understand the concept of "Gitflow" when either contributing to core or merging in updates from the Farajaland country configuration package.
 

@@ -8,11 +8,7 @@ The following release process commences with the v1.1.0 release.  You can read m
 
 The OpenCRVS Core team issue product releases once every 4 months with each release receiving 6 months of bug fix (hot-fix) support.
 
-| Jan    | Feb | Mar | Apr  | May    | Jun | Jul | Aug  | Sep    | Oct | Nov | Dec  |
-| ------ | --- | --- | ---- | ------ | --- | --- | ---- | ------ | --- | --- | ---- |
-| Stable |     |     | Beta | Stable |     |     | Beta | Stable |     |     | Beta |
-
-
+<figure><img src="../.gitbook/assets/opencrvs-release-calendar.png" alt=""><figcaption></figcaption></figure>
 
 ### **OpenCRVS Semantic Versioning**
 
@@ -30,7 +26,7 @@ Additional labels for "stable" and "beta" metadata are available as extensions t
 
 We follow the "[Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" branching model with a "Quality Gate" concept (which defines specific quality assurance flows for features, beta releases, stable releases and hot-fixes).  It is imperative that implementers understand the concept of "Gitflow" when either contributing to core or merging in updates from the Farajaland country configuration package.
 
-
+<figure><img src="../.gitbook/assets/opencrvs-gitflow.png" alt=""><figcaption><p>OpenCRVS Gitflow</p></figcaption></figure>
 
 Referring to the Gitflow and Quality Gate diagrams, you should be able to understand the following:
 
@@ -42,7 +38,7 @@ Any git hash tagged Dockerhub image is a new "feature" that has been recently me
 
 OWASP security penetration tests by a CREST certified 3rd party occur once every 12 months or on every major release.
 
-
+<figure><img src="../.gitbook/assets/opencrvs-release-qa.png" alt=""><figcaption><p>OpenCRVS Quality Gates</p></figcaption></figure>
 
 
 

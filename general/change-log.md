@@ -4,7 +4,7 @@
 
 
 
-The following release process commences with the v1.1.0 release.  You can read more about how we developed our release process, branching model and quality gates in this blog post.
+The following release process commences with the v1.1.0 release.  You can read more about how we developed our release process, branching model and quality gates in this [blog post](https://www.opencrvs.org/resources/connect/blog/release-management-as-a-digital-public-good-what-we-have-learnt-so-far).
 
 The OpenCRVS Core team issue product releases once every 4 months with each release receiving 6 months of bug fix (hot-fix) support.
 

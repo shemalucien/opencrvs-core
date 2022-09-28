@@ -99,6 +99,11 @@ const StatusIcon = styled.div`
   margin-top: 4px;
 `
 
+const AlignedDateRangePicker = styled(DateRangePicker)`
+  position: absolute;
+  top: 20px;
+`
+
 const AdjustedStatusIcon = styled.div`
   margin-left: 3px;
 `
@@ -469,7 +474,7 @@ class UserAuditHistoryComponent extends React.Component<Props, State> {
               <SectionTitle>
                 {intl.formatMessage(messages.auditSectionTitle)}
               </SectionTitle>
-              <DateRangePicker
+              <AlignedDateRangePicker
                 startDate={timeStart}
                 endDate={timeEnd}
                 onDatesChange={({ startDate, endDate }) => {

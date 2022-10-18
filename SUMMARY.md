@@ -118,5 +118,5 @@
 * [Releases](general/change-log.md)
   * [v.1.1.1: Release notes](general/releases/v.1.1.1-release-notes.md)
   * [v1.1.0-stable: Release notes](general/releases/v1.1.0-stable-release-notes.md)
-  * [v1.0.1 to v1.1.0 Migration notes](general/releases/v1.0.1-to-v1.1.0-migration-notes.md)
+  * [v1.0.1 to v1.1.\* Migration notes](general/releases/v1.0.1-to-v1.1.-migration-notes.md)
 * [Product Roadmap](general/roadmap.md)

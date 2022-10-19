@@ -23,11 +23,7 @@ docker ps -a
 ```
 
 ```
-docker exec <Insert auth service container id on node> \
-wget -S --header="Authorization: Bearer <Insert your valid system administrator JWT here>" \
---header='Accept-Charset: UTF-8' --header='Content-Type: application/json' \
---post-data ‘{"scope":"NATIONAL_ID"}' \
--O - http://user-mgnt:3030/registerSystemClient
+docker exec <docker auth image name> wget -S --header="Authorization: Bearer <JWT>" --header='Accept-Charset: UTF-8' --header='Content-Type: application/json' --post-data '{"scope":"NATIONAL_ID"}' -O - http://user-mgnt:3030/registerSystemClient
 ```
 
 **Request payload**

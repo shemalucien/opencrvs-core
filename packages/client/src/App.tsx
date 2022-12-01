@@ -194,6 +194,13 @@ export class App extends React.Component<IAppProps> {
                                           <ProtectedRoute
                                             exact
                                             path={
+                                              routes.REVIEW_EVENT_PARENT_FORM_PAGE_ACCESS_MODE
+                                            }
+                                            component={ReviewForm}
+                                          />
+                                          <ProtectedRoute
+                                            exact
+                                            path={
                                               routes.REVIEW_EVENT_PARENT_FORM_PAGE_GROUP
                                             }
                                             component={ReviewForm}

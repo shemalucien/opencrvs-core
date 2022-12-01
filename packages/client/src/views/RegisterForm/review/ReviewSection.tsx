@@ -1872,12 +1872,12 @@ class ReviewSectionComp extends React.Component<FullProps, State> {
                     )}
                   />
                 )}
-                {!isCorrection(declaration) ? (
+                {!isCorrection(declaration) || readonly ? (
                   <>
-                    {!readonly && (
+                    {!duplicate && (
                       <DuplicateWarning duplicateIds={declaration.duplicates} />
                     )}
-                    {submitClickEvent && !readonly && (
+                    {submitClickEvent && !duplicate && (
                       <ReviewAction
                         completeDeclaration={isComplete}
                         totalFileSizeExceeded={totalFileSizeExceeded}

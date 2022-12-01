@@ -50,7 +50,8 @@ import {
   FORM_CONFIG_WIZARD,
   FORM_CONFIG_HOME,
   EVENT_REGISTRATIONS,
-  REVIEW_DUPLICATE
+  REVIEW_DUPLICATE,
+  REVIEW_EVENT_PARENT_FORM_PAGE_ACCESS_MODE
 } from '@client/navigation/routes'
 import {
   NATL_ADMIN_ROLES,
@@ -567,6 +568,21 @@ export function goToPageGroup(
       historyState
     }
   }
+}
+
+export function goToReviewPageReadonly(
+  declarationId: string,
+  pageId: string,
+  event: string
+) {
+  return push(
+    formatUrl(REVIEW_EVENT_PARENT_FORM_PAGE_ACCESS_MODE, {
+      declarationId,
+      event,
+      pageId,
+      mode: 'readonly'
+    })
+  )
 }
 
 export function goToPage(

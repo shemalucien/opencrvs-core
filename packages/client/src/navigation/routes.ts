@@ -28,6 +28,8 @@ export const DRAFT_DEATH_FORM_PAGE_GROUP = `/drafts/:declarationId/events/${Even
 
 export const REVIEW_EVENT_PARENT_FORM_PAGE =
   '/reviews/:declarationId/events/:event/parent/:pageId'
+export const REVIEW_EVENT_PARENT_FORM_PAGE_ACCESS_MODE =
+  '/reviews/:declarationId/events/:event/parent/:pageId/:mode?'
 export const REVIEW_EVENT_PARENT_FORM_PAGE_GROUP =
   '/reviews/:declarationId/events/:event/parent/:pageId/group/:groupId'
 

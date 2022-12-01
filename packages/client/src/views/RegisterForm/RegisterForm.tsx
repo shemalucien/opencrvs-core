@@ -179,6 +179,7 @@ export type RouteProps = RouteComponentProps<{
   pageId: string
   groupId: string
   declarationId: string
+  mode?: string
 }>
 
 type DispatchProps = {
@@ -542,7 +543,9 @@ class RegisterFormView extends React.Component<FullProps, State> {
   }
 
   getEventTopBarPropsForForm = (menuOption: IEventTopBarMenuAction) => {
-    const { intl, declaration, activeSectionGroup, goToHomeTab } = this.props
+    const { intl, declaration, activeSectionGroup, goToHomeTab, match } =
+      this.props
+    const readonly = match.params.mode === 'readonly'
 
     if (isCorrection(declaration)) {
       return this.getEventTopBarPropsForCorrection()
@@ -589,6 +592,7 @@ class RegisterFormView extends React.Component<FullProps, State> {
   render() {
     const {
       intl,
+      match,
       setAllFieldsDirty,
       fieldsToShowValidationErrors,
       declaration,
@@ -597,6 +601,7 @@ class RegisterFormView extends React.Component<FullProps, State> {
       activeSection,
       activeSectionGroup
     } = this.props
+    const readonly = match.params.mode === 'readonly'
 
     const nextSectionGroup = getNextSectionIds(
       registerForm.sections,
@@ -665,7 +670,7 @@ class RegisterFormView extends React.Component<FullProps, State> {
               )}
               {activeSection.viewType === VIEW_TYPE.REVIEW && (
                 <>
-                  {isCorrection(declaration) ? (
+                  {isCorrection(declaration) && !readonly ? (
                     <EventTopBar {...this.getEventTopBarPropsForCorrection()} />
                   ) : (
                     <EventTopBar
@@ -695,6 +700,7 @@ class RegisterFormView extends React.Component<FullProps, State> {
                     rejectDeclarationClickEvent={this.toggleRejectForm}
                     submitClickEvent={this.confirmSubmission}
                     onChangeReviewForm={this.modifyDeclaration}
+                    readonly={readonly}
                     onContinue={() => {
                       this.props.goToCertificateCorrection(
                         this.props.declaration.id,

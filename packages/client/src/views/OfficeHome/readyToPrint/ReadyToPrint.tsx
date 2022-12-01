@@ -12,7 +12,7 @@
 
 import {
   goToDeclarationRecordAudit,
-  goToPrintCertificate
+  goToReviewPageReadonly
 } from '@client/navigation'
 import { transformData } from '@client/search/transformer'
 import { ITheme } from '@client/styledComponents'
@@ -55,7 +55,7 @@ import { startCase } from 'lodash'
 
 interface IBasePrintTabProps {
   theme: ITheme
-  goToPrintCertificate: typeof goToPrintCertificate
+  goToReviewPageReadonly: typeof goToReviewPageReadonly
   goToDeclarationRecordAudit: typeof goToDeclarationRecordAudit
   outboxDeclarations: IDeclaration[]
   queryData: {
@@ -197,9 +197,10 @@ class ReadyToPrintComponent extends React.Component<
           ) => {
             e && e.stopPropagation()
             if (downloadStatus === DOWNLOAD_STATUS.DOWNLOADED) {
-              this.props.goToPrintCertificate(
+              this.props.goToReviewPageReadonly(
                 reg.id,
-                reg.event.toLocaleLowerCase() || ''
+                'review',
+                reg.event ? reg.event.toLowerCase() : ''
               )
             }
           }
@@ -333,6 +334,6 @@ function mapStateToProps(state: IStoreState) {
 }
 
 export const ReadyToPrint = connect(mapStateToProps, {
-  goToPrintCertificate,
+  goToReviewPageReadonly,
   goToDeclarationRecordAudit
 })(injectIntl(withTheme(ReadyToPrintComponent)))

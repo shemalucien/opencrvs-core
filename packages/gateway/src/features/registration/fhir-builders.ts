@@ -3629,12 +3629,7 @@ export async function buildFHIRBundle(
   if (authHeader) {
     context.authHeader = authHeader
   }
-  await transformObj(
-    reg as Record<string, unknown>,
-    fhirBundle,
-    builders,
-    context
-  )
+  transformObj(reg as Record<string, unknown>, fhirBundle, builders, context)
   return fhirBundle
 }
 

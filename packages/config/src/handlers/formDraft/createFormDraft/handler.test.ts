@@ -117,8 +117,8 @@ describe('createFormDraftHandler test', () => {
   it('should delete question using mongoose', async () => {
     mockingoose(FormDraft).toReturn(birthMockFormDraft, 'findOne')
     mockingoose(Question).toReturn(mockQuestion, 'findOne')
-    mockingoose(FormDraft).toReturn(birthMockFormDraft, 'updateOne')
-    mockingoose(Question).toReturn(mockQuestion, 'updateOne')
+    mockingoose(FormDraft).toReturn(birthMockFormDraft, 'replaceOne')
+    mockingoose(Question).toReturn(mockQuestion, 'replaceOne')
     mockingoose(Question).toReturn(mockQuestion, 'findOneAndRemove')
 
     const res = await server.server.inject({
@@ -139,8 +139,8 @@ describe('createFormDraftHandler test', () => {
   it('should return error if wrong operation requested using mongoose', async () => {
     mockingoose(FormDraft).toReturn(birthMockFormDraft, 'findOne')
     mockingoose(Question).toReturn(mockQuestion, 'findOne')
-    mockingoose(FormDraft).toReturn(birthMockFormDraft, 'updateOne')
-    mockingoose(Question).toReturn(mockQuestion, 'updateOne')
+    mockingoose(FormDraft).toReturn(birthMockFormDraft, 'replaceOne')
+    mockingoose(Question).toReturn(mockQuestion, 'replaceOne')
     mockingoose(Question).toReturn(mockQuestion, 'findOneAndRemove')
 
     const res = await server.server.inject({
@@ -161,8 +161,8 @@ describe('createFormDraftHandler test', () => {
   it('should update question using mongoose', async () => {
     mockingoose(FormDraft).toReturn(birthMockFormDraft, 'findOne')
     mockingoose(Question).toReturn(mockQuestion, 'find')
-    mockingoose(Question).toReturn(mockQuestion, 'updateOne')
-    mockingoose(FormDraft).toReturn(birthMockFormDraft, 'updateOne')
+    mockingoose(Question).toReturn(mockQuestion, 'replaceOne')
+    mockingoose(FormDraft).toReturn(birthMockFormDraft, 'replaceOne')
     const res = await server.server.inject({
       method: 'POST',
       url: '/formDraft',
@@ -189,9 +189,9 @@ describe('createFormDraftHandler test', () => {
 
   it('should return error if any error occured on delete question', async () => {
     mockingoose(FormDraft).toReturn(birthMockFormDraft, 'findOne')
-    mockingoose(FormDraft).toReturn(birthMockFormDraft, 'updateOne')
+    mockingoose(FormDraft).toReturn(birthMockFormDraft, 'replaceOne')
     mockingoose(Question).toReturn(mockQuestion, 'findOne')
-    mockingoose(Question).toReturn(mockQuestion, 'updateOne')
+    mockingoose(Question).toReturn(mockQuestion, 'replaceOne')
     mockingoose(Question).toReturn(new Error('boom'), 'deleteMany')
     const res = await server.server.inject({
       method: 'POST',
@@ -215,7 +215,7 @@ describe('createFormDraftHandler test', () => {
 
   it('should return error if any error occured on update question', async () => {
     mockingoose(FormDraft).toReturn(deathMockFormDraft, 'findOne')
-    mockingoose(FormDraft).toReturn(new Error('boom'), 'updateOne')
+    mockingoose(FormDraft).toReturn(new Error('boom'), 'replaceOne')
     mockingoose(Question).toReturn(mockQuestion, 'findOne')
     const res = await server.server.inject({
       method: 'POST',

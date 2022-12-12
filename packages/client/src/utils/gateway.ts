@@ -725,6 +725,7 @@ export type History = {
   requester?: Maybe<Scalars['String']>
   signature?: Maybe<Signature>
   statusReason?: Maybe<StatusReason>
+  system?: Maybe<System>
   user?: Maybe<User>
 }
 
@@ -1788,6 +1789,11 @@ export type StatusWiseRegistrationCount = {
   __typename?: 'StatusWiseRegistrationCount'
   count: Scalars['Int']
   status: Scalars['String']
+}
+
+export type System = {
+  __typename?: 'System'
+  name: Scalars['String']
 }
 
 export type TotalMetricsResult = {
@@ -5918,7 +5924,7 @@ export type FetchViewRecordByCompositionQueryVariables = Exact<{
 
 export type FetchViewRecordByCompositionQuery = {
   __typename?: 'Query'
-  fetchRegistration?:
+  fetchRegistrationForViewing?:
     | {
         __typename: 'BirthRegistration'
         attendantAtBirth?: AttendantType | null

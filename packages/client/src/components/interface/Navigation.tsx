@@ -25,6 +25,7 @@ import { LeftNavigation } from '@opencrvs/components/lib/interface/Navigation/Le
 import { NavigationGroup } from '@opencrvs/components/lib/interface/Navigation/NavigationGroup'
 import { NavigationItem } from '@opencrvs/components/lib/interface/Navigation/NavigationItem'
 import { NavigationSubItem } from '@opencrvs/components/lib/interface/Navigation/NavigationSubItem'
+import { NavigationActionButtonGroup } from '@opencrvs/components/lib/interface/Navigation/NavigationActionButtonGroup'
 import { connect } from 'react-redux'
 import {
   goToHomeTab,
@@ -33,12 +34,13 @@ import {
   goToPerformanceView,
   goToTeamView,
   goToFormConfigHome,
-  goToApplicationConfig
+  goToApplicationConfig,
+  goToEventInfo
 } from '@client/navigation'
 import { redirectToAuthentication } from '@client/profile/profileActions'
 import { getUserDetails } from '@client/profile/profileSelectors'
 import { getUserLocation, IUserDetails } from '@client/utils/userUtils'
-import { Activity, Users } from '@opencrvs/components/lib/icons'
+import { Activity, Plus, Users } from '@opencrvs/components/lib/icons'
 import { SettingsNavigation } from '@opencrvs/components/lib/icons/SettingsNavigation'
 import { LogoutNavigation } from '@opencrvs/components/lib/icons/LogoutNavigation'
 import { Configuration } from '@opencrvs/components/lib/icons/Configuration'
@@ -52,6 +54,9 @@ import { IOfflineData } from '@client/offline/reducer'
 import { isDeclarationInReadyToReviewStatus } from '@client/utils/draftUtils'
 import { navigationMessages } from '@client/i18n/messages/views/navigation'
 import { UnbuplishedWarning } from '@client/views/SysAdmin/Config/Forms/Home/FormConfigHome'
+import { USERS_WITHOUT_SEARCH } from './Header/Header'
+import { PrimaryButton } from '@opencrvs/components/lib/buttons'
+import { Event } from '@client/utils/gateway'
 
 const SCREEN_LOCK = 'screenLock'
 
@@ -317,6 +322,10 @@ export const NavigationView = (props: IFullProps) => {
     readyToPrint: !initialSyncDone ? 0 : filteredData.printTab?.totalItems || 0
   }
 
+  const isCreateActionsVisible = !(
+    userInfo?.role && USERS_WITHOUT_SEARCH.includes(userInfo.role)
+  )
+
   return (
     <LeftNavigation
       applicationName={offlineCountryConfiguration.config.APPLICATION_NAME}
@@ -327,6 +336,25 @@ export const NavigationView = (props: IFullProps) => {
       avatar={() => userInfo && userInfo.avatar}
       warning={isMobileDevice() ? <></> : <UnbuplishedWarning hideIcon />}
     >
+      {isCreateActionsVisible && (
+        <NavigationActionButtonGroup>
+          <PrimaryButton onClick={() => goToEventInfo(Event.Birth)}>
+            Birth <Plus />
+          </PrimaryButton>
+          <PrimaryButton onClick={() => goToEventInfo(Event.Death)}>
+            Death <Plus />
+          </PrimaryButton>
+          <PrimaryButton onClick={() => goToEventInfo(Event.Death)}>
+            Marriage <Plus />
+          </PrimaryButton>
+          <PrimaryButton onClick={() => goToEventInfo(Event.Death)}>
+            Divorce <Plus />
+          </PrimaryButton>
+          <PrimaryButton onClick={() => goToEventInfo(Event.Death)}>
+            Adoption <Plus />
+          </PrimaryButton>
+        </NavigationActionButtonGroup>
+      )}
       {userDetails?.role === 'FIELD_AGENT' ? (
         <>
           <NavigationGroup>

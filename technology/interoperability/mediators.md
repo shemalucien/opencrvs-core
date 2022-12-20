@@ -1,5 +1,9 @@
 # Mediators
 
+{% hint style="info" %}
+As part of **OpenCRVS v1.2.0-beta (released December 2023),** integrations are much easier to set-up.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
+{% endhint %}
+
 [Mediators](http://openhim.org/docs/dev-guide/developing-mediators/) are separate microservices that run independently to OpenCRVS and perform additional mediation tasks for a particular use case. The common tasks within a mediator are as follows:
 
 * **Message format adaptation** - this is the transformation of messages received in a certain format into another format (eg. HL7 v2 to HL7 v3 or MHD to XDS.b).

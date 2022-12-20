@@ -1,0 +1,16 @@
+# Users
+
+The different user roles in the system, and defined below, reflect common actors involved in civil registration services around the world as well as non-traditional actors that may help improve service delivery e.g. field agents who can take services to the community.&#x20;
+
+* To see how these roles are mapped to user types in Farajaland, see [user-role-mapping.md](../../../default-configuration/opencrvs-configuration-in-farajaland/user-role-mapping.md "mention").
+* To see how these actors work together to improve service delivery in Farajaland, see [business-process-flows-in-farajaland.md](../../../default-configuration/business-process-flows-in-farajaland.md "mention").
+
+| Role                  | Responsibilities                                                                                                                                                         | Types                                                                      |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| Field agent           | <ul><li>Create birth and death notifications</li></ul>                                                                                                                   | <p>Healthcare Worker<br>Police Office<br>Local Leader<br>Social Worker</p> |
+| Registration agent    | <ul><li>Create birth and death declarations</li><li>Validate and send declarations for approval</li><li>Issue certificates</li><li>View performance statistics</li></ul> |                                                                            |
+| Registrar             | <ul><li>Create birth and death declarations</li><li>Approve and register declarations</li><li>Issue certificates</li><li>View performance statistics</li></ul>           |                                                                            |
+| National Registrar    | <ul><li>Create birth and death declarations</li><li>Approve and register declarations</li><li>Issue certificates</li><li>View performance statistics</li></ul>           |                                                                            |
+| Local System Admin    | <ul><li>Create users</li><li>Edit users</li></ul>                                                                                                                        |                                                                            |
+| National System Admin | <ul><li>Config management</li><li>Create users</li><li>Edit users</li></ul>                                                                                              |                                                                            |
+| Performance Manager   | <ul><li>View performance statistics</li></ul>                                                                                                                            |                                                                            |

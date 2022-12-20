@@ -1,5 +1,9 @@
 # 3.2.3 Set up CR offices and Health facilities
 
+{% hint style="warning" %}
+As part of **OpenCRVS v1.2.0-beta (released December 2023),** you can now setup as many administrative divisions as you would like using [Humdata](https://data.humdata.org/) standards.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
+{% endhint %}
+
 The next step is to prepare csv files to import into OpenCRVS all of the offices where civil registration staff work and all of the health facilities where births and deaths can occur in a medical setting.
 
 The facilities you create are saved into OpenCRVS as [FHIR Locations](https://www.hl7.org/fhir/location.html).

@@ -1,5 +1,9 @@
 # Authentication and authorization
 
+{% hint style="info" %}
+As part of **OpenCRVS v1.2.0-beta (released December 2023),** integrations are much easier to set-up.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
+{% endhint %}
+
 You can either use the OpenHIM GUI to create an exposed channel and configure authentication using [OpenHIM documentation](http://openhim.org/docs/configuration/authentication), or alternatively your mediator can be registered as an authorized system client.
 
 To set up a system client with the right permissions there is no GUI, your system administrator is required to:

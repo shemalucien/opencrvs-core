@@ -2,8 +2,9 @@
 
 INSTRUCTIONS FOR CONTENT CREATORS:
 
-1. When writing new content, always edit the latest documentation for the latest release.
-2. When you have finished making changes, click "Merge" to save and publish.
+1. When writing new content, always select the latest documentation for the latest release. E.G. the collection on the left navigation with the highest release number.
+2. Select the page you wish to edit and click "Edit"
+3. When you have finished making changes, click "Merge" to save and publish.
 
 
 

@@ -3,6 +3,7 @@
 INSTRUCTIONS FOR CONTENT CREATORS:
 
 1. When writing new content, always edit the latest documentation for the latest release.
+2. When you have finished making changes, click "Merge" to save and publish.
 
 
 

@@ -92,7 +92,7 @@
   * [3.3 Set-up a server-hosted environment](setup/3.-installation/3.3-set-up-a-server-hosted-environment/README.md)
     * [3.3.1 Provision your server nodes with SSH access](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.1-provision-your-server-nodes-with-ssh-access.md)
     * [3.3.2 Install dependencies](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.2-install-dependencies.md)
-    * [3.3.3 Create Docker Secrets & provision a comms gateway](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.3-create-docker-secrets-and-provision-a-comms-gateway.md)
+    * [3.3.3 Create Docker Secrets & provision a comms gateway](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.3-create-docker-secrets-and-provision-an-sms-gateway.md)
     * [3.3.4 Set up an SMTP server for OpenCRVS monitoring alerts](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.4-set-up-an-smtp-server-for-opencrvs-monitoring-alerts.md)
     * [3.3.5 Setup DNS A records](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.5-setup-dns-a-records.md)
     * [3.3.6 Deploy](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy.md)

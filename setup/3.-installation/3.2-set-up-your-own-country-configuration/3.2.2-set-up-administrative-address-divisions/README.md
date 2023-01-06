@@ -1,5 +1,9 @@
 # 3.2.2 Set up administrative address divisions
 
+{% hint style="warning" %}
+As part of **OpenCRVS v1.2.0-beta (released December 2023),** you can now setup as many administrative divisions as you would like using [Humdata](https://data.humdata.org/) standards.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
+{% endhint %}
+
 Now that you have a repository ready for your country configuration code, you can begin the configuration process.  [Administrative division](https://en.wikipedia.org/wiki/Administrative\_division) structure must be standardised and configured in the application in order to accurately geo-locate registrations and provide accurate registration performance analytics and vital statistics exports. &#x20;
 
 OpenCRVS fully appreciates that within many countries, addresses are not standardised in some urban and rural areas.  We believe passionately that this should not be a hindrance to registration, so we have gone out of our way to enable optional and un-standardised urban and rural address levels. However, we must ensure at least some administrative structure standardisation in order to calculate key metrics. &#x20;

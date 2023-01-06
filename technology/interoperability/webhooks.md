@@ -1,5 +1,9 @@
 # Webhooks
 
+{% hint style="info" %}
+As part of **OpenCRVS v1.2.0-beta (released December 2023),** integrations are much easier to set-up.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
+{% endhint %}
+
 In order to make OpenCRVS as useful and open as possible to other systems, OpenCRVS publishes the following civil registration events as webhooks that mediators can subscribe to.
 
 * Birth registration

@@ -1,9 +1,5 @@
 # Interoperability
 
-{% hint style="info" %}
-As part of **OpenCRVS v1.2.0-beta (released December 2023),** integrations are much easier to set-up.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
-{% endhint %}
-
 {% hint style="success" %}
 OpenCRVS provides flexible interoperability options via OpenHIM, FHIR and a Webhooks microservice
 {% endhint %}

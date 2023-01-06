@@ -16,7 +16,7 @@ OpenCRVS comes with a pre-installed suite of tools for monitoring and debugging 
 
 Once the environment is installed, the monitoring suite can be accessed using the `kibana.<your_domain>` __ URL.&#x20;
 
-![](<../../.gitbook/assets/image (19).png>)
+![](<../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
 
 The login credentials are the ones you used as `KIBANA_USERNAME`  and `KIBANA_PASSWORD` as part of the [deployment](../3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy.md). &#x20;
 
@@ -28,7 +28,7 @@ Metricbeat gets installed on all host machines in your infrastructure. Its sole 
 
 The OpenCRVS monitoring stack comes with a pre-installed Application Performance Monitoring tool (APM). This tool collects performance metrics, errors and HTTP request information from each of the services in the OpenCRVS stack. You can find this tool in Kibana by navigating to **Observability -> APM -> Services**. This tool can be used to catch anomalies such as errors happening inside the services. It can also be used to detect bottlenecks and to know which services should be scaled up.
 
-![](<../../.gitbook/assets/image (31).png>)
+![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 #### Logstash
 

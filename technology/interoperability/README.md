@@ -12,12 +12,6 @@ c) integrating with [DHIS2](https://dhis2.org/) to standardise birth and death n
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-01-10 at 16.46.06.png" alt=""><figcaption><p>Using the OpenCRVS v1.2.* Integrations GUI to configure a webhook client</p></figcaption></figure>
 
-OpenCRVS' database layer for all registration data is expressed in JSON as [FHIR](https://hl7.org/FHIR/) in a NoSQL FHIR database called [Hearth](https://github.com/opencrvs/hearth).  This means that our schema is automatically thoroughly documented in the HL7 FHIR specification.  We have made some customisations to support the civil registration context, but we knew how important it would be for health institutions to be able to send us birth and death notifications, hence our early adoption of FHIR as our interoperability standard.
-
-We expose some FHIR APIs directly via our API Gateway, specifically for performing CRUD actions on [FHIR Locations](https://build.fhir.org/location.html) which we use for administrative structure, civil registration and health office buildings where registrations occur.  When OpenCRVS is running you can view [Swagger](https://swagger.io/) documentation in this Gateway.
-
-OpenCRVS stack includes [OpenHIM](http://openhim.org/).  The Open Health Information Mediator is a middleware component designed to ease interoperability between disparate information systems. Both OpenHIM and Hearth are OpenSource projects developed by [Jembi Health Systems](https://www.jembi.org/).  It is possible to expose direct access to OpenHIM in OpenCRVS Core, should you wish to interoperate with it.
-
 As of OpenCRVS v1.2.\* we now provide a simple GUI to set up integrating clients, generate and refresh API keys. &#x20;
 
 There are 4 common interoperability use cases you can easily take advantage of using our new GUI.
@@ -28,6 +22,16 @@ There are 4 common interoperability use cases you can easily take advantage of u
 4. **Webhook**: Allow any other system to subscribe to event in OpenCRVS and retrieve a customisable payload of registration data.
 
 The following sections will describe step-by-step instructions regarding how to configure these integrations as well as show you how you can expose OpenHIM to have full interoperability control over OpenCRVS.&#x20;
+
+
+
+**Other ways to interoperate**
+
+OpenCRVS' database layer for all registration data is expressed in JSON as [FHIR](https://hl7.org/FHIR/) in a NoSQL FHIR database called [Hearth](https://github.com/opencrvs/hearth).  This means that our schema is automatically thoroughly documented in the HL7 FHIR specification.  We have made some customisations to support the civil registration context, but we knew how important it would be for health institutions to be able to send us birth and death notifications, hence our early adoption of FHIR as our interoperability standard.
+
+We expose some FHIR APIs directly via our API Gateway, specifically for performing CRUD actions on [FHIR Locations](https://build.fhir.org/location.html) which we use for administrative structure, civil registration and health office buildings where registrations occur.  When OpenCRVS is running you can view [Swagger](https://swagger.io/) documentation in this Gateway.
+
+OpenCRVS stack includes [OpenHIM](http://openhim.org/).  The Open Health Information Mediator is a middleware component designed to ease interoperability between disparate information systems. Both OpenHIM and Hearth are OpenSource projects developed by [Jembi Health Systems](https://www.jembi.org/).  It is possible to expose direct access to OpenHIM in OpenCRVS Core, should you wish to interoperate with it.
 
 
 

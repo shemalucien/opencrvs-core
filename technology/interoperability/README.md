@@ -1,11 +1,5 @@
 # Interoperability
 
-### ****
-
-{% hint style="info" %}
-As part of **OpenCRVS v1.2.0-beta (released December 2023),** integrations are much easier to set-up.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
-{% endhint %}
-
 OpenCRVS has been technically architected from conception to interoperate with other e-Gov systems in a standardised, safe and secure way. &#x20;
 
 We have demonstrated how easy it is to interoperate with OpenCRVS in the past by:&#x20;

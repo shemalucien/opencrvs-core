@@ -12,9 +12,9 @@ c) integrating with [DHIS2](https://dhis2.org/) to standardise birth and death n
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-01-10 at 16.46.06.png" alt=""><figcaption><p>Using the OpenCRVS v1.2.* Integrations GUI to configure a webhook client</p></figcaption></figure>
 
-As of OpenCRVS v1.2.\* we now provide a simple GUI to set up integrating clients, generate and refresh API keys. &#x20;
+As of OpenCRVS v1.2.\* we now provide a simple GUI to set up, enable and disable integrating clients that generates and refreshes API keys. &#x20;
 
-There are 4 common interoperability use cases you can easily take advantage of using our new GUI.
+There are 4 common interoperability use cases you can easily take advantage of using our new GUI and specific API Gateway endpoints in JSON and GraphQL.
 
 1. **Event Notification**: Allow any other service to POST full or partial civil registration event applications to OpenCRVS - referred to in civil registration nomenclature as a "notification".  Most commonly these are submitted by hospitals, but you could also use this functionality to enable application submission from a social protection system or a public portal.
 2. **National ID**: Ensure a National ID system is notified by a webhook whenever an event (birth or death) is registered in OpenCRVS.  Use this to create or deactivate National ID numbers, or use it to authenticate citizens before allowing them to register an event.

@@ -18,7 +18,7 @@ Once the environment is installed, the monitoring suite can be accessed using th
 
 ![](<../../.gitbook/assets/image (19).png>)
 
-The login credentials are the ones you used as `KIBANA_USERNAME`  and `KIBANA_PASSWORD` as part of the [deployment](../3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy.md). &#x20;
+The login credentials are the ones you used as `KIBANA_USERNAME`  and `KIBANA_PASSWORD` as part of the [deployment](../3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy-automated-and-manual.md). &#x20;
 
 #### Metricbeat
 

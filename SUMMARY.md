@@ -95,7 +95,7 @@
     * [3.3.3 Create Docker Secrets & provision a comms gateway](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.3-create-docker-secrets-and-provision-an-sms-gateway.md)
     * [3.3.4 Set up an SMTP server for OpenCRVS monitoring alerts](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.4-set-up-an-smtp-server-for-opencrvs-monitoring-alerts.md)
     * [3.3.5 Setup DNS A records](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.5-setup-dns-a-records.md)
-    * [3.3.6 Deploy](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy.md)
+    * [3.3.6 Deploy (Automated & Manual)](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy-automated-and-manual.md)
     * [3.3.7 Automated & manual backup and manual restore](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.7-automated-and-manual-backup-and-manual-restore.md)
 * [4. Functional configuration](setup/4.-functional-configuration/README.md)
   * [4.1 Configure application settings](setup/4.-functional-configuration/4.1-configure-application-settings.md)

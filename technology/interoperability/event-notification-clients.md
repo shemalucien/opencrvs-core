@@ -1,7 +1,7 @@
 ---
 description: >-
-  Receiving full or partial event applications from an external provider such as
-  a health institution or public portal.
+  Submitting full or partial event applications into OpenCRVS from an external
+  service such as a health institution or public portal.
 ---
 
 # Event Notification clients
@@ -22,7 +22,7 @@ You can use our [Postman collections](https://github.com/opencrvs/opencrvs-faraj
 
 **Submitting an Event Notification**
 
-To submit an Event Notification, your client must first request an [authorization token ](authenticate-a-client.md)using your `client_id` and `client_secret`.
+To submit an Event Notification, your client must first request an [authorization token ](authentication-and-authorization.md)using your `client_id` and `client_secret`.
 
 
 
@@ -570,7 +570,7 @@ Refer to our [Postman collections](https://github.com/opencrvs/opencrvs-farajala
 | Parameter                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <pre><code>token
-</code></pre>            | An [authorization token](authenticate-a-client.md)                                                                                                                                                                                                                                                                                                                                                                         |
+</code></pre>            | An [authorization token](authentication-and-authorization.md)                                                                                                                                                                                                                                                                                                                                                              |
 | <pre><code>uuid
 </code></pre>             | A random [universally unique identifier](https://en.wikipedia.org/wiki/Universally\_unique\_identifier)                                                                                                                                                                                                                                                                                                                    |
 | <pre><code>officeId

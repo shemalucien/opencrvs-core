@@ -280,7 +280,7 @@ Unacknowledged responses are retried according to the capabilities of our librar
 
 Firstly, ensure that you have correctly configured your subscriber endpoint above to respond to **Verification Requests** and **Webhook Events**.
 
-To subscribe, your subscription service must request an [authorization token ](authenticate-a-client.md)using your `client_id` and `client_secret`.
+To subscribe, your subscription service must request an [authorization token ](authentication-and-authorization.md)using your `client_id` and `client_secret`.
 
 With the token you can now perform the following actions:
 

@@ -2,7 +2,7 @@
 description: Authenticating with your client details to retrieve an access token
 ---
 
-# Authenticating a client
+# Authenticate a client
 
 Now that you have created a client, when you want to perform an API request, you must first authenticate and recieve an OpenCRVS access **token**.
 

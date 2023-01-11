@@ -49,7 +49,7 @@
 * [Security](technology/security.md)
 * [Interoperability](technology/interoperability/README.md)
   * [Create a client](technology/interoperability/create-a-client.md)
-  * [Authenticate a client](technology/interoperability/authenticate-a-client.md)
+  * [Authenticate a client](technology/interoperability/authentication-and-authorization.md)
   * [Event Notification clients](technology/interoperability/event-notification-clients.md)
   * [Webhook clients](technology/interoperability/webhooks.md)
   * [Location API](technology/interoperability/location-api.md)

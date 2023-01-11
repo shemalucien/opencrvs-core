@@ -17,6 +17,8 @@ Only a National System Administrator role can create a client. E.G. In our examp
 
 4\. You will see a modal overlay where you can select the type of client you wish to create.  The business functionality available for each client is explained in subsequent pages in this section of our documentation.
 
+**The type of client you create is important and can only perform API requests associated with the business functionality relevant to that type.**  A Record Search client cannot perform an Event Notification for example.&#x20;
+
 You must give each client a unique name.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-01-11 at 11.34.17.png" alt=""><figcaption><p>Creating an Event notification client</p></figcaption></figure>

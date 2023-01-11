@@ -586,3 +586,61 @@ Refer to our [Postman collections](https://github.com/opencrvs/opencrvs-farajala
 | <pre><code>countryCode
 </code></pre>      | The [Alpha-3 country code](https://www.iban.com/country-codes) for the address. E.G. **UGD** for Uganda, **FAR** for our fictional country Farajaland.                                                                                                                                                                                                                                                                     |
 
+
+
+#### Event Notification Response
+
+If the notification has been successfully processed by OpenCRVS, you will receive a **200 OK** response and the following payload back.  For each successfully saved FHIR resource, you will receive a location.
+
+If the request fails, you will receive a **500** Error and you must check the payload you are sending for errors. &#x20;
+
+```
+{
+    "resourceType": "Bundle",
+    "entry": [
+        {
+            "response": {
+                "status": "201",
+                "location": "/fhir/Composition/727efd99-4b1a-4c67-8ae0-91003a09170d/_history/533ad880-ba9d-4426-9ad5-ab3ad79180d8"
+            }
+        },
+        {
+            "response": {
+                "status": "201",
+                "location": "/fhir/Task/f444833b-4b96-44cb-bf9c-370ddaa411ed/_history/be3b22f6-97eb-4aac-bee9-bb8bd8ce57aa"
+            }
+        },
+        {
+            "response": {
+                "status": "201",
+                "location": "/fhir/Patient/b85c716b-16b3-4d1f-93bf-d46f4182f9e3/_history/06e0e369-4f41-4c33-9cbb-56093ea9c135"
+            }
+        },
+        {
+            "response": {
+                "status": "201",
+                "location": "/fhir/Patient/c4e7ba36-36ad-4708-9925-6e5e00a140f8/_history/dece69d4-c4a7-4ebf-87f2-11e8f3862348"
+            }
+        },
+        {
+            "response": {
+                "status": "201",
+                "location": "/fhir/RelatedPerson/455517a9-ce05-404d-993d-1faaf852621c/_history/75d7b6b6-488e-48a9-87dc-29d21aca5735"
+            }
+        },
+        {
+            "response": {
+                "status": "201",
+                "location": "/fhir/Patient/bfa19fde-6305-441d-80c3-fcccb62e6cc4/_history/a80d5adc-2a2c-4c87-8bd5-69c35c2efdf3"
+            }
+        },
+        {
+            "response": {
+                "status": "201",
+                "location": "/fhir/Encounter/b644f0b7-1f49-4e0d-88b4-b4196ae65f65/_history/bde7a831-75a3-4456-9e32-af765bf14ad5"
+            }
+        }
+    ],
+    "type": "transaction-response"
+}
+```

@@ -1,28 +1,40 @@
-# Webhooks
+---
+description: Business functionality and API endpoints available to a "Webhook" client.
+---
 
-{% hint style="info" %}
-As part of **OpenCRVS v1.2.0-beta (released December 2023),** integrations are much easier to set-up.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
-{% endhint %}
+# Webhook clients
 
-In order to make OpenCRVS as useful and open as possible to other systems, OpenCRVS publishes the following civil registration events as webhooks that mediators can subscribe to.
+As of OpenCRVS v1.2.\*, OpenCRVS publishes the following civil registration events as webhooks that clients can subscribe to.  This is particularly useful for e-Gov systems if you wish to initiate a service for a citizen at the moment a Birth or Death is officially registered.
 
 * Birth registration
 * Death registration
-* Birth certified
-* Death certified
-* Birth corrected
-* Death corrected
 
-Included in these webhooks is a **FHIR Resource type and unique ID** to the resource associated, in these cases, a **FHIR Composition ID**. Once a subscriber receives the event, they can query OpenCRVS for **demographics, attachments and links to biometric data** for the registration in a dedicated and secure API.
+Included in these webhooks is a **FHIR Resource type and unique ID** to the OpenCRVS resource associated and customisable **demographics, attachments and links to biometric data** for the registration in a SHA signed and encrypted payload.
 
-Subscribing to an OpenCRVS webhook requires you to develop a mediator that has **system client** privileges, explained previously. As an example, we have written [**this mediator**](https://github.com/opencrvs/mosip-mediator) that subscribes to a birth registration event and retrieves the data required by [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) to register a national ID.:
+{% hint style="warning" %}
+Subscribing to an OpenCRVS webhook requires you to develop a service that exposes the standardised and required webhook endpoints associated with the [W3C WebSub](https://www.w3.org/TR/websub/) pattern.
+{% endhint %}
 
-A mediator that subscribes to an OpenCRVS webhook must:
+{% hint style="info" %}
+FYI: In OpenCRVS nomenclature, we have adopted the OpenHIM term "**Mediator**" to describe a 3rd party developed service that integrates with OpenCRVS using a client token.
+{% endhint %}
+
+Any mediator that subscribes to an OpenCRVS webhook must:
 
 1. Expose endpoints on a secure server that can process HTTPS requests and respond to a webhook following the [WebSub](https://www.w3.org/TR/websub/) pattern.
 2. Authenticate and query OpenCRVS to find a list of available event webhooks.
 3. Authenticate and subscribe to the webhook of choice.
 4. Respond to the webhook event as you wish internally, and request further details from OpenHIM to suit your business case. Refer to the [mediator](https://github.com/opencrvs/opencrvs.github.io/blob/master/website/docs/technology/mediators) page for examples of raw FHIR resources.
+
+{% hint style="info" %}
+You can use our [Postman collections](https://github.com/opencrvs/opencrvs-farajaland/tree/master/postman) to test webhook API functionality. [Postman](https://www.postman.com/) is a tool you can download to test API access before building your integrations.
+{% endhint %}
+
+{% hint style="info" %}
+As an example 3rd party webhook client service, we have written [**this mediator**](https://github.com/opencrvs/mosip-mediator) that subscribes to a birth registration webhook and retrieves the data required by [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) to register a national ID in MOSIP at the moment a Birth is registered. This medator only works for a National ID client explained later, but you can refer to the code to replicate the sequence diagrams below regarding subscribing and handling webhooks.
+{% endhint %}
+
+
 
 ### Sequence diagram
 

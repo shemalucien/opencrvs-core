@@ -49,8 +49,8 @@
 * [Security](technology/security.md)
 * [Interoperability](technology/interoperability/README.md)
   * [Create a client](technology/interoperability/create-a-client.md)
-  * [Authenticating a client](technology/interoperability/authenticating-a-client.md)
-  * [Webhooks](technology/interoperability/webhooks.md)
+  * [Authenticating a client](technology/interoperability/authentication-and-authorization.md)
+  * [Webhook clients](technology/interoperability/webhook-clients.md)
   * [Mediators](technology/interoperability/mediators.md)
 
 ## Default configuration

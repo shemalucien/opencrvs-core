@@ -4,7 +4,7 @@ description: Business functionality and API endpoints available to a "Webhook" c
 
 # Webhook clients
 
-As of OpenCRVS v1.2.\*, OpenCRVS publishes the following civil registration events as webhooks that clients can subscribe to.  This is particularly useful for e-Gov systems if you wish to initiate a service for a citizen at the moment a Birth or Death is officially registered.
+As of OpenCRVS v1.2.\*, OpenCRVS publishes the following civil registration events as webhooks that clients can subscribe to.  This is particularly useful for e-Gov systems if you wish to initiate business functionality for a citizen at the moment a Birth or Death is officially registered.
 
 * Birth registration
 * Death registration

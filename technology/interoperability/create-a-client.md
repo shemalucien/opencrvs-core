@@ -41,6 +41,12 @@ You can also temporarily "**Deactivate**" and "**Enable**" a client or alternati
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-01-11 at 11.35.35.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="danger" %}
+All client behaviour is audited and is ultimately the personal responsibility of the National System Administrator of OpenCRVS that created the client.  Protect citizen data and do not expose access unnecessarily, as you may be in breach of local privacy laws.
+{% endhint %}
+
 <figure><img src="../../.gitbook/assets/Screenshot 2023-01-11 at 11.34.26.png" alt=""><figcaption></figcaption></figure>
+
+
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-01-11 at 11.34.39.png" alt=""><figcaption></figcaption></figure>

@@ -382,6 +382,10 @@ Provided all is successfully completeed, your webhook will be subscribed and you
 
 This API unsubscribes a client service to an OpenCRVS webhook using the webhook id.
 
+{% hint style="info" %}
+You may notice that as of OpenCRVS v1.2.\*, webhook clients have the ability to unsubscribe themselves or other webhook clients to webhook events.  In this version of OpenCRVS it is assumed that all webhooks created by the system administrator can be trusted not to interfere with each other's subscriptions.&#x20;
+{% endhint %}
+
 #### **URL**
 
 ```

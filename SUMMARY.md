@@ -48,6 +48,7 @@
     * [Locations](technology/standards/fhir-documents/locations.md)
 * [Security](technology/security.md)
 * [Interoperability](technology/interoperability/README.md)
+  * [Create a client](technology/interoperability/create-a-client.md)
   * [Authentication and authorization](technology/interoperability/authentication-and-authorization.md)
   * [Webhooks](technology/interoperability/webhooks.md)
   * [Mediators](technology/interoperability/mediators.md)

@@ -1,3 +1,7 @@
+---
+description: An introduction describing how OpenCRVS interoperates
+---
+
 # Interoperability
 
 OpenCRVS has been technically architected from conception to interoperate with other e-Gov systems in a standardised, safe and secure way. &#x20;

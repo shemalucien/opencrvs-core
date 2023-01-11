@@ -4,7 +4,7 @@ description: Business functionality and API endpoints available to a "Webhook" c
 
 # Webhook clients
 
-As of OpenCRVS v1.2.\*, OpenCRVS publishes the following civil registration events as webhooks that clients can subscribe to.  This is particularly useful for e-Gov systems if you wish to initiate business functionality for a citizen at the moment a Birth or Death is officially registered.
+OpenCRVS publishes the following civil registration events as webhooks that clients can subscribe to.  This is particularly useful for e-Gov systems if you wish to initiate business functionality for a citizen at the moment a Birth or Death is officially registered.
 
 * Birth registration
 * Death registration
@@ -280,7 +280,7 @@ Unacknowledged responses are retried according to the capabilities of our librar
 
 Firstly, ensure that you have correctly configured your subscriber endpoint above to respond to **Verification Requests** and **Webhook Events**.
 
-To subscribe, your subscription service must request an [authorization token ](authentication-and-authorization.md)using your `client_id` and `client_secret`.
+To subscribe, your subscription service must request an [authorization token ](authenticate-a-client.md)using your `client_id` and `client_secret`.
 
 With the token you can now perform the following actions:
 

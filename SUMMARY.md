@@ -25,6 +25,7 @@
   * [14. Payment](product-specifications/support-functions/14.-payment.md)
   * [15. Learning](product-specifications/support-functions/15.-learning.md)
   * [16. User support](product-specifications/support-functions/16.-user-support.md)
+  * [17. Outbox](product-specifications/support-functions/17.-outbox.md)
 * [Admin functions](product-specifications/admin-functions/README.md)
   * [17. User management](product-specifications/admin-functions/17.-user-management.md)
   * [18. Comms management](product-specifications/admin-functions/18.-comms-management.md)

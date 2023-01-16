@@ -1,3 +1,9 @@
+---
+description: >-
+  Business functionality associated with a National ID client and instructions
+  to setup a MOSIP enabled National ID integration.
+---
+
 # National ID client
 
 Civil registration provides the source of truth for any vital event that occurs in a country.  As a result is usual that an integration with a country's National ID system is requested. &#x20;
@@ -28,11 +34,11 @@ OpenCRVS can let a National ID system know of any death that occurs in the count
 
 The default functionality dispatches the full payload at the moment of registration via the same process utilised by the webhook client.  You can consider the National ID client as identical to a [webhook](webhooks.md) client with full payload permissions.  To implement the National ID client, you must configure a webhook mediator service in exactly the same way for any other [webhook](webhooks.md) client.
 
-
-
 {% hint style="info" %}
 Example code for a mediator service that subscribes to an OpenCRVS National ID webhook is our [MOSIP Mediator](https://github.com/opencrvs/mosip-mediator)
 {% endhint %}
+
+###
 
 ### MOSIP functionality
 

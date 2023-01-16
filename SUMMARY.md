@@ -54,6 +54,7 @@
   * [Event Notification clients](technology/interoperability/event-notification-clients.md)
   * [Record Search clients](technology/interoperability/record-search-clients.md)
   * [Webhook clients](technology/interoperability/webhooks.md)
+  * [National ID client](technology/interoperability/national-id-client.md)
   * [Location API](technology/interoperability/location-api.md)
   * [Mediators](technology/interoperability/mediators.md)
 

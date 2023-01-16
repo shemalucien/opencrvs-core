@@ -54,10 +54,14 @@ OpenCRVS can let a National ID system know of any death that occurs in the count
 When a MOSIP enabled National ID client is set up, at the point of death, the deceased's National ID number must be captured in the application form.
 {% endhint %}
 
-&#x20;The deceased's National ID number (VID / UIN) is sent in a request to the [MOSIP Token Seeder](https://docs.mosip.io/1.2.0/integrations/mosip-token-seeder) (details below).  The (VID / UIN) is authorized and if valid a UINTOKEN is returned.  OpenCRVS then uses the UINTOKEN to link the death with the birth event before dispatching the death webhook. &#x20;
+&#x20;The deceased's National ID number (VID / UIN) is sent in a request to the [MOSIP Token Seeder](https://docs.mosip.io/1.2.0/integrations/mosip-token-seeder) (details below).  [The (VID / UIN) is authorized and if valid a UINTOKEN is returned](https://github.com/opencrvs/opencrvs-core/blob/1e5834db765d469b728f0da1d47607c1d9c3f9f4/packages/workflow/src/features/registration/fhir/fhir-bundle-modifier.ts#L677).  OpenCRVS then uses the UINTOKEN to link the death with the birth event before dispatching the death webhook. &#x20;
 
 {% hint style="info" %}
-**By integrating OpenCRVS with MOSIP, we acheive a person-centric, longitudinal record of life events thanks to the MOSIP Token Seeder validation.**
+**By integrating OpenCRVS with MOSIP, we achieve a person-centric, longitudinal record of life events thanks to the MOSIP Token Seeder validation.**
+{% endhint %}
+
+{% hint style="warning" %}
+If there is any failure communicating with MOSIP, the event creation will not be interrupted in OpenCRVS.  This is to ensure that civil registration still occurs regardless of the current health of the MOSIP installation.
 {% endhint %}
 
 

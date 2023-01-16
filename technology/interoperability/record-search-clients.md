@@ -147,4 +147,124 @@ We recommend that you use the Advanced Search feature in the OpenCRVS applicatio
 | informantDoBEnd             | As above                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                             |
 | informantIdentifier         | As above                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                             |
 
-Record Search Response
+
+
+**Record Search Response**
+
+The response from a record search is not FHIR, but an Elasticsearch response.  The audit experience is explained below the example payload.
+
+```
+{
+  "data": {
+    "searchEvents": {
+      "totalItems": 3,
+      "results": [
+        {
+          "id": "cb813494-9339-48dd-85a1-156278436f30",
+          "type": "Birth",
+          "registration": {
+            "status": "CERTIFIED",
+            "contactNumber": "+260760001907",
+            "trackingId": "BHKTHM7",
+            "registrationNumber": "2023BHKTHM7",
+            "registeredLocationId": "712502d2-5ea2-49d9-86df-a7d61f3f351f",
+            "duplicates": null,
+            "assignment": null,
+            "createdAt": "1673047650433",
+            "modifiedAt": null,
+            "__typename": "RegistrationSearchSet"
+          },
+          "operationHistories": [ ... ],
+          "dateOfBirth": "2022-10-26",
+          "childName": [
+            {
+              "firstNames": "Santiago",
+              "familyName": "Schmeler",
+              "use": "en",
+              "__typename": "HumanName"
+            },
+            {
+              "firstNames": "",
+              "familyName": null,
+              "use": "fr",
+              "__typename": "HumanName"
+            }
+          ],
+          "__typename": "BirthEventSearchSet"
+        },
+        {
+          "id": "b2fd5270-49c1-4227-8625-d874b6eef25d",
+          "type": "Birth",
+          "registration": {
+            "status": "CERTIFIED",
+            "contactNumber": "+260754288799",
+            "trackingId": "BBPX0DM",
+            "registrationNumber": "2023BBPX0DM",
+            "registeredLocationId": "712502d2-5ea2-49d9-86df-a7d61f3f351f",
+            "duplicates": null,
+            "assignment": null,
+            "createdAt": "1673048958068",
+            "modifiedAt": null,
+            "__typename": "RegistrationSearchSet"
+          },
+          "operationHistories": [ ... ],
+          "dateOfBirth": "2022-08-31",
+          "childName": [
+            {
+              "firstNames": "Price",
+              "familyName": "Lind",
+              "use": "en",
+              "__typename": "HumanName"
+            },
+            {
+              "firstNames": "",
+              "familyName": null,
+              "use": "fr",
+              "__typename": "HumanName"
+            }
+          ],
+          "__typename": "BirthEventSearchSet"
+        },
+        {
+          "id": "a7c641cb-9671-4715-a1a4-ecee08def9b0",
+          "type": "Birth",
+          "registration": {
+            "status": "CERTIFIED",
+            "contactNumber": "+260751978586",
+            "trackingId": "BXZJNML",
+            "registrationNumber": "2023BXZJNML",
+            "registeredLocationId": "712502d2-5ea2-49d9-86df-a7d61f3f351f",
+            "duplicates": null,
+            "assignment": null,
+            "createdAt": "1673062235276",
+            "modifiedAt": null,
+            "__typename": "RegistrationSearchSet"
+          },
+          "operationHistories": [ ... ],
+          "dateOfBirth": "2021-12-11",
+          "childName": [
+            {
+              "firstNames": "Nash",
+              "familyName": "Cruickshank",
+              "use": "en",
+              "__typename": "HumanName"
+            },
+            {
+              "firstNames": "",
+              "familyName": null,
+              "use": "fr",
+              "__typename": "HumanName"
+            }
+          ],
+          "__typename": "BirthEventSearchSet"
+        }
+      ],
+      "__typename": "EventSearchResultSet"
+    }
+  }
+}
+```
+
+After a search has completed and if you search for any record returned in OpenCRVS, you will see that in Record Audit, an entry shows that this client has accessed the personally identifiable citizen data on the record.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2023-01-16 at 11.49.25.png" alt=""><figcaption></figcaption></figure>

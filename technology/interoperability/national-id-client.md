@@ -10,7 +10,7 @@ Civil registration provides the source of truth for any vital event that occurs 
 
 We have some default functionality and some functionality that is unique to integrations with [MOSIP - an OpenSource platform for foundational ID](https://mosip.io/). &#x20;
 
-When creating a National ID client, you must give it a name.  If you are installing OpenCRVS alongside MOSIP, enter "MOSIP" (without quotation) for the name.
+When creating a National ID client, you must give it a name.  If you are installing OpenCRVS alongside MOSIP, enter "MOSIP" (without quotation) for the name, otherwise you can give it any name you like and take advantage of the default functionality explained below.
 
 {% hint style="warning" %}
 **You can only have one National ID client!**

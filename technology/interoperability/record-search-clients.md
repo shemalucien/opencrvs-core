@@ -265,6 +265,6 @@ The response from a record search is not FHIR, but an Elasticsearch response.  T
 }
 ```
 
-After a search has completed and if you search for any record returned in OpenCRVS, you will see that in Record Audit, an entry shows that this client has accessed the personally identifiable citizen data on the record.
+After a search has completed and if you search for any record returned, you will see that in Record Audit, an entry shows that this client has accessed the personally identifiable citizen data on the record.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-01-16 at 11.49.25.png" alt=""><figcaption></figcaption></figure>

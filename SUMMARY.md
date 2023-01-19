@@ -55,7 +55,7 @@
   * [Record Search clients](technology/interoperability/record-search-clients.md)
   * [Webhook clients](technology/interoperability/webhooks.md)
   * [National ID client](technology/interoperability/national-id-client.md)
-  * [Location API](technology/interoperability/location-api.md)
+  * [FHIR Location REST API](technology/interoperability/fhir-location-rest-api.md)
   * [Mediators](technology/interoperability/mediators.md)
 
 ## Default configuration

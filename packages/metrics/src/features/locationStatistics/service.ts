@@ -66,11 +66,11 @@ async function cacheOfficeCount(authHeader: IAuthHeader) {
     fetchLocationsByType('ADMIN_STRUCTURE', authHeader),
     fetchLocationsByType('CRVS_OFFICE', authHeader)
   ])
-  locations.forEach(({ id }) => (OFFICE_COUNT_CACHE[id] = -1))
+  locations.forEach(({ id }) => (OFFICE_COUNT_CACHE[id!] = -1))
   const locationsMap = locations.reduce<LocationsMap>(
     (locationsMap, location) => ({
       ...locationsMap,
-      [location.id!]: location
+      [location.id!]: location as Location
     }),
     {}
   )
@@ -81,7 +81,7 @@ async function cacheOfficeCount(authHeader: IAuthHeader) {
     if (parentLocation) {
       adjacency[parentLocation.id] = [
         ...(adjacency[parentLocation.id] ?? []),
-        location.id
+        location.id as string
       ]
     }
   })
@@ -90,7 +90,7 @@ async function cacheOfficeCount(authHeader: IAuthHeader) {
    */
   locations
     .filter(({ partOf }) => partOf?.reference?.split('/')[1] === '0')
-    .forEach((location) => dfs(locationsMap, location, adjacency))
+    .forEach((location) => dfs(locationsMap, location as Location, adjacency))
 }
 
 function isOffice(location: Location) {

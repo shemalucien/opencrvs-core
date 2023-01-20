@@ -62,7 +62,7 @@ https://gateway.<your-domain>/documentation
 
 Send a **GET** request with **Content-Type: application/json** headers to:
 
-<pre><code><strong>Get ALL locations:
+<pre><code><strong>Get ALL administrative structure locations:
 </strong><strong>
 </strong><strong>https://gateway.&#x3C;your-domain>/location
 </strong>

@@ -123,7 +123,7 @@
 
 * [Contributing](general/contributing.md)
 * [Releases](general/releases/README.md)
-  * [v1.2.0-beta: Release notes](general/releases/v1.2.0-beta-release-notes.md)
+  * [v1.2.0: Release notes](general/releases/v1.2.0-release-notes.md)
   * [v1.1.\* to v1.2.\* Migration notes](general/releases/v1.1.-to-v1.2.-migration-notes.md)
   * [v.1.1.2: Release notes](general/releases/v.1.1.2-release-notes.md)
   * [v.1.1.1: Release notes](general/releases/v.1.1.1-release-notes.md)

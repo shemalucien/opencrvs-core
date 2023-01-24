@@ -20,11 +20,7 @@ Any service that subscribes to an OpenCRVS webhook must:
 1. Expose endpoints on a secure server that can process HTTPS requests and respond to a webhook following the [WebSub](https://www.w3.org/TR/websub/) pattern.
 2. Authenticate and query OpenCRVS to find a list of available event webhooks.
 3. Authenticate and subscribe to the webhook of choice.
-4. Respond to the webhook event as you wish internally, and request further details from OpenHIM to suit your business case. Refer to the [mediator](https://github.com/opencrvs/opencrvs.github.io/blob/master/website/docs/technology/mediators) page for examples of raw FHIR resources.
-
-{% hint style="info" %}
-FYI: In OpenCRVS nomenclature, we have adopted the OpenHIM term "**Mediator**" to describe a 3rd party developed service that integrates with OpenCRVS using a client token.
-{% endhint %}
+4. Respond to the webhook event as you wish internally, and request further details from OpenCRVS via a [Record Search](record-search-clients.md) if you need to.
 
 {% hint style="info" %}
 You can use our [Postman collections](https://github.com/opencrvs/opencrvs-farajaland/tree/master/postman) to test webhook API functionality. [Postman](https://www.postman.com/) is a tool you can download to test API access before building your integrations.

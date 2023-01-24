@@ -14,6 +14,7 @@ OpenCRVS builds on these sound principles by additionally providing:
 * Standards-based multi-language content management.
 * A market-leading, powerful search and de-duplication engine powered by [ElasticSearch](https://www.elastic.co/).
 * Real-time performance analytics powered by the time-series database [Influx](https://www.influxdata.com/).
+* An Amazon S3 compatible opject store for storing supporting documentation attachments powered by [Minio](https://min.io/).
 * Increased performance by the use of [GraphQL](https://graphql.org/), reducing HTTP requests between client and server.
 * An automated continuous integration, delivery and testing suite.
 * A single JS, [TypeScript](https://www.typescriptlang.org/) codebase for backend, desktop and mobile using [Progressive Web Application technology](https://developer.mozilla.org/en-US/docs/Web/Progressive\_web\_apps/Introduction) for offline and low-connectivity access.
@@ -25,7 +26,7 @@ OpenCRVS is a full-stack that is designed to give you the lowest possible ["tota
 
 Our international development teams work in an Agile way, in tandem with local development resources and human-centred designers, following the [Scrum](https://www.atlassian.com/agile/scrum) methodology, to rapidly design, build, deploy, test and maintain OpenCRVS releases.
 
-{% embed url="https://www.figma.com/file/1WohPWFe53VH7zO7yILJDx/Architecture?node-id=0:1" %}
+{% embed url="https://www.figma.com/file/J4K2d7brMlnUleH4892qLF/Application-services-and-network-diagram?node-id=0%3A1&t=IvUMjgwgvhsHoi3W-1" %}
 
 {% file src="../../.gitbook/assets/Application services and network diagram (1).png" %}
 

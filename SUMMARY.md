@@ -103,6 +103,7 @@
     * [3.3.5 Setup DNS A records](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.5-setup-dns-a-records.md)
     * [3.3.6 Deploy (Automated & Manual)](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.6-deploy-automated-and-manual.md)
     * [3.3.7 Automated & manual backup and manual restore](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.7-automated-and-manual-backup-and-manual-restore.md)
+    * [3.3.8 Clearing and restoring a server to factory reset data](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.8-clearing-and-restoring-a-server-to-factory-reset-data.md)
 * [4. Functional configuration](setup/4.-functional-configuration/README.md)
   * [4.1 Configure application settings](setup/4.-functional-configuration/4.1-configure-application-settings.md)
   * [4.2 Configure registration periods and fees](setup/4.-functional-configuration/4.2-configure-registration-periods-and-fees.md)

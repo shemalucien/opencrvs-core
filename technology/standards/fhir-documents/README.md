@@ -1,7 +1,7 @@
 # FHIR Documents
 
 {% hint style="info" %}
-As part of OpenCRVS v1.2.0-beta we are documenting our entire FHIR standard used in the civil registration context.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
+As part of OpenCRVS v1.2.0 we are documenting our entire FHIR standard used in the civil registration context.  As a result these pages are being re-written/deprecated.  Please return in a few days for up to date content. &#x20;
 {% endhint %}
 
 When we were looking for a Civil Registration data standard to use for OpenCRVS, we were inspired by FHIR, specifically:&#x20;

@@ -83,7 +83,7 @@
   * [3.2 Set-up your own country configuration](setup/3.-installation/3.2-set-up-your-own-country-configuration/README.md)
     * [3.2.1 Fork your own country configuration repository](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.1-fork-your-own-country-configuration-repository.md)
     * [3.2.2 Set up administrative address divisions](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.2-set-up-administrative-address-divisions/README.md)
-      * [3.2.2.1 Prepare source files for state and district levels](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.2-set-up-administrative-address-divisions/3.2.2.1-prepare-source-files-for-state-and-district-levels.md)
+      * [3.2.2.1 Prepare source file for administrative structure](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.2-set-up-administrative-address-divisions/3.2.2.1-prepare-source-file-for-administrative-structure.md)
       * [3.2.2.2 Prepare source file for district level statistics](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.2-set-up-administrative-address-divisions/3.2.2.2-prepare-source-file-for-district-level-statistics.md)
     * [3.2.3 Set up CR offices and Health facilities](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.3-set-up-cr-offices-and-health-facilities/README.md)
       * [3.2.3.1 Prepare source file for CRVS Office facilities](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.3-set-up-cr-offices-and-health-facilities/3.2.3.1-prepare-source-file-for-crvs-office-facilities.md)

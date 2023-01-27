@@ -9,6 +9,7 @@
  * Copyright (C) The OpenCRVS Authors. OpenCRVS and the OpenCRVS
  * graphic logo are (registered/a) trademark(s) of Plan International.
  */
+import { MongoClient } from 'mongodb'
 import { IAuthHeader } from '@gateway/common-types'
 import {
   EVENT_TYPE,
@@ -692,6 +693,164 @@ async function getPreviousRegStatus(taskId: string, authHeader: IAuthHeader) {
   return filteredTaskHistory[0] && getStatusFromTask(filteredTaskHistory[0])
 }
 
+async function getCompositionBundle(
+  compositionId: string
+): Promise<fhir.DomainResource[]> {
+  const uri = 'mongodb://localhost:27017/'
+  // Create a new MongoClient
+  const client = new MongoClient(uri)
+
+  try {
+    // Connect the client to the server (optional starting in v4.7)
+    await client.connect()
+    // Establish and verify connection
+
+    function join(sectionKey: string, fromCollection: string, toField: string) {
+      return [
+        {
+          $lookup: {
+            from: fromCollection,
+            localField: 'extensions.' + sectionKey,
+            foreignField: 'id',
+            as: toField
+          }
+        }
+      ]
+    }
+
+    const databaseResult = await client
+      .db('hearth-dev')
+      .collection('Composition')
+      .aggregate([
+        { $match: { id: compositionId } },
+        {
+          $addFields: {
+            composition: '$$ROOT',
+            extensions: {
+              $arrayToObject: {
+                $map: {
+                  input: '$section',
+                  as: 'el',
+                  in: [
+                    {
+                      $let: {
+                        vars: {
+                          firstElement: {
+                            $arrayElemAt: ['$$el.code.coding', 0]
+                          }
+                        },
+                        in: '$$firstElement.code'
+                      }
+                    },
+                    {
+                      $let: {
+                        vars: {
+                          firstElement: { $arrayElemAt: ['$$el.entry', 0] }
+                        },
+                        in: {
+                          $arrayElemAt: [
+                            { $split: ['$$firstElement.reference', '/'] },
+                            1
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        ...join('birth-encounter', 'Encounter', 'encounter'),
+        ...join(
+          'supporting-documents',
+          'DocumentReference',
+          'supportingDocuments'
+        ),
+        ...join('certificates', 'DocumentReference', 'certificate'),
+        ...join('child-details', 'Patient', 'child'),
+        ...join('mother-details', 'Patient', 'mother'),
+        ...join('father-details', 'Patient', 'father'),
+        ...join('informant-details', 'RelatedPerson', 'informant'),
+        { $unwind: '$encounter' },
+        { $addFields: { tmpEncounter: '$encounter' } },
+        { $unwind: '$tmpEncounter.location' },
+        {
+          $addFields: {
+            compositionIdForJoining: { $concat: ['Composition/', '$id'] },
+            encounterIdForJoining: {
+              $concat: ['Encounter/', '$tmpEncounter.id']
+            },
+            encounterLocationId: {
+              $replaceAll: {
+                input: '$tmpEncounter.location.location.reference',
+                find: 'Location/',
+                replacement: ''
+              }
+            }
+          }
+        },
+        {
+          $lookup: {
+            from: 'Task',
+            localField: 'compositionIdForJoining',
+            foreignField: 'focus.reference',
+            as: 'tasks'
+          }
+        },
+        {
+          // Todo this will cause issues
+          $lookup: {
+            from: 'Task_history',
+            localField: 'compositionIdForJoining',
+            foreignField: 'focus.reference',
+            as: 'tasksHistory'
+          }
+        },
+        {
+          $lookup: {
+            from: 'Observation',
+            localField: 'encounterIdForJoining',
+            foreignField: 'context.reference',
+            as: 'observations'
+          }
+        },
+        {
+          $lookup: {
+            from: 'Location',
+            localField: 'encounterLocationId',
+            foreignField: 'id',
+            as: 'encounterLocation'
+          }
+        },
+        {
+          $project: {
+            composition: 1,
+            encounter: 1,
+            supportingDocuments: 1,
+            certificate: 1,
+            child: 1,
+            mother: 1,
+            father: 1,
+            informant: 1,
+            tasks: 1,
+            tasksHistory: 1,
+            encounterLocation: 1,
+            observations: 1
+          }
+        }
+      ])
+      .toArray()
+
+    return databaseResult
+      .flatMap((x) => Object.values(x).filter((x) => typeof x === 'object'))
+      .flat()
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close()
+  }
+}
+
 export async function markRecordAsDownloadedOrAssigned(
   id: string,
   authHeader: IAuthHeader
@@ -706,5 +865,5 @@ export async function markRecordAsDownloadedOrAssigned(
 
   await fetchFHIR('/Task', authHeader, 'PUT', JSON.stringify(taskBundle))
   // return the full composition
-  return fetchFHIR(`/Composition/${id}`, authHeader)
+  return getCompositionBundle(id)
 }

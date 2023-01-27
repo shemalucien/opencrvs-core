@@ -1372,6 +1372,12 @@ export const typeResolvers: GQLResolver = {
     }
   },
   BirthRegistration: {
+    id(bundle: fhir.DomainResource[], _, authHeader) {
+      const composition = bundle.find(
+        ({ resourceType }) => resourceType === 'Composition'
+      ) as ITemplatedComposition
+      return composition.id
+    },
     async _fhirIDMap(composition: ITemplatedComposition, _, authHeader) {
       // Preparing Encounter
       const encounterSection = findCompositionSection(
@@ -1438,61 +1444,81 @@ export const typeResolvers: GQLResolver = {
         questionnaireResponse: questionnaireResponse?.entry?.[0]?.resource?.id
       }
     },
-    createdAt(composition: ITemplatedComposition) {
+    createdAt(bundle: fhir.DomainResource[], _, authHeader) {
+      const composition = bundle.find(
+        ({ resourceType }) => resourceType === 'Composition'
+      ) as ITemplatedComposition
       return composition.date
     },
-    async mother(composition: ITemplatedComposition, _, authHeader) {
+    async mother(bundle: fhir.DomainResource[], _, authHeader) {
+      const composition = bundle.find(
+        ({ resourceType }) => resourceType === 'Composition'
+      ) as ITemplatedComposition
+
       const patientSection = findCompositionSection(MOTHER_CODE, composition)
       if (!patientSection || !patientSection.entry) {
         return null
       }
-      return await fetchFHIR(
-        `/${patientSection.entry[0].reference}`,
-        authHeader
+      const mother = bundle.find(
+        ({ id }) =>
+          id === patientSection.entry![0].reference?.replace('Patient/', '')
       )
+
+      return mother
     },
-    async father(composition: ITemplatedComposition, _, authHeader) {
+    async father(bundle: fhir.DomainResource[], _, authHeader) {
+      const composition = bundle.find(
+        ({ resourceType }) => resourceType === 'Composition'
+      ) as ITemplatedComposition
+
       const patientSection = findCompositionSection(FATHER_CODE, composition)
       if (!patientSection || !patientSection.entry) {
         return null
       }
-      return await fetchFHIR(
-        `/${patientSection.entry[0].reference}`,
-        authHeader
+
+      return bundle.find(
+        ({ id }) =>
+          id === patientSection.entry![0].reference?.replace('Patient/', '')
       )
     },
-    async child(composition: ITemplatedComposition, _, authHeader) {
+    async child(bundle: fhir.DomainResource[], _, authHeader) {
+      const composition = bundle.find(
+        ({ resourceType }) => resourceType === 'Composition'
+      ) as ITemplatedComposition
+
       const patientSection = findCompositionSection(CHILD_CODE, composition)
       if (!patientSection || !patientSection.entry) {
         return null
       }
-      return await fetchFHIR(
-        `/${patientSection.entry[0].reference}`,
-        authHeader
+
+      return bundle.find(
+        ({ id }) =>
+          id === patientSection.entry![0].reference?.replace('Patient/', '')
       )
     },
-    async informant(composition: ITemplatedComposition, _, authHeader) {
+    async informant(bundle: fhir.DomainResource[], _, authHeader) {
+      const composition = bundle.find(
+        ({ resourceType }) => resourceType === 'Composition'
+      ) as ITemplatedComposition
+
       const patientSection = findCompositionSection(INFORMANT_CODE, composition)
       if (!patientSection || !patientSection.entry) {
         return null
       }
-      return (await fetchFHIR(
-        `/${patientSection.entry[0].reference}`,
-        authHeader
-      )) as fhir.RelatedPerson
-    },
-    async registration(composition: ITemplatedComposition, _, authHeader) {
-      const taskBundle = await fetchFHIR(
-        `/Task?focus=Composition/${composition.id}`,
-        authHeader
-      )
 
-      if (!taskBundle.entry[0] || !taskBundle.entry[0].resource) {
-        return null
-      }
-      return taskBundle.entry[0].resource
+      return bundle.find(
+        ({ id }) =>
+          id ===
+          patientSection.entry![0].reference?.replace('RelatedPerson/', '')
+      )
     },
-    async weightAtBirth(composition: ITemplatedComposition, _, authHeader) {
+    async registration(bundle: fhir.DomainResource[], _, authHeader) {
+      return bundle.find(({ resourceType }) => resourceType === 'Task')
+    },
+    async weightAtBirth(bundle: fhir.DomainResource[], _, authHeader) {
+      const composition = bundle.find(
+        ({ resourceType }) => resourceType === 'Composition'
+      ) as ITemplatedComposition
       const encounterSection = findCompositionSection(
         BIRTH_ENCOUNTER_CODE,
         composition
@@ -1500,124 +1526,53 @@ export const typeResolvers: GQLResolver = {
       if (!encounterSection || !encounterSection.entry) {
         return null
       }
-      const observations = await fetchFHIR(
-        `/Observation?encounter=${encounterSection.entry[0].reference}&code=${BODY_WEIGHT_CODE}`,
-        authHeader
-      )
-      return (
-        (observations &&
-          observations.entry &&
-          observations.entry[0] &&
-          observations.entry[0].resource &&
-          observations.entry[0].resource.valueQuantity &&
-          observations.entry[0].resource.valueQuantity.value) ||
-        null
-      )
+
+      const observation = bundle.find(
+        (item) =>
+          item.resourceType === 'Observation' &&
+          (item as fhir.Observation).code.coding?.find(
+            (x) => x.code === BODY_WEIGHT_CODE
+          )
+      ) as fhir.Observation
+
+      return observation?.valueQuantity?.value || null
     },
 
     async questionnaire(composition: ITemplatedComposition, _, authHeader) {
-      const encounterSection = findCompositionSection(
-        BIRTH_ENCOUNTER_CODE,
-        composition
-      )
-      if (!encounterSection || !encounterSection.entry) {
-        return null
-      }
-      const response = await fetchFHIR(
-        `/QuestionnaireResponse?subject=${encounterSection.entry[0].reference}`,
-        authHeader
-      )
-      let questionnaireResponse: fhir.QuestionnaireResponse | null = null
-
-      if (
-        response &&
-        response.entry &&
-        response.entry[0] &&
-        response.entry[0].resource
-      ) {
-        questionnaireResponse = response.entry[0].resource
-      }
-
-      if (!questionnaireResponse) {
-        return null
-      }
-      const questionnaire: GQLQuestionnaireQuestion[] = []
-
-      if (questionnaireResponse.item && questionnaireResponse.item.length) {
-        questionnaireResponse.item.forEach((item) => {
-          if (item.answer && item.answer[0]) {
-            questionnaire.push({
-              fieldId: item.text,
-              value: item.answer[0].valueString
-            })
-          }
-        })
-        return questionnaire
-      } else {
-        return null
-      }
+      /* TODO */
     },
-    async birthType(composition: ITemplatedComposition, _, authHeader) {
-      const encounterSection = findCompositionSection(
-        BIRTH_ENCOUNTER_CODE,
-        composition
-      )
-      if (!encounterSection || !encounterSection.entry) {
-        return null
-      }
-      const observations = await fetchFHIR(
-        `/Observation?encounter=${encounterSection.entry[0].reference}&code=${BIRTH_TYPE_CODE}`,
-        authHeader
-      )
-      return (
-        (observations &&
-          observations.entry &&
-          observations.entry[0] &&
-          observations.entry[0].resource.valueQuantity.value) ||
-        null
+    async birthType(bundle: fhir.DomainResource[], _, authHeader) {
+      const observation = bundle.find(
+        (item) =>
+          item.resourceType === 'Observation' &&
+          (item as fhir.Observation).code.coding?.find(
+            (x) => x.code === BIRTH_ATTENDANT_CODE
+          )
+      ) as fhir.Observation
+
+      return observation?.valueQuantity?.value || null
+    },
+    async eventLocation(bundle: fhir.DomainResource[], _, authHeader) {
+      const encounter = bundle.find(
+        ({ resourceType }) => resourceType === 'Encounter'
+      ) as fhir.Encounter
+
+      return bundle.find(
+        (item) =>
+          item.id ===
+          encounter.location?.[0]?.location?.reference?.replace('Location/', '')
       )
     },
-    async eventLocation(composition: ITemplatedComposition, _, authHeader) {
-      const encounterSection = findCompositionSection(
-        BIRTH_ENCOUNTER_CODE,
-        composition
-      )
-      if (!encounterSection || !encounterSection.entry) {
-        return null
-      }
-      const data = await fetchFHIR(
-        `/${encounterSection.entry[0].reference}`,
-        authHeader
-      )
+    async attendantAtBirth(bundle: fhir.DomainResource[], _, authHeader) {
+      const observation = bundle.find(
+        (item) =>
+          item.resourceType === 'Observation' &&
+          (item as fhir.Observation).code.coding?.find(
+            (x) => x.code === BIRTH_ATTENDANT_CODE
+          )
+      ) as fhir.Observation
 
-      if (!data || !data.location || !data.location[0].location) {
-        return null
-      }
-
-      return await fetchFHIR(
-        `/${data.location[0].location.reference}`,
-        authHeader
-      )
-    },
-    async attendantAtBirth(composition: ITemplatedComposition, _, authHeader) {
-      const encounterSection = findCompositionSection(
-        BIRTH_ENCOUNTER_CODE,
-        composition
-      )
-      if (!encounterSection || !encounterSection.entry) {
-        return null
-      }
-      const observations = await fetchFHIR(
-        `/Observation?encounter=${encounterSection.entry[0].reference}&code=${BIRTH_ATTENDANT_CODE}`,
-        authHeader
-      )
-      return (
-        (observations &&
-          observations.entry &&
-          observations.entry[0] &&
-          observations.entry[0].resource.valueString) ||
-        null
-      )
+      return observation?.valueString || null
     },
     async birthRegistrationType(
       composition: ITemplatedComposition,
@@ -1715,31 +1670,11 @@ export const typeResolvers: GQLResolver = {
         null
       )
     },
-    async history(composition: ITemplatedComposition, _: any, authHeader: any) {
-      const task = await fetchFHIR(
-        `/Task/?focus=Composition/${composition.id}`,
-        authHeader
-      )
-
-      const taskId = task.entry[0].resource.id
-
-      const taskHistory = await fetchFHIR(
-        `/Task/${taskId}/_history?_count=100`,
-        authHeader
-      )
-
-      if (!taskHistory.entry[0] || !taskHistory.entry[0].resource) {
-        return null
-      }
-
-      return taskHistory?.entry?.map(
-        (item: {
-          resource: { extension: any }
-          extension: fhir.Extension[]
-        }) => {
-          return item.resource
-        }
-      )
+    async history(bundle: fhir.DomainResource[], _: any, authHeader: any) {
+      // sort by creation date, return all except first
+      return bundle.filter(
+        ({ resourceType }) => resourceType === 'Task'
+      ) as fhir.Task[]
     }
   }
 }

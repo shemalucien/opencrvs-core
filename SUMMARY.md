@@ -5,7 +5,6 @@
 ## Product Specifications
 
 * [Functional Architecture](product-specifications/functional-architecture/core-functions/README.md)
-* [Function and tasks](product-specifications/function-and-tasks.md)
 * [Users](product-specifications/function-architecture/users/README.md)
   * [Examples](product-specifications/function-architecture/users/examples.md)
 * [Core functions](product-specifications/functional-architecture.md)

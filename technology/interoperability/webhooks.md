@@ -1,37 +1,43 @@
-# Webhooks
+---
+description: Business functionality and API endpoints available to a "Webhook" client.
+---
 
-In order to make OpenCRVS as useful and open as possible to other systems, OpenCRVS publishes the following civil registration events as webhooks that mediators can subscribe to.
+# Webhook clients
+
+OpenCRVS publishes the following civil registration events as webhooks that clients can subscribe to.  This is particularly useful for e-Gov systems if you wish to initiate business functionality for a citizen at the moment a Birth or Death is officially registered.
 
 * Birth registration
 * Death registration
-* Birth certified
-* Death certified
-* Birth corrected
-* Death corrected
 
-Included in these webhooks is a **FHIR Resource type and unique ID** to the resource associated, in these cases, a **FHIR Composition ID**. Once a subscriber receives the event, they can query OpenCRVS for **demographics, attachments and links to biometric data** for the registration in a dedicated and secure API.
+Included in these webhooks is a **FHIR Resource type and unique ID** to the OpenCRVS resource associated and customisable **demographics, attachments and links to biometric data** for the registration in a SHA signed and encrypted payload.
 
-Subscribing to an OpenCRVS webhook requires you to develop a mediator that has **system client** privileges, explained previously. As an example, we have written [**this mediator**](https://github.com/opencrvs/mosip-mediator) that subscribes to a birth registration event and retrieves the data required by [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) to register a national ID.:
+{% hint style="warning" %}
+Subscribing to an OpenCRVS webhook requires you to develop a service that exposes the standardised and required webhook endpoints associated with the [W3C WebSub](https://www.w3.org/TR/websub/) pattern.
+{% endhint %}
 
-A mediator that subscribes to an OpenCRVS webhook must:
+Any service that subscribes to an OpenCRVS webhook must:
 
 1. Expose endpoints on a secure server that can process HTTPS requests and respond to a webhook following the [WebSub](https://www.w3.org/TR/websub/) pattern.
 2. Authenticate and query OpenCRVS to find a list of available event webhooks.
 3. Authenticate and subscribe to the webhook of choice.
-4. Respond to the webhook event as you wish internally, and request further details from OpenHIM to suit your business case. Refer to the [mediator](https://github.com/opencrvs/opencrvs.github.io/blob/master/website/docs/technology/mediators) page for examples of raw FHIR resources.
+4. Respond to the webhook event as you wish internally, and request further details from OpenCRVS via a [Record Search](record-search-clients.md) if you need to.
 
-### Sequence diagram
+{% hint style="info" %}
+You can use our [Postman collections](https://github.com/opencrvs/opencrvs-farajaland/tree/master/postman) to test webhook API functionality. [Postman](https://www.postman.com/) is a tool you can download to test API access before building your integrations.
+{% endhint %}
 
-The following sequence diagram describes a Mediator that is developed to receive information from an OpenCRVS Webhook.
+{% hint style="info" %}
+As an example 3rd party webhook client service, we have written [**this mediator**](https://github.com/opencrvs/mosip-mediator) that subscribes to a birth registration webhook and retrieves the data required by [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) to register a national ID in MOSIP at the moment a Birth is registered. This medator only works for a National ID client explained later, but you can refer to the code to replicate the sequence diagrams below regarding subscribing and handling webhooks.
+{% endhint %}
 
-![](https://github.com/opencrvs/opencrvs.github.io/blob/master/website/static/img/mediator-sequence.png?raw=true)
+
 
 ### Creating a subscriber endpoint
 
-Your microservice mediator must be able to process two types of HTTPS requests:&#x20;
+Your mediator must be able to process two types of HTTPS requests:&#x20;
 
 * Verification Requests
-* Event Notifications.&#x20;
+* Webhook Events.&#x20;
 
 Since both requests use HTTPs your server must have a valid TLS or SSL certificate correctly configured and installed.
 
@@ -39,7 +45,7 @@ The following sections explain what will be in each type of request to these end
 
 #### Verification Requests
 
-Anytime you try to subscribe to a Webhook, OpenCRVS will send a GET request to this endpoint URL to confirm that your microservice is prepared to receive webhooks.
+Anytime you try to subscribe to a webhook, OpenCRVS will send a GET request to this endpoint URL to confirm that your mediator is prepared to receive webhook events.
 
 Sample:
 
@@ -70,15 +76,15 @@ Verify that the `topic` value matches the event you're trying to subscribe to. R
 }
 ```
 
-#### Event Notifications
+#### Webhook Events
 
-When you configure your Webhooks product, you will subscribe to specific events. Whenever there's a a new event created, we will send your endpoint a POST request with a JSON payload describing the event **FHIR Compostion ID**.
+Whenever there's a a new event created, we will send your endpoint a POST request with a JSON payload.  When you create or edit a webhook client, you select the data you wish to be contained in the payload using the checkboxes.
 
-For example, if you subscribed to the birth registration event, we would send you a POST request to the same URL as the **Verification request** URL that would look something like this:
+<figure><img src="../../.gitbook/assets/Screenshot 2023-01-11 at 11.34.54.png" alt=""><figcaption></figcaption></figure>
 
-The property `context` contains the FHIR bundles that are required for successfully processing an action. In our current birth registration webhook we have included all the required information that the [MOSIP - the Modular Open Source Identity Platform](https://www.mosip.io/) requires in order to create a National ID number as an example.
+For example, if you subscribed to the birth registration event, we would send you a POST request to the same URL as the **Verification request** URL that would look something like this depending on what content you configured in the screen above:
 
-Links to biometric documents that are hosted by a 3rd party vendor service such as [Simprints](https://www.simprints.com/) could be contained here as additional DocumentReferences thus connecting OpenCRVS to a functional and foundational National ID system.
+The property `context` contains the FHIR bundles. Refer to our [standards](../standards/) section to learn more about the FHIR specification.
 
 ```
 POST / HTTPS/1.1
@@ -244,9 +250,13 @@ X-Hub-Signature: sha1={super-long-SHA1-signature}
 
 #### **Validating Payloads**
 
-We sign all Event Notification payloads with an HMAC **SHA256** hash and include the hash in the request's `hmac` property, preceded with `sha256=`. You should validate this against your `sha_secret` environment variable.
+We encrypt the payload using your client's `sha_secret` in an **SHA256** signature hash and include the hash in the request's `hmac` property, preceded with `sha256=`.&#x20;
 
-This [method](https://github.com/opencrvs/opencrvs-core/blob/c20e50af197be8e4423746a3bb1d4eb6cbe64353/packages/webhooks/src/features/event/service.ts#L19) shows how we create the signature to help you understand how you might create a similar hash and compare. You can confirm that this data is genuine.
+This [method](https://github.com/opencrvs/opencrvs-core/blob/c20e50af197be8e4423746a3bb1d4eb6cbe64353/packages/webhooks/src/features/event/service.ts#L19) shows how we create the signature to help you understand how you might create a similar hash and compare them.&#x20;
+
+{% hint style="warning" %}
+**You must confirm that the data is genuinely received from OpenCRVS and not from a malicious man-in-the-middle by using the sha\_secret in this way**
+{% endhint %}
 
 To validate the payload in a similar way to our method:
 
@@ -254,9 +264,9 @@ Generate a **SHA256** signature using the `context` array contents at position \
 
 Please note that we generate the signature using an escaped unicode version of the payload, with lowercase hex digits. If you just calculate against the decoded bytes, you will end up with a different signature. For example, the string `äöå` should be escaped to `\u00e4\u00f6\u00e5`.
 
-#### **Responding to Event Notifications**
+#### **Responding to Webhook Events**
 
-Your endpoint should respond to all Event Notifications with `200 OK HTTPS`.
+Your endpoint should respond to all events with `200 OK HTTPS`.
 
 **Frequency:** Be sure to adjust your servers to handle each Webhook individually and at any time.
 
@@ -264,18 +274,20 @@ Unacknowledged responses are retried according to the capabilities of our librar
 
 ### Subscription process
 
-Firstly, ensure that you have correctly configured your subscriber endpoint above to respond to **Verification Requests** and **Event Notifications**.
+Firstly, ensure that you have correctly configured your subscriber endpoint above to respond to **Verification Requests** and **Webhook Events**.
 
-Next, your subscription service must request an Authorization Bearer token using your `client_id` and `client_secret`.
+To subscribe, your subscription service must request an [authorization token ](authentication-and-authorization.md)using your `client_id` and `client_secret`.
 
-#### List available webhooks
+With the token you can now perform the following actions:
 
-This API returns webhooks that are owned by the authenticated client service
+#### List webhook subscribers
+
+This API returns all clients that are subscribed to receive webhook notifications.
 
 **URL**
 
 ```
-GET https://webhooks.<your-open-crvs-host.com>/webhooks
+GET https://webhooks.<your_domain>/webhooks
 ```
 
 #### **Request headers**
@@ -300,7 +312,7 @@ Example json
             "client_id": "8636abe2-affb-4238-8bff-200ed3652d1e",
             "type": "api",
             "username": "sys.admin",
-            "name": "Euan Millar"
+            "name": "Jonathan Campbell"
         }
         "topic": "BIRTH_REGISTERED"
     }
@@ -355,10 +367,6 @@ The supported events and associated topic string:
 | -------------------- | ------------------ |
 | `Birth registration` | `BIRTH_REGISTERED` |
 | `Death registration` | `DEATH_REGISTERED` |
-| `Birth certified`    | `BIRTH_CERTIFIED`  |
-| `Death certified`    | `DEATH_CERTIFIED`  |
-| `Birth corrected`    | `BIRTH_CORRECTED`  |
-| `Death corrected`    | `DEATH_CORRECTED`  |
 
 #### **Response payload**
 
@@ -369,6 +377,10 @@ Provided all is successfully completeed, your webhook will be subscribed and you
 #### Unsubscribe to a webhook
 
 This API unsubscribes a client service to an OpenCRVS webhook using the webhook id.
+
+{% hint style="info" %}
+You may notice that as of OpenCRVS v1.2.\*, webhook clients have the ability to unsubscribe themselves or other webhook clients to webhook events.  In this version of OpenCRVS it is assumed that all webhooks created by the system administrator can be trusted not to interfere with each other's subscriptions.&#x20;
+{% endhint %}
 
 #### **URL**
 
@@ -386,9 +398,5 @@ Authorization: Bearer <token>
 #### **Response**
 
 **204** status code and an empty response will be returned when the webhook has been successfully deleted.
-
-### Requesting the FHIR Composition for a birth event
-
-The payload of the birth registration event webhook contains the [FHIR Composition](https://www.hl7.org/fhir/composition.html) id, that can be used to retrieve all subsequent details for the registration. So, subscribing to this webhook is good way to access all other details in the [OpenCRVS FHIR Documents](https://app.gitbook.com/o/zub8C4BetmW3a9Bj4Cd4/s/qI5B1zX9fZVx3HCjIY12/\~/changes/6pHhtQvucSfdH5ndyWpd/technology/interoperability/opencrvs-fhir-documents)
 
 ####

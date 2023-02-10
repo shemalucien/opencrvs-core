@@ -25,9 +25,31 @@ The infrastructure chosen for the test represents the recommended minimum server
 * 160 GB Disk
 * Ubuntu 20.04 (LTS) x64
 
-**Results**
-
 The system achieved a request rate of 4 requests per second with minimal noticeable impact on response times, which is approximately four times the load required to support a country the size of Nigeria (population 206M).
+
+
+
+**OpenCRVS v1.2.\* Test results**
+
+The test was configured to run up to 15 VUs for 12 minutes 30 seconds. A total of 1 104 requests were made with a max throughput of 3.5 reqs/s.
+
+The average response time of the system being tested was 1 894 ms and 1 104 requests were made at an average request rate of 2 requests per second.
+
+The test had 2 different checks that were evaluated a total of 2 210 times, of which 2 failed. Overall the success rate was 99.91%.
+
+The maximum response time was 4 779 ms at 13 VUs. The average response time at the same point in time was 3 651 ms, with 95% of requests taking less than 4 497 ms.
+
+The test had an overall average request rate of 1.5 reqs/s peaking at 3.5 reqs/s while running 12 VUs.
+
+The amount of data sent peaked at 13 VUs, sending 4 KB/s of data. Data received had its peak at 11 VUs with 2.39 KB/s being received.
+
+There were requests to 3 unique URLs, with 1 104 different responses received. The slowest response had an average response time of 1 897 ms.
+
+<figure><img src="../../.gitbook/assets/k6results.png" alt=""><figcaption></figcaption></figure>
+
+****
+
+**OpenCRVS v1.1.\* Test results**
 
 1267 request were made in total, with no errors encountered during the test. With the highest request rate target of 200, the 95 percentile response time was 3.5 seconds, with an average request rate of 2.8 requests per second. During this target, an average of 12 requests were made concurrently.
 

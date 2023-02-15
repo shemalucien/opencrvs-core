@@ -30,7 +30,7 @@ type Query {
     locationId: String
     event: String
   ): RegistrationCountResult
-  fetchRecordDetailsForVerification(id: String): RecordDetails
+  fetchRecordDetailsForVerification(id: String!): RecordDetails
     @auth(requires: ANONYMOUS)
   locationsByParent(parentId: String, type: String): [Location]
   locationById(locationId: String): Location
@@ -902,6 +902,7 @@ type History {
   user: User
   date: Date
   regStatus: RegStatus
+  ipAddress: String
   action: RegAction
   statusReason: StatusReason
   reason: String
@@ -1442,6 +1443,7 @@ type Certificate {
 }
 
 enum RegAction {
+  VERIFIED
   ASSIGNED
   UNASSIGNED
   REINSTATED

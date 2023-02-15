@@ -30,17 +30,17 @@ export const validImageB64String =
 const fetch = createFetchMock(vi)
 fetch.enableMocks()
 
-enum MENU_ITEM {
-  PREVIEW,
-  PRINT,
-  DOWNLOAD,
-  UPLOAD
+const MENU_ITEM = {
+  PREVIEW: 0,
+  PRINT: 1,
+  DOWNLOAD: 2,
+  UPLOAD: 3
 }
 
 async function clickOnMenuItem(
   testComponent: ReactWrapper,
   event: string,
-  item: MENU_ITEM
+  item: number
 ) {
   await waitForElement(
     testComponent,
@@ -203,7 +203,7 @@ describe('ConfigHome page when already has uploaded certificate template', async
 
     it('should call print certificate after clicking print', async () => {
       await clickOnMenuItem(testComponent, 'birth', MENU_ITEM.PRINT)
-      testComponent.update()
+      // testComponent.update()
       await new Promise((resolve) => {
         setTimeout(resolve, 200)
       })

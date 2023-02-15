@@ -78,6 +78,15 @@ describe('Test apollo server config', () => {
     })
     expect(context).toStrictEqual({
       Authorization: `Bearer ${token}`,
+      request: {
+        headers: {
+          authorization: `Bearer ${token}`,
+          'user-agent': 'OpenCRVS'
+        },
+        info: {
+          remoteAddress: '1.1.1.1'
+        }
+      },
       'x-correlation-id': '1',
       'x-real-ip': '1.1.1.1',
       'x-real-user-agent': 'OpenCRVS'

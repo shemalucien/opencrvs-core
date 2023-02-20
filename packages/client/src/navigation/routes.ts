@@ -74,6 +74,11 @@ export const SYS_ADMIN_HOME = '/sys-admin-home'
 export const SYS_ADMIN_HOME_TAB = '/sys-admin-home/:tabId'
 
 export const PERFORMANCE_HOME = '/performance'
+
+export const PERFORMANCE_REGISTRATION = '/performance/registration'
+export const PERFORMANCE_LEADER_BOARDS = '/performance/leaderboards'
+export const PERFORMANCE_STATISTICS = '/performance/statistics'
+
 export const ADVANCED_SEARCH = '/search-result/advanced-search'
 export const ADVANCED_SEARCH_RESULT = '/advanced-search/result'
 

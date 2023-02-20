@@ -135,6 +135,26 @@ const messagesToDefine: INavigationMessages = {
     defaultMessage: 'Outbox',
     description: 'Label for navigation item outbox',
     id: 'navigation.outbox'
+  },
+  statistics: {
+    defaultMessage: 'Statistics',
+    description: 'Reports Performance Statistics Navigation',
+    id: 'navigation.performanceStatistics'
+  },
+  registration: {
+    defaultMessage: 'Registration',
+    description: 'Reports Performance Registration Navigation',
+    id: 'navigation.performanceRegistration'
+  },
+  leaderBoards: {
+    defaultMessage: 'Leader Boards',
+    description: 'Reports Performance Leader Boards Navigation',
+    id: 'navigation.leaderBoards'
+  },
+  report: {
+    defaultMessage: 'Report',
+    description: 'Reports Performance Reports Navigation',
+    id: 'navigation.performanceReport'
   }
 }
 

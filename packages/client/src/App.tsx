@@ -69,6 +69,7 @@ import { AdministrativeLevels } from '@client/views/Organisation/AdministrativeL
 import InformantNotification from '@client/views/SysAdmin/InformantSMSNotification/InformantSMSNotification'
 import { VerifyCertificatePage } from '@client/views/VerifyCertificate/VerifyCertificatePage'
 import { UnprotectedRoute } from '@client/components/UnprotectedRoute'
+import { PerformanceStatistics } from '@client/views/Performance/Statistics'
 
 interface IAppProps {
   client?: ApolloClient<{}>
@@ -466,6 +467,15 @@ export class App extends React.Component<IAppProps> {
                                                   routes.PERFORMANCE_REGISTRATIONS_LIST
                                                 }
                                                 component={RegistrationList}
+                                              />
+                                              <ProtectedRoute
+                                                exact
+                                                path={
+                                                  routes.PERFORMANCE_STATISTICS
+                                                }
+                                                component={
+                                                  PerformanceStatistics
+                                                }
                                               />
                                               <ProtectedRoute
                                                 exact

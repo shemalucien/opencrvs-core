@@ -57,7 +57,7 @@ import {
   ADVANCED_SEARCH_RESULT,
   PERFORMANCE_REGISTRATIONS_LIST,
   ORGANISATIONS_INDEX,
-  INFORMANT_NOTIFICATION
+  INFORMANT_NOTIFICATION, PERFORMANCE_STATISTICS
 } from '@client/navigation/routes'
 import {
   NATL_ADMIN_ROLES,
@@ -179,6 +179,10 @@ export function goToCertificateConfig() {
 
 export function goToInformantNotification() {
   return push(INFORMANT_NOTIFICATION)
+}
+
+export function goToPerformanceStatistics() {
+  return push(PERFORMANCE_STATISTICS)
 }
 
 export function goToVSExport() {

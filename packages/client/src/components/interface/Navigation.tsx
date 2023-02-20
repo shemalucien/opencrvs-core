@@ -36,7 +36,8 @@ import {
   goToAdvancedSearchResult,
   goToVSExport,
   goToOrganisationView,
-  goToInformantNotification
+  goToInformantNotification,
+  goToPerformanceStatistics
 } from '@client/navigation'
 import { redirectToAuthentication } from '@client/profile/profileActions'
 import { getUserDetails } from '@client/profile/profileSelectors'
@@ -67,7 +68,8 @@ import { IAdvancedSearchParamState } from '@client/search/advancedSearch/reducer
 import { omit } from 'lodash'
 import { getAdvancedSearchParamsState } from '@client/search/advancedSearch/advancedSearchSelectors'
 import { ADVANCED_SEARCH_RESULT } from '@client/navigation/routes'
-
+import * as Icons from 'react-feather'
+import { ChartActivity } from '@opencrvs/components/lib/Icon/custom-icons'
 const SCREEN_LOCK = 'screenLock'
 
 type Keys = keyof typeof WORKQUEUE_TABS
@@ -100,7 +102,11 @@ export const WORKQUEUE_TABS = {
 
 const GROUP_ID = {
   declarationGroup: 'declarationGroup',
-  menuGroup: 'menuGroup'
+  menuGroup: 'menuGroup',
+  statistics: 'statistics',
+  registration: 'registration',
+  leaderBoards: 'leaderBoards',
+  performance: 'performance'
 }
 
 interface IUSER_SCOPE {
@@ -113,6 +119,7 @@ const USER_SCOPE: IUSER_SCOPE = {
     WORKQUEUE_TABS.sentForReview,
     WORKQUEUE_TABS.requiresUpdate,
     WORKQUEUE_TABS.outbox,
+    WORKQUEUE_TABS.performance,
     GROUP_ID.declarationGroup
   ],
   REGISTRATION_AGENT: [
@@ -227,6 +234,7 @@ interface IDispatchProps {
   updateRegistrarWorkqueue: typeof updateRegistrarWorkqueue
   setAdvancedSearchParam: typeof setAdvancedSearchParam
   goToInformantNotification: typeof goToInformantNotification
+  goToPerformanceStatistics: typeof goToPerformanceStatistics
 }
 
 interface IStateProps {
@@ -305,6 +313,7 @@ export const NavigationView = (props: IFullProps) => {
     updateRegistrarWorkqueue,
     setAdvancedSearchParam,
     goToInformantNotification,
+    goToPerformanceStatistics,
     className
   } = props
   const tabId = deselectAllTabs
@@ -321,8 +330,11 @@ export const NavigationView = (props: IFullProps) => {
     WORKQUEUE_TABS.systems
   ]
   const conmmunicationTab: string[] = [WORKQUEUE_TABS.informantNotification]
+  const performanceTab: string[] = [GROUP_ID.statistics]
   const [isConfigExpanded, setIsConfigExpanded] = React.useState(false)
   const [isCommunationExpanded, setIsCommunationExpanded] =
+    React.useState(false)
+  const [isPerformanceExpanded, setIsPerformanceExpanded] =
     React.useState(false)
 
   const { data, initialSyncDone } = workqueue
@@ -784,6 +796,98 @@ export const NavigationView = (props: IFullProps) => {
                   )}
               </NavigationGroup>
             )}
+          {userDetails?.role &&
+            USER_SCOPE[userDetails.role].includes(GROUP_ID.menuGroup) && (
+              <NavigationGroup>
+                {userDetails?.role &&
+                  USER_SCOPE[userDetails.role].includes(
+                    WORKQUEUE_TABS.performance
+                  ) && (
+                    <>
+                      <NavigationItem
+                        id={`navigation_${WORKQUEUE_TABS.performance}_main`}
+                        label={intl.formatMessage(
+                          navigationMessages[WORKQUEUE_TABS.performance]
+                        )}
+                        onClick={() =>
+                          setIsPerformanceExpanded(!isPerformanceExpanded)
+                        }
+                        isSelected={
+                          enableMenuSelection &&
+                          performanceTab.includes(activeMenuItem)
+                        }
+                        expandableIcon={() =>
+                          isPerformanceExpanded ||
+                          performanceTab.includes(activeMenuItem) ? (
+                            <Expandable selected={true} />
+                          ) : (
+                            <Expandable />
+                          )
+                        }
+                      />
+                      {(isPerformanceExpanded ||
+                        performanceTab.includes(activeMenuItem)) && (
+                        <>
+                          <NavigationItem
+                            icon={() => (
+                              <ChartActivity color={'primary'} size={24} />
+                            )}
+                            label={intl.formatMessage(
+                              navigationMessages[GROUP_ID.registration]
+                            )}
+                            onClick={goToPerformanceStatistics}
+                            id={`navigation_${GROUP_ID.registration}`}
+                            isSelected={
+                              enableMenuSelection &&
+                              activeMenuItem === GROUP_ID.registration
+                            }
+                          />
+                          <NavigationItem
+                            icon={() => <Activity />}
+                            label={intl.formatMessage(
+                              navigationMessages[GROUP_ID.statistics]
+                            )}
+                            onClick={goToPerformanceStatistics}
+                            id={`navigation_${GROUP_ID.statistics}`}
+                            isSelected={
+                              enableMenuSelection &&
+                              activeMenuItem === GROUP_ID.statistics
+                            }
+                          />
+                          <NavigationItem
+                            icon={() => <Icons.Award width={20} height={20} />}
+                            label={intl.formatMessage(
+                              navigationMessages[GROUP_ID.leaderBoards]
+                            )}
+                            onClick={goToPerformanceStatistics}
+                            id={`navigation_${GROUP_ID.leaderBoards}`}
+                            isSelected={
+                              enableMenuSelection &&
+                              activeMenuItem === GROUP_ID.leaderBoards
+                            }
+                          />
+                          <NavigationItem
+                            icon={() => (
+                              <Icons.BarChart2 width={20} height={20} />
+                            )}
+                            label={intl.formatMessage(
+                              navigationMessages['report']
+                            )}
+                            onClick={() =>
+                              props.goToPerformanceViewAction(userDetails)
+                            }
+                            id={`navigation_${GROUP_ID.performance}_main`}
+                            isSelected={
+                              enableMenuSelection &&
+                              activeMenuItem === GROUP_ID.performance
+                            }
+                          />
+                        </>
+                      )}
+                    </>
+                  )}
+              </NavigationGroup>
+            )}
         </>
       )}
       <NavigationGroup>
@@ -894,7 +998,8 @@ export const Navigation = connect<
   goToSettings,
   updateRegistrarWorkqueue,
   setAdvancedSearchParam,
-  goToInformantNotification
+  goToInformantNotification,
+  goToPerformanceStatistics
 })(injectIntl(withRouter(NavigationView)))
 
 /** @deprecated since the introduction of `<Frame>` */

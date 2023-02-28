@@ -14,7 +14,7 @@ OpenCRVS builds on these sound principles by additionally providing:
 * Standards-based multi-language content management.
 * A market-leading, powerful search and de-duplication engine powered by [ElasticSearch](https://www.elastic.co/).
 * Real-time performance analytics powered by the time-series database [Influx](https://www.influxdata.com/).
-* An Amazon S3 compatible opject store for storing supporting documentation attachments powered by [Minio](https://min.io/).
+* An Amazon S3 compatible object store for storing supporting documentation attachments powered by [Minio](https://min.io/).
 * Increased performance by the use of [GraphQL](https://graphql.org/), reducing HTTP requests between client and server.
 * An automated continuous integration, delivery and testing suite.
 * A single JS, [TypeScript](https://www.typescriptlang.org/) codebase for backend, desktop and mobile using [Progressive Web Application technology](https://developer.mozilla.org/en-US/docs/Web/Progressive\_web\_apps/Introduction) for offline and low-connectivity access.

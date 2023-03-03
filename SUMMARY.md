@@ -5,7 +5,6 @@
 ## Product Specifications
 
 * [Functional Architecture](product-specifications/functional-architecture.md)
-* [Features](product-specifications/features.md)
 * [Users](product-specifications/users/README.md)
   * [Examples](product-specifications/users/examples.md)
 * [Core functions](product-specifications/core-functions/README.md)
@@ -131,3 +130,4 @@
   * [v.1.1.1: Release notes](general/releases/v.1.1.1-release-notes.md)
   * [v1.1.0: Release notes](general/releases/v1.1.0-release-notes.md)
 * [Product Roadmap](general/product-roadmap.md)
+* [Features list (in progress)](general/features-list-in-progress.md)

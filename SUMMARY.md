@@ -124,7 +124,7 @@
 
 * [Contributing](general/contributing.md)
 * [Releases](general/releases/README.md)
-  * [v1.2.1: Release notes](general/releases/v1.2.1-elasticsearch-downgrade.md)
+  * [Patch: Elasticsearch 7.10.2](general/releases/patch-elasticsearch-7.10.2.md)
   * [v1.2.0: Release notes](general/releases/v1.2.0-release-notes.md)
   * [v1.1.\* to v1.2.0 Migration notes](general/releases/v1.1.-to-v1.2.0-migration-notes.md)
   * [v.1.1.2: Release notes](general/releases/v.1.1.2-release-notes.md)

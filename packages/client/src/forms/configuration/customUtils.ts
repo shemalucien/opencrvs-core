@@ -46,7 +46,9 @@ function getOtherConditionalsAction(
     )
     return {
       action: 'hide',
-      expression: `!(new RegExp("${escapeRegExpValue}").test(draftData && draftData.${sectionId} && draftData.${sectionId}.${fieldName}))`
+      expression: `!(new RegExp("${escapeRegExpValue}").test(draftData && draftData.${sectionId} && draftData.${sectionId}.${fieldName}
+        && typeof draftData.${sectionId}.${fieldName} == "object" && draftData.${sectionId}.${fieldName}.hasOwnProperty("value")? 
+        draftData.${sectionId}.${fieldName}.value:draftData.${sectionId}.${fieldName}))`
     }
   })
 }

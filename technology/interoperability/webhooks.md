@@ -92,151 +92,163 @@ Content-Type: application/json
 X-Hub-Signature: sha1={super-long-SHA1-signature}
 
 {
-    "payload": {
-        "id": "531e9275-40e4-4ab5-a12c-6fa74d7b5b61",
-        "timestamp": "2019-12-12T10:53:43-08:00",
-        "event": {
-            "hub": {
-                "topic": "BIRTH_REGISTERED"
-            }
-        }
-    }
-    "url": "",
-    "hmac": "sha256=1d51fb6d-8636abe2-affb-4238-8bff-200ed3652d1et-dhrhd55",
-    context: [{
-        "resourceType": "Bundle",
-        "entry": [
+  "payload": {
+    "id": "531e9275-40e4-4ab5-a12c-6fa74d7b5b61",
+    "timestamp": "2019-12-12T10:53:43-08:00",
+    "event": {
+      "hub": {
+        "topic": "BIRTH_REGISTERED"
+      },
+      "context": [
+        {
+          "resourceType": "Bundle",
+          "entry": [
             {
-            "resource": {
+              "resource": {
                 "resourceType": "Task",
                 "status": "requested",
                 "code": {
-                "coding": [
-                    { "system": "http://opencrvs.org/specs/types", "code": "BIRTH" }
-                ]
+                  "coding": [
+                    {
+                      "system": "http://opencrvs.org/specs/types",
+                      "code": "BIRTH"
+                    }
+                  ]
                 },
                 "focus": {
-                "reference": "Composition/e9e2ff8d-1eac-412b-8bbc-408e90276a3f"
+                  "reference": "Composition/e9e2ff8d-1eac-412b-8bbc-408e90276a3f"
                 },
                 "identifier": [
-                {
+                  {
                     "system": "http://opencrvs.org/specs/id/draft-id",
                     "value": "53fe6974-6140-4e50-afc7-998a9018709b"
-                },
-                {
+                  },
+                  {
                     "system": "http://opencrvs.org/specs/id/birth-tracking-id",
                     "value": "B6E6YJB"
-                },
-                {
+                  },
+                  {
                     "system": "http://opencrvs.org/specs/id/birth-registration-number",
                     "value": "2020B6E6YJB"
-                }
+                  }
                 ],
                 "extension": [
-                {
+                  {
                     "url": "http://opencrvs.org/specs/extension/contact-person",
                     "valueString": "MOTHER"
-                },
-                {
+                  },
+                  {
                     "url": "http://opencrvs.org/specs/extension/contact-relationship",
                     "valueString": ""
-                },
-                {
+                  },
+                  {
                     "url": "http://opencrvs.org/specs/extension/contact-person-phone-number",
                     "valueString": "+260965656563"
-                },
-                {
+                  },
+                  {
                     "url": "http://opencrvs.org/specs/extension/timeLoggedMS",
                     "valueInteger": 52942
-                },
-                {
+                  },
+                  {
                     "url": "http://opencrvs.org/specs/extension/regLastUser",
                     "valueReference": {
-                    "reference": "Practitioner/c3355b48-7790-43c7-b8f0-10c7316f9bed"
+                      "reference": "Practitioner/c3355b48-7790-43c7-b8f0-10c7316f9bed"
                     }
-                },
-                {
+                  },
+                  {
                     "url": "http://opencrvs.org/specs/extension/regLastLocation",
                     "valueReference": {
-                    "reference": "Location/1b4092e0-d391-45cd-89d4-162a81f0f63f"
+                      "reference": "Location/1b4092e0-d391-45cd-89d4-162a81f0f63f"
                     }
-                },
-                {
+                  },
+                  {
                     "url": "http://opencrvs.org/specs/extension/regLastOffice",
                     "valueReference": {
-                    "reference": "Location/4ec9c980-0b2f-436a-b49e-203e1e601620"
+                      "reference": "Location/4ec9c980-0b2f-436a-b49e-203e1e601620"
                     }
-                }
+                  }
                 ],
                 "lastModified": "2020-09-27T09:15:20.015Z",
                 "businessStatus": {
-                "coding": [
+                  "coding": [
                     {
-                    "system": "http://opencrvs.org/specs/reg-status",
-                    "code": "REGISTERED"
+                      "system": "http://opencrvs.org/specs/reg-status",
+                      "code": "REGISTERED"
                     }
-                ]
+                  ]
                 },
                 "meta": {
-                "lastUpdated": "2020-09-27T09:15:20.040+00:00",
-                "versionId": "cfbefeac-bda0-4339-9745-9d54e7816c7d"
+                  "lastUpdated": "2020-09-27T09:15:20.040+00:00",
+                  "versionId": "cfbefeac-bda0-4339-9745-9d54e7816c7d"
                 },
                 "id": "60ec435c-1370-4314-ab0b-f44507f0db24"
-            }
+              }
             },
             {
-            "resource": {
+              "resource": {
                 "resourceType": "Patient",
                 "active": true,
-                "name": [{ "use": "en", "given": ["esrgstg"], "family": ["srthsrt"] }],
+                "name": [
+                  { "use": "en", "given": ["esrgstg"], "family": ["srthsrt"] }
+                ],
                 "gender": "male",
                 "birthDate": "2019-12-23",
                 "multipleBirthInteger": 1,
                 "meta": {
-                "lastUpdated": "2020-09-27T09:15:20.166+00:00",
-                "versionId": "9f5f1a5e-7059-4f5b-bf2f-8aa4f641b37c"
+                  "lastUpdated": "2020-09-27T09:15:20.166+00:00",
+                  "versionId": "9f5f1a5e-7059-4f5b-bf2f-8aa4f641b37c"
                 },
                 "id": "1e9ca16b-7c9a-469d-8101-ddd0db229077",
                 "identifier": [
-                { "type": "BIRTH_REGISTRATION_NUMBER", "value": "2020B6E6YJB" }
+                  {
+                    "type": "BIRTH_REGISTRATION_NUMBER",
+                    "value": "2020B6E6YJB"
+                  }
                 ]
-            }
+              }
             },
             {
-            "resource": {
+              "resource": {
                 "resourceType": "DocumentReference",
                 "masterIdentifier": {
-                "system": "urn:ietf:rfc:3986",
-                "value": "d3240515-3d90-4f1a-bbb6-6530477565bd"
+                  "system": "urn:ietf:rfc:3986",
+                  "value": "d3240515-3d90-4f1a-bbb6-6530477565bd"
                 },
                 "status": "current",
                 "content": [
-                {
+                  {
                     "attachment": {
-                    "contentType": "image/png",
-                    "data": "data:image/png;base64,iVBORw0KJLX..."
+                      "contentType": "image/png",
+                      "data": "data:image/png;base64,iVBORw0KJLX..."
                     }
-                }
+                  }
                 ],
                 "type": {
-                "coding": [
+                  "coding": [
                     {
-                    "system": "http://opencrvs.org/specs/supporting-doc-type",
-                    "code": "NATIONAL_ID_FRONT"
+                      "system": "http://opencrvs.org/specs/supporting-doc-type",
+                      "code": "NATIONAL_ID_FRONT"
                     }
-                ]
+                  ]
                 },
                 "subject": { "display": "MOTHER" },
                 "meta": {
-                "lastUpdated": "2020-09-27T09:15:20.042+00:00",
-                "versionId": "0307d10f-f2c1-42be-a0d3-b09c268a38cf"
+                  "lastUpdated": "2020-09-27T09:15:20.042+00:00",
+                  "versionId": "0307d10f-f2c1-42be-a0d3-b09c268a38cf"
                 },
                 "id": "bf503f30-1d0a-40dc-908f-9c0d5e9cdf23"
+              }
             }
-            }
-        ]
-        }]
+          ]
+        }
+      ]
+    }
+  },
+  "url": "",
+  "hmac": "sha256=1d51fb6d-8636abe2-affb-4238-8bff-200ed3652d1et-dhrhd55"
 }
+
+
 ```
 
 | Parameter                 | Sample value                                                      | Description                                                                                                     |
@@ -244,9 +256,9 @@ X-Hub-Signature: sha1={super-long-SHA1-signature}
 | `payload.id`              | `531e9275-40e4-4ab5-a12c-6fa74d7b5b61`                            | The unique `id` for this webhook. Helpful when debugging.                                                       |
 | `payload.timestamp`       | `2019-12-12T10:53:43-08:00`                                       | A timestamp identifying the time that the webhook was created                                                   |
 | `payload.event.hub.topic` | `BIRTH_REGISTERED`                                                | A supported OpenCRVS event type string that triggered this webhook.                                             |
+| `payload.event.context`   | `[{ ... }]`                                                       | The [FHIR resources](https://www.hl7.org/fhir/resource.html) bundle associated with the target of this webhook. |
 | `url`                     | `https://www.your-clever-domain-name.com/webhooks`                | The URL that is notified by this webhook                                                                        |
 | `hmac`                    | `sha256=d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f` | The request signature that is created using your `sha_secret` explained below.                                  |
-| `context`                 | `[{ ... }]`                                                       | The [FHIR resources](https://www.hl7.org/fhir/resource.html) bundle associated with the target of this webhook. |
 
 #### **Validating Payloads**
 

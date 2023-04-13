@@ -995,7 +995,7 @@ export const eventLocationAddressLineTemplateTransformer =
   ) => {
     if (
       queryData.eventLocation?.type &&
-      queryData.eventLocation?.type == 'HEALTH_FACILITY'
+      queryData.eventLocation?.type === 'HEALTH_FACILITY'
     ) {
       return
     }

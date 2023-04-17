@@ -596,8 +596,7 @@ export function SystemList() {
                         label: intl.formatMessage(
                           integrationMessages.integratingSystemTypeOsia
                         ),
-                        value: IntegratingSystemType.Osia,
-                        disabled: true
+                        value: IntegratingSystemType.Osia
                       },
                       {
                         label: intl.formatMessage(

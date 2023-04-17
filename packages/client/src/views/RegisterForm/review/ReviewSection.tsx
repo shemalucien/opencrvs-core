@@ -624,7 +624,7 @@ enum SignatureSectionType {
   WITNESS_TWO_SIGNATURE = 'witnessTwoSignature'
 }
 
-class ReviewSectionComp extends React.Component<FullProps, State> {
+export class ReviewSectionComp extends React.Component<FullProps, State> {
   hasChangesBeenMade = false
 
   constructor(props: FullProps) {
@@ -1695,6 +1695,7 @@ class ReviewSectionComp extends React.Component<FullProps, State> {
       onContinue,
       viewRecord
     } = this.props
+
     const isDuplicate = Boolean(declaration.duplicates?.length)
     const formSections =
       viewRecord || isDuplicate

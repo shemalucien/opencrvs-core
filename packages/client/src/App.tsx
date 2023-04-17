@@ -76,6 +76,7 @@ import { IssueCertificate } from '@client/views/IssueCertificate/IssueCertificat
 import { IssuePayment } from '@client/views/IssueCertificate/IssueCollectorForm/IssuePayment'
 import UserRoles from '@client/views/SysAdmin/Config/UserRoles/UserRoles'
 import { ApolloProvider } from '@client/utils/ApolloProvider'
+import { CustomFormPoc } from './views/CustomFormPoC'
 
 interface IAppProps {
   client?: ApolloClient<NormalizedCacheObject>
@@ -132,6 +133,10 @@ export function App(props: IAppProps) {
                                       <>
                                         <TransitionWrapper location={location}>
                                           <Switch location={location}>
+                                            <Route
+                                              path="/custom-form-poc"
+                                              component={CustomFormPoc}
+                                            />
                                             <ProtectedRoute
                                               exact
                                               path={routes.HOME}

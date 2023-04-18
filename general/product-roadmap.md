@@ -2,7 +2,7 @@
 
 #### Upcoming in v1.3
 
-* Marriage and divorce registration flows
+* Marriage registration
 * Vital statistics export
 * Advanced deduplication
 * Track issuance of certificates
@@ -20,6 +20,7 @@
 **Backlog items**\
 Scope for 1.4 will be determined based on requirements from reference implementations and other requests. Get in touch via team@opencrvs.org to join the Product Council and specify your priority features.
 
+* Divorce registration
 * Foetal death registration flow
 * Web portal for direct public services
 * Certified copy application flow

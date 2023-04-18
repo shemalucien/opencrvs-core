@@ -1,12 +1,25 @@
----
-description: Product features on our radar
----
+# Product roadmap
 
-# Product Roadmap
-
-A list of potential functionality that will be included in the next release is listed below. Scope will be determined based on requirements from reference implementations and other requests. Get in touch via team@opencrvs.org to join the Product Council and specify your priority features.
+#### Upcoming in v1.3
 
 * Marriage and divorce registration flows
+* Vital statistics export
+* Advanced deduplication
+* Track issuance of certificates
+* Verify a certificate with QR
+* Configurable performance dashboards with infographics
+* Configure National ID: MOSIP, OSIA or other
+* Configure user role types
+* Capture informant signature to consent declaration submission
+* Organisation chart view
+* Configure informant sms notifications
+* Configure login background image or color
+
+
+
+**Backlog items**\
+Scope for 1.4 will be determined based on requirements from reference implementations and other requests. Get in touch via team@opencrvs.org to join the Product Council and specify your priority features.
+
 * Foetal death registration flow
 * Web portal for direct public services
 * Certified copy application flow
@@ -15,7 +28,6 @@ A list of potential functionality that will be included in the next release is l
 * Vital statistics export
 * Printed performance management reports
 * Advanced configuration of forms, certificates, application settings and communications (during live operations)
-* Advanced deduplication
 * Integrated payments
 * Delegated authority
 * Validation overrides and approval (where outside normal bounds)

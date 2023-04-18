@@ -13,7 +13,7 @@
 * Capture informant signature to consent declaration submission
 * Organisation chart view
 * Configure informant sms notifications
-* Configure login background image or color
+* Configure login background image or colour
 
 
 
@@ -26,7 +26,6 @@ Scope for 1.4 will be determined based on requirements from reference implementa
 * Certified copy application flow
 * Verify a record (API)
 * Verify a certificate (via QR code)
-* Vital statistics export
 * Printed performance management reports
 * Advanced configuration of forms, certificates, application settings and communications (during live operations)
 * Integrated payments

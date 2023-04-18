@@ -3,7 +3,6 @@
 #### Upcoming in v1.3
 
 * Marriage registration
-* Vital statistics export
 * Advanced deduplication
 * Track issuance of certificates
 * Verify a certificate with QR

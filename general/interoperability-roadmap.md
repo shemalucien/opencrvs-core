@@ -4,9 +4,15 @@ OpenCRVS has been technically architected from conception to interoperate with o
 
 
 
+{% hint style="success" %}
+OpenCRVS already interoperates out-the-box using the [FHIR](https://www.hl7.org/fhir/overview.html) standard as JSON.  The [FHIR API](https://www.hl7.org/fhir/http.html) is exposed via [OpenHIM](http://openhim.org/). **The supported FHIR version is: STU3**
+{% endhint %}
+
+
+
 **OpenCRVS v1.0: June 2022:**
 
-a) Adopted the [OpenHIE](https://guides.ohie.org/arch-spec/) architectural framework by design and [FHIR](https://www.hl7.org/fhir/overview.html) standard interoperability reference middleware [OpenHIM](http://openhim.org/)
+a) Adopted the [OpenHIE](https://guides.ohie.org/arch-spec/) architectural framework by design and [FHIR](https://www.hl7.org/fhir/overview.html) standard interoperability reference middleware [OpenHIM](http://openhim.org/) - FHIR version STU3.
 
 b) Integrated with [DHIS2](https://dhis2.org/) to standardise [event notifications](../technology/interoperability/event-notification-clients.md) from a hospital setting for civil registration using [FHIR](https://www.hl7.org/fhir/overview.html) in Bangladesh pilot.
 
@@ -62,9 +68,13 @@ d) [G2PConnect](https://g2pconnect.global/) protocol integration v0.1
 
 a) [G2PConnect](https://g2pconnect.global/) protocol integration v1.0
 
+b) Integration with the [JeMPI Master Patient index](https://github.com/jembi/JeMPI) v0.1
+
 
 
 **OpenCRVS v1.6 - Planned release: May 2024:**
 
-b) [G2PConnect](https://g2pconnect.global/) protocol integration v2.0
+a) [G2PConnect](https://g2pconnect.global/) protocol integration v2.0
+
+b) Integration with the [JeMPI Master Patient index](https://github.com/jembi/JeMPI) v1.0
 

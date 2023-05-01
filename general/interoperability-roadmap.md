@@ -5,7 +5,7 @@ OpenCRVS has been technically architected from conception to interoperate with o
 
 
 {% hint style="success" %}
-OpenCRVS already interoperates out-the-box using the [FHIR](https://www.hl7.org/fhir/overview.html) standard as JSON.  The [FHIR API](https://www.hl7.org/fhir/http.html) is exposed via [OpenHIM](http://openhim.org/). **The supported FHIR version is: STU3**
+OpenCRVS interoperates out-the-box using the [FHIR](https://www.hl7.org/fhir/overview.html) standard as JSON.  The [FHIR API](https://www.hl7.org/fhir/http.html) is exposed via [OpenHIM](http://openhim.org/). **The supported FHIR version is: STU3**
 {% endhint %}
 
 
@@ -61,6 +61,8 @@ b) Correct record integration with [MOSIP](https://mosip.io/)
 c) Revocation of a record integration with [MOSIP](https://mosip.io/)
 
 d) [G2PConnect](https://g2pconnect.global/) protocol integration v0.1
+
+e) OpenCRVS civil registration related [FHIR](https://www.hl7.org/fhir/extensibility.html) extensions published
 
 
 

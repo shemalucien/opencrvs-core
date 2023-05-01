@@ -4,7 +4,7 @@ OpenCRVS has been technically architected from conception to interoperate with o
 
 
 
-**OpenCRVS v1.0:**&#x20;
+**OpenCRVS v1.0: June 2022:**
 
 a) Adopted the [OpenHIE](https://guides.ohie.org/arch-spec/) architectural framework by design and [FHIR](https://www.hl7.org/fhir/overview.html) standard interoperability reference middleware [OpenHIM](http://openhim.org/)
 
@@ -12,7 +12,7 @@ b) Integrated with [DHIS2](https://dhis2.org/) to standardise [event notificatio
 
 
 
-**OpenCRVS v1.1:**&#x20;
+**OpenCRVS v1.1: Sep 2022**
 
 a) Birth registration integration with [MOSIP](https://mosip.io/).
 
@@ -22,7 +22,7 @@ c) Release of OpenCRVS [FHIR](https://www.hl7.org/fhir/overview.html) standard W
 
 
 
-**OpenCRVS v1.2**&#x20;
+**OpenCRVS v1.2: Jan 2023**
 
 a) Release of the [Elasticsearch](https://www.elastic.co/) [Record Search API](../technology/interoperability/record-search-clients.md) for use as part of a social protection interoperability collaboration  the[ Digital Convergance Initiative](https://spdci.org/).
 

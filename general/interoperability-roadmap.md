@@ -38,7 +38,7 @@ b) Permanent installation of MOSIP integration at the MOSIP Experience Center in
 
 d) Core collaboration of the [G2PConnect](https://g2pconnect.global/) protocol initiated.
 
-e) Integration with Secure Identity All;iance, OSIA standard [Birth Use Case](https://osia.readthedocs.io/en/v4.1/02%20-%20functional.html#birth-use-case)
+e) Integration with [Secure Identity Alliance](https://secureidentityalliance.org/), OSIA standard [Birth Use Case](https://osia.readthedocs.io/en/v4.1/02%20-%20functional.html#birth-use-case)
 
 f) Integration with [OpenSPP](https://openspp.org/) social protection system, using QR code.
 
@@ -48,17 +48,23 @@ g) Integration with [INGroupe](https://ingroupe.com/) National ID system.
 
 **OpenCRVS v1.4 - Planned release: Sep 2023:**
 
-Blah
+a) [W3C Verifiable Credential](https://www.w3.org/TR/vc-data-model/) integration with [MOSIP](https://mosip.io/)
+
+b) Correct record integration with [MOSIP](https://mosip.io/)
+
+c) Revocation of a record integration with [MOSIP](https://mosip.io/)
+
+d) [G2PConnect](https://g2pconnect.global/) protocol integration v0.1
 
 
 
 **OpenCRVS v1.5 - Planned release: Jan 2024:**
 
-Blah
+a) [G2PConnect](https://g2pconnect.global/) protocol integration v1.0
 
 
 
 **OpenCRVS v1.6 - Planned release: May 2024:**
 
-Blah
+b) [G2PConnect](https://g2pconnect.global/) protocol integration v2.0
 

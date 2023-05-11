@@ -2,7 +2,7 @@
 
 The FHIR Composition id is a powerful identifier and should only be accessible by approved government systems, such as those using `health` or `nationalId` JWT scopes. If you are proposing a new webhook in a feature request, consider the `resourceType` that your service requires, based on the explanation of the FHIR resources in the rest of this page. You should not need to expose the composition id in your mediator if your client service doesnt require it.
 
-The FHIR Composition id is a powerful identifier and should only be accessible by approved government systems, such as those using `health` or `nationalId` JWT scopes. If you are proposing a new webhook in a feature request, consider the `resourceType` that your service requires, based on the explanation of the FHIR resources in the rest of this page. You should not need to expose the composition id in your mediator if your client service doesnt require it.
+
 
 | Parameter             | Sample value                           | Description                                                                                                                                                                                               |
 | --------------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

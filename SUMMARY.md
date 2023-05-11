@@ -95,6 +95,7 @@
     * [3.2.6 Create factory reset reference data backups](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.6-create-factory-reset-reference-data-backups.md)
     * [3.2.7 Set-up language content](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.7-set-up-language-content.md)
     * [3.2.8 Set up initialisation settings](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.8-set-up-initialisation-settings.md)
+    * [3.2.9 Clearing and restoring a local environment to factory reset data](setup/3.-installation/3.2-set-up-your-own-country-configuration/3.2.9-clearing-and-restoring-a-local-environment-to-factory-reset-data.md)
   * [3.3 Set-up a server-hosted environment](setup/3.-installation/3.3-set-up-a-server-hosted-environment/README.md)
     * [3.3.1 Provision your server nodes with SSH access](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.1-provision-your-server-nodes-with-ssh-access.md)
     * [3.3.2 Install dependencies](setup/3.-installation/3.3-set-up-a-server-hosted-environment/3.3.2-install-dependencies.md)

@@ -41,4 +41,3 @@ OpenCRVS stack includes [OpenHIM](http://openhim.org/).  The Open Health Informa
 
 
 
-****

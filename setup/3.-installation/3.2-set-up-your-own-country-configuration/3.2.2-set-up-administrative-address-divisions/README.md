@@ -24,4 +24,3 @@ The rest of the address fields that can be completed by a user are all optional 
 
 We begin by creating source files for importing your standardised administrative subdivisions into the OpenCRVS database.  Each one of these locations will be converted into a [FHIR Location](https://build.fhir.org/location.html) object.  All subdivisions can be retrieved and edited in the future by using the [FHIR Location API](../../../../technology/interoperability/location-api.md).
 
-****

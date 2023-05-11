@@ -156,7 +156,7 @@ Authorization: Bearer {{token}}
 
 ```
 
-****
+
 
 **Civil registration office**
 

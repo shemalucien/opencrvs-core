@@ -37,7 +37,7 @@ As you join the OpenCRVS community, we request that you collaborate in the spiri
 
 #### **Because we care**
 
-> We work hard because we believe profoundly in our mission. ****&#x20;
+> We work hard because we believe profoundly in our mission.&#x20;
 >
 > We care deeply about the quality of our product and its implementation, knowing that it will profoundly affect people’s lives.
 >

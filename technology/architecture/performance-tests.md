@@ -47,7 +47,7 @@ There were requests to 3 unique URLs, with 1 104 different responses received. T
 
 <figure><img src="../../.gitbook/assets/k6results.png" alt=""><figcaption></figcaption></figure>
 
-****
+
 
 **OpenCRVS v1.1.\* Test results**
 

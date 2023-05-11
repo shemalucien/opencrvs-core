@@ -50,7 +50,11 @@ We are working on a [Kubernetes](https://kubernetes.io/) migration now that Kube
 
 ###
 
-![](https://static.wixstatic.com/media/93440e\_d04078ae922a4126b8e9dd3f96066505\~mv2.png/v1/fill/w\_136,h\_39,al\_c,q\_80,usm\_0.66\_1.00\_0.01/FHIR\_Foundation.webp)
+<div align="left">
+
+<img src="https://static.wixstatic.com/media/93440e_d04078ae922a4126b8e9dd3f96066505~mv2.png/v1/fill/w_136,h_39,al_c,q_80,usm_0.66_1.00_0.01/FHIR_Foundation.webp" alt="">
+
+</div>
 
 **Hearth MongoDB Database layer**
 
@@ -62,7 +66,11 @@ We extended [FHIR](https://www.hl7.org/fhir/) to support the civil registration 
 
 
 
-![](https://static.wixstatic.com/media/93440e\_21c72b72ff3a405596448e33f80a719c\~mv2\_d\_3422\_1781\_s\_2.png/v1/fill/w\_136,h\_70,al\_c,q\_80,usm\_0.66\_1.00\_0.01/Elasticsearch-Logo-Color-V.webp)
+<div align="left">
+
+<img src="https://static.wixstatic.com/media/93440e_21c72b72ff3a405596448e33f80a719c~mv2_d_3422_1781_s_2.png/v1/fill/w_136,h_70,al_c,q_80,usm_0.66_1.00_0.01/Elasticsearch-Logo-Color-V.webp" alt="">
+
+</div>
 
 **ElasticSearch**
 
@@ -74,7 +82,11 @@ ElasticSearch is also used with [Kibana](https://www.elastic.co/kibana) for appl
 \
 
 
-![](https://static.wixstatic.com/media/93440e\_7ae07f5f77c6407080656fff4e0cdcd3\~mv2.jpg/v1/fill/w\_134,h\_26,al\_c,q\_80,usm\_0.66\_1.00\_0.01/influxdata-2.webp)
+<div align="left">
+
+<img src="https://static.wixstatic.com/media/93440e_7ae07f5f77c6407080656fff4e0cdcd3~mv2.jpg/v1/fill/w_134,h_26,al_c,q_80,usm_0.66_1.00_0.01/influxdata-2.webp" alt="">
+
+</div>
 
 **InfluxData**
 
@@ -82,7 +94,11 @@ The hyper-efficient [Influx](https://www.influxdata.com) "time series database" 
 \
 
 
-![](https://static.wixstatic.com/media/93440e\_bdd011d5e3744e7b84684e6789c1f5c7\~mv2.png/v1/fill/w\_136,h\_40,al\_c,q\_80,usm\_0.66\_1.00\_0.01/openhim-logo-green.webp)
+<div align="left">
+
+<img src="https://static.wixstatic.com/media/93440e_bdd011d5e3744e7b84684e6789c1f5c7~mv2.png/v1/fill/w_136,h_40,al_c,q_80,usm_0.66_1.00_0.01/openhim-logo-green.webp" alt="">
+
+</div>
 
 **OpenHIM enterprise service bus, interoperability Layer**
 
@@ -112,7 +128,11 @@ Each microservice in OpenCRVS has no knowledge of other services or business req
 
 
 
-![](https://static.wixstatic.com/media/93440e\_d1ec46ba4c2d4c1dbb6afe6b9b7143de\~mv2.png/v1/fill/w\_133,h\_40,al\_c,q\_80,usm\_0.66\_1.00\_0.01/graphql.webp)
+<div align="left">
+
+<img src="https://static.wixstatic.com/media/93440e_d1ec46ba4c2d4c1dbb6afe6b9b7143de~mv2.png/v1/fill/w_133,h_40,al_c,q_80,usm_0.66_1.00_0.01/graphql.webp" alt="">
+
+</div>
 
 * [metrics](https://github.com/opencrvs/opencrvs-core/tree/master/packages/metrics) - the civil registration metrics and analytics microservice using the [Influx](https://www.influxdata.com) time series database.
 * [notification](https://github.com/opencrvs/opencrvs-core/tree/master/packages/notification) - the microservice that manages SMS communications from OpenCRVS, communicating with a choice of 2 3rd party SMS Gateways.
@@ -122,13 +142,21 @@ Each microservice in OpenCRVS has no knowledge of other services or business req
 
 #### Client application packages
 
-![](https://static.wixstatic.com/media/93440e\_50ed7c9e719e44daa7ca7d3e183f4071\~mv2.png/v1/fill/w\_121,h\_55,al\_c,q\_80,usm\_0.66\_1.00\_0.01/react.webp)
+<div align="left">
+
+<img src="https://static.wixstatic.com/media/93440e_50ed7c9e719e44daa7ca7d3e183f4071~mv2.png/v1/fill/w_121,h_55,al_c,q_80,usm_0.66_1.00_0.01/react.webp" alt="">
+
+</div>
 
 * [login](https://github.com/opencrvs/opencrvs-core/tree/master/packages/login) - the login UI client built in [React](https://reactjs.org/).
 * [client](https://github.com/opencrvs/opencrvs-core/tree/master/packages/client) - the OpenCRVS UI client for civil registration built in [React](https://reactjs.org/).\
 
 
-![](https://static.wixstatic.com/media/93440e\_8452ed95c717459e86c95ed0e17378ad\~mv2.png/v1/fill/w\_136,h\_70,al\_c,q\_80,usm\_0.66\_1.00\_0.01/PWA-Progressive-Web-App-Logo.webp)
+<div align="left">
+
+<img src="https://static.wixstatic.com/media/93440e_8452ed95c717459e86c95ed0e17378ad~mv2.png/v1/fill/w_136,h_70,al_c,q_80,usm_0.66_1.00_0.01/PWA-Progressive-Web-App-Logo.webp" alt="">
+
+</div>
 
 Using an Android [progressive web application](https://developer.mozilla.org/en-US/docs/Web/Progressive\_web\_apps/Introduction) for our client applications means that we can take advantage of offline functionality and native mobile features using [Workbox](https://developers.google.com/web/tools/workbox), without the overhead of maintaining multiple web and mobile codebases and respective App/Play Store releases.
 

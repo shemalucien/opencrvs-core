@@ -14,7 +14,7 @@ OpenCRVS comes with a pre-installed suite of tools for monitoring and debugging 
 
 ### Getting started
 
-Once the environment is installed, the monitoring suite can be accessed using the `kibana.<your_domain>` __ URL.&#x20;
+Once the environment is installed, the monitoring suite can be accessed using the `kibana.<your_domain>` URL.&#x20;
 
 ![](<../../.gitbook/assets/image (19).png>)
 

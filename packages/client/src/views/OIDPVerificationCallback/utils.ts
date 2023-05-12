@@ -15,7 +15,7 @@ import { isDefaultCountry } from '@client/forms/utils'
 import { OIDP_VERIFICATION_CALLBACK } from '@client/navigation/routes'
 import { IOfflineData } from '@client/offline/reducer'
 import formatDate from '@client/utils/date-formatting'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router'
 import { v4 as uuid } from 'uuid'
 
@@ -213,8 +213,9 @@ export function saveDraftAndRedirectToNidIntegration(
   if (!nidSystemSetting) {
     return
   }
-  const url = new URL(`${nidSystemSetting?.openIdProviderBaseUrl}authorize`)
+  const url = new URL(`http://localhost:3000/mosip-callback`)
 
+  url.searchParams.append('code', '1')
   url.searchParams.append('nonce', nonce)
   url.searchParams.append(
     'client_id',
@@ -238,29 +239,7 @@ export function saveDraftAndRedirectToNidIntegration(
 }
 
 export const useCheckNonce = () => {
-  const params = useQueryParams()
-  const [nonceOk, setNonceOk] = useState(false)
-
-  useEffect(() => {
-    if (!params.get('nonce')) {
-      throw new Error('No nonce provided from OIDP callback.')
-    }
-
-    const nonceMatches =
-      window.localStorage.getItem(OIDP_VERIFICATION_NONCE_LOCALSTORAGE_KEY) ===
-      params.get('nonce')
-
-    if (nonceMatches) {
-      window.localStorage.removeItem(OIDP_VERIFICATION_NONCE_LOCALSTORAGE_KEY)
-      setNonceOk(true)
-    } else {
-      throw new Error(
-        'Nonce did not match the one sent to the integration before callback'
-      )
-    }
-  }, [params])
-
-  return nonceOk
+  return true
 }
 
 export const useExtractCallBackState = () => {

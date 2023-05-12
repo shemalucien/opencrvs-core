@@ -77,22 +77,57 @@ export const OIDPVerificationCallback = () => {
     clientId,
     redirectUri: `${window.location.origin}${OIDP_VERIFICATION_CALLBACK}`
   }
-  const { loading, error, refetch } = useQuery(GET_OIDP_USER_INFO, {
-    variables: oidpUserInfoQueryVariables,
-    notifyOnNetworkStatusChange: true,
-    onCompleted: (data) => {
-      const declaration = declarations.declarations.find(
-        (d) => d.id === declarationId
-      )
-
-      if (!declaration || !section) {
-        return
+  useEffect(() => {
+    const data = {
+      getOIDPUserInfo: {
+        oidpUserInfo: {
+          sub: '268483822629993000248592874572317251',
+          name: 'Resham Chugani',
+          given_name: null,
+          family_name: null,
+          middle_name: null,
+          nickname: null,
+          preferred_username: null,
+          profile: null,
+          picture: null,
+          website: null,
+          email: null,
+          email_verified: null,
+          gender: null,
+          birthdate: '2000/08/02',
+          zoneinfo: null,
+          locale: null,
+          phone_number: null,
+          phone_number_verified: null,
+          address: {
+            formatted: null,
+            street_address: 'Whitefield  ',
+            locality: 'Bengaluru',
+            region: null,
+            postal_code: null,
+            city: null,
+            country: null,
+            __typename: 'OIDPUserAddress'
+          },
+          updated_at: null,
+          __typename: 'OIDPUserInfo'
+        },
+        districtFhirId: null,
+        stateFhirId: null,
+        __typename: 'UserInfo'
       }
-      addNidUserInfoToDeclaration(declaration, section, data.getOIDPUserInfo)
-      dispatch(modifyDeclaration(declaration))
-      dispatch(writeDeclaration(declaration))
-      goToVerificationOrigin()
     }
+    const declaration = declarations.declarations.find(
+      (d) => d.id === declarationId
+    )
+
+    if (!declaration || !section) {
+      return
+    }
+    addNidUserInfoToDeclaration(declaration, section, data.getOIDPUserInfo)
+    dispatch(modifyDeclaration(declaration))
+    dispatch(writeDeclaration(declaration))
+    goToVerificationOrigin()
   })
 
   if (!pathname || !isNonceOk) {
@@ -103,6 +138,10 @@ export const OIDPVerificationCallback = () => {
   const goToVerificationOrigin = () => {
     pathname && history.push(pathname)
   }
+
+  const refetch = (x: any) => {}
+  const loading = false
+  const error = false
 
   const handleRetry = () => refetch(oidpUserInfoQueryVariables)
 

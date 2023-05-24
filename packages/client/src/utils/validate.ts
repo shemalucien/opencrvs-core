@@ -498,6 +498,14 @@ export const dateInPast = (): Validation => (value: IFormFieldValue) =>
 export const dateFormatIsCorrect = (): Validation => (value: IFormFieldValue) =>
   dateFormat(value as string)
 
+export const isValidAdvanceSearchDate = (date: string): boolean => {
+  return (
+    isAValidDateFormat(date) &&
+    isDateNotInFuture(date) &&
+    isDateAfter(date, '1-1-1900')
+  )
+}
+
 /*
  * TODO: The name validation functions should be refactored out.
  *

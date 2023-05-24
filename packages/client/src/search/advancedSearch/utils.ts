@@ -31,6 +31,7 @@ import { messages as advancedSearchForm } from '@client/i18n/messages/views/adva
 import format from '@client/utils/date-formatting'
 import { ISearchLocation } from '@opencrvs/components'
 import formatDate from '@client/utils/date-formatting'
+import { isValidAdvanceSearchDate } from '@client/utils/validate'
 
 export type advancedSearchPillKey = Exclude<
   keyof IAdvancedSearchResultMessages,
@@ -507,7 +508,7 @@ export const isValidDateRangePickerValue = (
   let isValid = false
   if (!dateRangePickerValue.isDateRangeActive) {
     if (dateRangePickerValue.exact) {
-      isValid = true
+      isValid = isValidAdvanceSearchDate(dateRangePickerValue.exact)
     }
   } else {
     if (dateRangePickerValue.rangeStart && dateRangePickerValue.rangeEnd) {

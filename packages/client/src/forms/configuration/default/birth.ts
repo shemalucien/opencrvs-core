@@ -18,6 +18,7 @@ import {
   birthDocumentForWhomFhirMapping,
   birthDocumentTypeFhirMapping
 } from '@client/forms/register/fieldMappings/birth/mutation/documents-mappings'
+import { IdentityIdType } from '@client/utils/gateway'
 
 export const birthRegisterForms: ISerializedForm = {
   sections: [
@@ -965,11 +966,42 @@ export const birthRegisterForms: ISerializedForm = {
         }
       ],
       mapping: {
+        template: [
+          {
+            fieldName: 'birthConfigurableIdentifier1',
+            operation: 'childIdentityToFieldTransformer',
+            parameters: [[IdentityIdType.BirthConfigurableIdentifier_1]]
+          },
+          {
+            fieldName: 'birthConfigurableIdentifier2',
+            operation: 'childIdentityToFieldTransformer',
+            parameters: [[IdentityIdType.BirthConfigurableIdentifier_2]]
+          },
+          {
+            fieldName: 'birthConfigurableIdentifier3',
+            operation: 'childIdentityToFieldTransformer',
+            parameters: [[IdentityIdType.BirthConfigurableIdentifier_3]]
+          }
+        ],
         mutation: {
-          operation: 'childFieldToIdentityTransformer'
+          operation: 'childFieldToIdentityTransformer',
+          parameters: [
+            [
+              IdentityIdType.BirthConfigurableIdentifier_1,
+              IdentityIdType.BirthConfigurableIdentifier_2,
+              IdentityIdType.BirthConfigurableIdentifier_3
+            ]
+          ]
         },
         query: {
-          operation: 'childIdentityToFieldTransformer'
+          operation: 'childIdentityToFieldTransformer',
+          parameters: [
+            [
+              IdentityIdType.BirthConfigurableIdentifier_1,
+              IdentityIdType.BirthConfigurableIdentifier_2,
+              IdentityIdType.BirthConfigurableIdentifier_3
+            ]
+          ]
         }
       }
     },

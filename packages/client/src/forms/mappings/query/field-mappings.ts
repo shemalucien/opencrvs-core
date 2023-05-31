@@ -43,7 +43,7 @@ import { getSelectedOption } from '@client/forms/utils'
 import { getLocationNameMapOfFacility } from '@client/utils/locationUtils'
 import { getCountryName } from '@client/views/SysAdmin/Config/Application/utils'
 import { AddressCases } from '@client/forms/configuration/administrative/addresses'
-import { BirthRegistration } from '@client/utils/gateway'
+import { BirthRegistration, IdentityIdType } from '@client/utils/gateway'
 
 interface IName {
   [key: string]: any
@@ -1062,17 +1062,30 @@ export const plainInputTransformer = (
   }
 }
 
-export const childIdentityToFieldTransformer = (
-  transformedData: IFormData,
-  queryData: BirthRegistration,
-  sectionId: 'child',
-  targetSectionId?: string
-) => {
-  queryData[sectionId]?.identifier?.forEach((identifier) => {
-    if (!identifier || !identifier.type || !identifier.id) {
-      return
-    }
-    transformedData[targetSectionId || sectionId][identifier.type] =
-      identifier.id
-  })
-}
+export const childIdentityToFieldTransformer =
+  (
+    idTypes: Array<
+      | IdentityIdType.BirthConfigurableIdentifier_1
+      | IdentityIdType.BirthConfigurableIdentifier_2
+      | IdentityIdType.BirthConfigurableIdentifier_3
+    >
+  ) =>
+  (
+    transformedData: IFormData,
+    queryData: BirthRegistration,
+    sectionId: 'child',
+    targetSectionId?: string,
+    targetFieldName?: string
+  ) => {
+    idTypes.forEach((idType) => {
+      const identifier = queryData[sectionId]?.identifier?.find(
+        (identifier) => identifier?.type === idType
+      )
+      if (!identifier || !identifier.type || !identifier.id) {
+        return
+      }
+      transformedData[targetSectionId || sectionId][
+        targetFieldName || identifier.type
+      ] = identifier.id
+    })
+  }

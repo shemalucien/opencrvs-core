@@ -61,6 +61,10 @@ interface IEventRegistrationCallbackPayload {
   trackingId: string
   registrationNumber: string
   error: string
+  childIdentifiers?: {
+    type: `BIRTH_CONFIGURABLE_IDENTIFIER_${1 | 2 | 3}`
+    value: string
+  }[]
 }
 
 async function sendBundleToHearth(
@@ -260,7 +264,7 @@ export async function markEventAsRegisteredCallbackHandler(
   request: Hapi.Request,
   h: Hapi.ResponseToolkit
 ) {
-  const { trackingId, registrationNumber, error } =
+  const { trackingId, registrationNumber, error, childIdentifiers } =
     request.payload as IEventRegistrationCallbackPayload
 
   if (error) {
@@ -307,6 +311,22 @@ export async function markEventAsRegisteredCallbackHandler(
       REG_NUMBER_SYSTEM[event],
       registrationNumber
     )
+
+    if (event === EVENT_TYPE.BIRTH && childIdentifiers) {
+      // For birth event patients[0] is child and it should
+      // already be initialized with the RN identifier
+      childIdentifiers.forEach((childIdentifier) => {
+        const previousIdentifier = patients[0].identifier!.find(
+          ({ type }) => type === childIdentifier.type
+        )
+        if (!previousIdentifier) {
+          // @ts-ignore
+          patients[0].identifier!.push(childIdentifier)
+        } else {
+          previousIdentifier.value = childIdentifier.value
+        }
+      })
+    }
 
     if (event === EVENT_TYPE.DEATH) {
       /** using first patient because for death event there is only one patient */

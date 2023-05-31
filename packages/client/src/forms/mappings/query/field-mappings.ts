@@ -43,6 +43,7 @@ import { getSelectedOption } from '@client/forms/utils'
 import { getLocationNameMapOfFacility } from '@client/utils/locationUtils'
 import { getCountryName } from '@client/views/SysAdmin/Config/Application/utils'
 import { AddressCases } from '@client/forms/configuration/administrative/addresses'
+import { BirthRegistration } from '@client/utils/gateway'
 
 interface IName {
   [key: string]: any
@@ -1059,4 +1060,19 @@ export const plainInputTransformer = (
     }
     transformedData[sectionId][field.name] = queryData[field.name] || ''
   }
+}
+
+export const childIdentityToFieldTransformer = (
+  transformedData: IFormData,
+  queryData: BirthRegistration,
+  sectionId: 'child',
+  targetSectionId?: string
+) => {
+  queryData[sectionId]?.identifier?.forEach((identifier) => {
+    if (!identifier || !identifier.type || !identifier.id) {
+      return
+    }
+    transformedData[targetSectionId || sectionId][identifier.type] =
+      identifier.id
+  })
 }

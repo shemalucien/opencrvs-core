@@ -963,7 +963,15 @@ export const birthRegisterForms: ISerializedForm = {
             }
           ]
         }
-      ]
+      ],
+      mapping: {
+        mutation: {
+          operation: 'childFieldToIdentityTransformer'
+        },
+        query: {
+          operation: 'childIdentityToFieldTransformer'
+        }
+      }
     },
     {
       id: BirthSection.Informant,

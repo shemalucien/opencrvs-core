@@ -18,6 +18,7 @@ import {
   IFormSectionData,
   IFormFieldMutationMapFunction
 } from '@client/forms'
+import { IdentityIdType } from '@client/utils/gateway'
 import { set } from 'lodash'
 
 interface IPersonName {
@@ -585,3 +586,29 @@ export const longDateTransformer =
 
     return transformedData
   }
+
+export const childFieldToIdentityTransformer = (
+  transformedData: TransformedData,
+  draftData: IFormData,
+  sectionId: 'child'
+) => {
+  const transformedSection = transformedData[sectionId]
+  if (!transformedSection.identifier) {
+    transformedSection.identifier = []
+  }
+
+  ;[
+    IdentityIdType.BirthConfigurableIdentifier_1,
+    IdentityIdType.BirthConfigurableIdentifier_2,
+    IdentityIdType.BirthConfigurableIdentifier_3
+  ].forEach((idType) => {
+    if (!draftData[sectionId][idType]) {
+      return
+    }
+
+    transformedSection.identifier.push({
+      id: draftData[sectionId][idType],
+      type: idType
+    })
+  })
+}

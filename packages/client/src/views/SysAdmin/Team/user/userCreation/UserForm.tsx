@@ -183,6 +183,7 @@ class UserFormComponent extends React.Component<IFullProps, IState> {
               onSetTouched={(setTouchedFunc) => {
                 this.setAllFormFieldsTouched = setTouchedFunc
               }}
+              initialValues={formData}
               requiredErrorMessage={messages.requiredForNewUser}
               onUploadingStateChanged={this.onUploadingStateChanged}
             />

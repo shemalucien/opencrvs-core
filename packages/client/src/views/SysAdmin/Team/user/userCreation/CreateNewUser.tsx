@@ -232,11 +232,13 @@ const mapStateToProps = (state: IStoreState, props: Props) => {
         }
       )[section.id],
       ...formData,
+      primaryFacilityType: 'HEALTH_FACILITY',
       skippedOfficeSelction: true
     }
   } else {
     formData = {
       ...formData,
+      primaryFacilityType: 'HEALTH_FACILITY',
       skippedOfficeSelction: false
     }
   }

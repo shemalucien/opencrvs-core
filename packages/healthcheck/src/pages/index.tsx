@@ -78,11 +78,11 @@ export default function Home({
 
         </div>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10%' }}>
-          <Pagination
-            currentPage={1}
-            onPageChange={() => {}}
-            totalPages={10}
-          />
+        <Pagination
+          currentPage={1}
+          onPageChange={() => {}}
+          totalPages={10}
+        />
         </div>
         
       </div>

@@ -11,7 +11,8 @@
  */
 import { Favicon } from '@/components/Favicon'
 import { Services } from '@/components/Services'
-import { checkHealth, Service } from '@/lib/check-health'
+import { MyEnvironment } from "@/components/Dependencies";
+import { checkHealth, Service} from '@/lib/check-health'
 import type { InferGetServerSidePropsType } from 'next'
 import Head from 'next/head'
 import React from 'react'
@@ -21,7 +22,9 @@ import { SearchTool } from '@opencrvs/components/lib/SearchTool'
 import { Icon } from '@opencrvs/components/lib/Icon'
 import { Stack } from '@opencrvs/components/lib/Stack'
 import { Button } from '@opencrvs/components/lib/Button'
-import {Pagination} from '@opencrvs/components/lib/Pagination'
+import { Pagination } from '@opencrvs/components/lib/Pagination'
+
+import { Table } from '@opencrvs/components/lib/Table'
 const isAllOk = (services: Service[]) =>
   Array.isArray(services) && services.every((service) => service.status === 'ok');
 
@@ -55,37 +58,74 @@ export default function Home({
     : [];
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
-      <Head>
-        <title>{isAllOk ? '' : '! '}OpenCRVS healthcheck</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Favicon status={isAllOk ? 'ok' : 'error'} />
-      </Head>
-      <LeftNavigation applicationName="OpenCRVS" applicationVersion="1.1.0" buildVersion="Development">
-        {/* Add side navigation content here */}
-      </LeftNavigation>
-      {/* <AppBar> */}
-        {/* Add header content here */}
-      {/* </AppBar> */}
-      <div style={{ flex: 1, overflowY: 'auto' }}>
-        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90%' }}>
-          {runningServices.length > 0 ? (
-            <Services services={runningServices} />
-          ) : (
-            <div>No services are currently running.</div>
-          )}
-          {/* Add other content here */}
 
-        </div>
-        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10%' }}>
-        <Pagination
-          currentPage={1}
-          onPageChange={() => {}}
-          totalPages={10}
+
+
+
+    /* <div style={{ minHeight: '150px', justifyContent: 'center', alignItems: 'center' }}>
+        <AppBar
+          desktopLeft={<Button aria-label="Go back" size="large" type="icon"><Icon name="ArrowLeft" size="large" /></Button>}
+          desktopRight={
+            <Stack gap={8}>
+              <Button size="large" type="icon"><Icon name="Target" size="large" /></Button>
+              <Button size="large" type="secondary">Exit</Button>
+              <Button size="large" type="primary">Save</Button>
+            </Stack>
+          }
+          desktopTitle={<h1 style={{ fontSize: '24px', fontWeight: 'bold', margin: 0 }}>OpenCRVS</h1>}
+          mobileLeft={<Button aria-label="Go back" size="large" type="icon"><Icon name="ArrowLeft" size="large" /></Button>}
+          mobileRight={<Button type="secondary">Button</Button>}
+          mobileTitle={<h1 style={{ fontSize: '24px', fontWeight: 'bold', margin: 0 }}>OpenCRVS</h1>}
         />
-        </div>
-        
+      </div> */
+
+    /* <div style={{ flex: 1, overflowY: 'auto' }}>
+      {runningServices.length == 0 ? (
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90%' }}>
+          {/* <Services services={runningServices} /> */
+
+    /* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+                <Table
+                  tableHeight={500} // Set table height to the full height of the window
+                  columns={[
+                    { label: 'User', width: 25, key: 'user' },
+                    { label: 'url', width: 50, key: 'url' },
+                    { label: 'Status', width: 25, key: 'status' }
+                  ]}
+                  content={[
+                    { user: 'webhooks', url: 'http://localhost:2525/ping', status: 'Active' },
+                    { user: 'Stevie Nicks', time: '12 May 2021', status: 'Active' },
+                    { user: 'Ellie Crouch', time: '1 November 2020', status: 'Active' },
+                    { user: 'Jill Cross', time: '23 October 2021', status: 'Inactive' },
+                    { user: 'Rebecca Finch', time: '11 March 2021', status: 'Active' }
+                  ]}
+                />
+              </div>
+  
+            </div>
+          ) : (
+            <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '90%' }}>
+              <div>No services are currently running.</div>
+            </div>
+          )}
+          */
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Head>
+          <title>{isAllOk ? '' : '! '}OpenCRVS healthcheck</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <Favicon status={isAllOk ? 'ok' : 'error'} />
+        </Head>
+        <MyEnvironment />
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10%', position: 'sticky', bottom: 0 }}>
+        <Pagination currentPage={1} onPageChange={() => { }} totalPages={10} />
       </div>
     </div>
+
+
+
+    // </div>
+
   );
 }

@@ -1,0 +1,59 @@
+
+
+.service-list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .service-name {
+    font-weight: bold;
+  }
+  
+  .status {
+    display: flex;
+    align-items: center;
+  }
+  
+  .status span {
+    margin-right: 5px;
+  }
+
+
+  .check {
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+  .check svg {
+    margin-top: 1px;
+    margin-right: 0.5rem;
+  }
+  .service {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .status svg {
+    margin-left: 0.5rem;
+  }
+  
+  .service-name {
+    margin-right: 2rem;
+  }
